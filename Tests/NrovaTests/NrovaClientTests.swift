@@ -7,7 +7,7 @@ final class NrovaClientTests: XCTestCase {
     func testDefaultConfigurationUsesProductionEndpoints() {
         let configuration = NrovaConfiguration(apiKey: "test")
 
-        XCTAssertEqual(configuration.organizationId, "C1IRXJbknvZSTKMBxLDQ")
+        XCTAssertEqual(configuration.organizationId, NrovaConfiguration.defaultOrganizationId)
         XCTAssertEqual(
             configuration.endpoints.distribution.absoluteString,
             "https://us-central1-nrovallc.cloudfunctions.net/distributionApi"
@@ -57,11 +57,12 @@ final class NrovaClientTests: XCTestCase {
     // MARK: - Distribution wiring
 
     func testDistributionListApplicationsRequest() async throws {
+        let orgId = NrovaConfiguration.defaultOrganizationId
         let mock = MockTransport(responder: { request in
             XCTAssertEqual(request.httpMethod, "GET")
             XCTAssertEqual(
                 request.url?.absoluteString,
-                "https://us-central1-nrovallc.cloudfunctions.net/distributionApi/v1/organizations/C1IRXJbknvZSTKMBxLDQ/applications"
+                "https://us-central1-nrovallc.cloudfunctions.net/distributionApi/v1/organizations/\(orgId)/applications"
             )
             XCTAssertEqual(request.value(forHTTPHeaderField: "Authorization"), "Bearer test-key")
             XCTAssertEqual(request.value(forHTTPHeaderField: "X-API-Key"), "test-key")
@@ -69,7 +70,7 @@ final class NrovaClientTests: XCTestCase {
             let json = """
             {
               "schema": "nrova.distribution.v1",
-              "orgId": "C1IRXJbknvZSTKMBxLDQ",
+              "orgId": "\(orgId)",
               "applications": [
                 {
                   "id": "acme-notes",
@@ -93,10 +94,11 @@ final class NrovaClientTests: XCTestCase {
     }
 
     func testDistributionLatestEncodesQueryAndDecodesPayload() async throws {
+        let orgId = NrovaConfiguration.defaultOrganizationId
         let mock = MockTransport(responder: { request in
             XCTAssertEqual(request.httpMethod, "GET")
             let url = request.url!
-            XCTAssertEqual(url.path, "/distributionApi/v1/organizations/C1IRXJbknvZSTKMBxLDQ/applications/acme-notes/latest")
+            XCTAssertEqual(url.path, "/distributionApi/v1/organizations/\(orgId)/applications/acme-notes/latest")
             let items = URLComponents(url: url, resolvingAgainstBaseURL: false)?.queryItems ?? []
             XCTAssertTrue(items.contains(URLQueryItem(name: "platform", value: "macos")))
             XCTAssertTrue(items.contains(URLQueryItem(name: "channel", value: "stable")))
@@ -226,11 +228,12 @@ final class NrovaClientTests: XCTestCase {
     // MARK: - Feature flags
 
     func testFeatureFlagsEvaluatePostsBody() async throws {
+        let orgId = NrovaConfiguration.defaultOrganizationId
         let mock = MockTransport(responder: { request in
             XCTAssertEqual(request.httpMethod, "POST")
             XCTAssertEqual(
                 request.url?.absoluteString,
-                "https://us-central1-nrovallc.cloudfunctions.net/developerApi/v1/organizations/C1IRXJbknvZSTKMBxLDQ/evaluate"
+                "https://us-central1-nrovallc.cloudfunctions.net/developerApi/v1/organizations/\(orgId)/evaluate"
             )
 
             let body = try XCTUnwrap(request.httpBody)
@@ -242,7 +245,7 @@ final class NrovaClientTests: XCTestCase {
 
             let json = """
             {
-              "orgId": "C1IRXJbknvZSTKMBxLDQ",
+              "orgId": "\(orgId)",
               "subjectId": "user-1",
               "countryCode": "US",
               "evaluatedAt": "2026-06-09T00:00:00.000Z",
@@ -259,6 +262,92 @@ final class NrovaClientTests: XCTestCase {
             countryCode: "US"
         )
         XCTAssertTrue(enabled)
+    }
+
+    // MARK: - Info.plist loader
+
+    func testInfoDictionaryLoaderUsesProvidedKeyAndOrg() throws {
+        let configuration = try NrovaConfiguration.fromInfoDictionary([
+            "NrovaAPIKey": "sk_test_abc",
+            "NrovaOrganizationId": "TenantXYZ"
+        ])
+        XCTAssertEqual(configuration.apiKey, "sk_test_abc")
+        XCTAssertEqual(configuration.organizationId, "TenantXYZ")
+    }
+
+    func testInfoDictionaryLoaderTrimsWhitespaceAndFallsBackToDefaultOrg() throws {
+        let configuration = try NrovaConfiguration.fromInfoDictionary([
+            "NrovaAPIKey": "  sk_test_abc  "
+        ])
+        XCTAssertEqual(configuration.apiKey, "sk_test_abc")
+        XCTAssertEqual(configuration.organizationId, NrovaConfiguration.defaultOrganizationId)
+    }
+
+    func testInfoDictionaryLoaderHonoursCustomKeyNames() throws {
+        let keys = NrovaConfiguration.InfoPlistKeys(
+            apiKey: "MyApp.NrovaKey",
+            organizationId: "MyApp.NrovaOrg"
+        )
+        let configuration = try NrovaConfiguration.fromInfoDictionary(
+            [
+                "MyApp.NrovaKey": "sk_test_abc",
+                "MyApp.NrovaOrg": "TenantXYZ"
+            ],
+            keys: keys
+        )
+        XCTAssertEqual(configuration.apiKey, "sk_test_abc")
+        XCTAssertEqual(configuration.organizationId, "TenantXYZ")
+    }
+
+    func testInfoDictionaryLoaderThrowsWhenAPIKeyMissing() {
+        XCTAssertThrowsError(try NrovaConfiguration.fromInfoDictionary([:])) { error in
+            guard case NrovaConfiguration.InfoPlistError.missingAPIKey(let plistKey, _) = error else {
+                XCTFail("Expected missingAPIKey, got \(error)")
+                return
+            }
+            XCTAssertEqual(plistKey, "NrovaAPIKey")
+        }
+    }
+
+    func testInfoDictionaryLoaderThrowsWhenAPIKeyEmpty() {
+        XCTAssertThrowsError(
+            try NrovaConfiguration.fromInfoDictionary(["NrovaAPIKey": "   "])
+        ) { error in
+            guard case NrovaConfiguration.InfoPlistError.missingAPIKey = error else {
+                XCTFail("Expected missingAPIKey, got \(error)")
+                return
+            }
+        }
+    }
+
+    func testInfoDictionaryLoaderThrowsWhenOrganizationEmpty() {
+        XCTAssertThrowsError(
+            try NrovaConfiguration.fromInfoDictionary([
+                "NrovaAPIKey": "sk_test_abc",
+                "NrovaOrganizationId": ""
+            ])
+        ) { error in
+            guard case NrovaConfiguration.InfoPlistError.emptyOrganizationId = error else {
+                XCTFail("Expected emptyOrganizationId, got \(error)")
+                return
+            }
+        }
+    }
+
+    func testNrovaClientFromInfoDictionaryWiresEverything() throws {
+        let client = try NrovaClient.fromInfoDictionary(
+            ["NrovaAPIKey": "sk_test_abc"],
+            transport: MockTransport()
+        )
+        XCTAssertEqual(client.configuration.apiKey, "sk_test_abc")
+        XCTAssertEqual(client.configuration.organizationId, NrovaConfiguration.defaultOrganizationId)
+    }
+
+    // MARK: - Version constant
+
+    func testSDKVersionIsExposed() {
+        XCTAssertFalse(Nrova.version.isEmpty)
+        XCTAssertEqual(Nrova.version, "1.0.0")
     }
 
     // MARK: - Health

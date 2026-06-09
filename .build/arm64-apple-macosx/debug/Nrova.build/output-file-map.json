@@ -23,6 +23,13 @@
     "swift-dependencies": "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/HTTPClient.swiftdeps",
     "diagnostics": "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/HTTPClient.dia"
   },
+  "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Core/InfoPlistConfiguration.swift": {
+    "dependencies": "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/InfoPlistConfiguration.d",
+    "object": "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/InfoPlistConfiguration.swift.o",
+    "swiftmodule": "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/InfoPlistConfiguration~partial.swiftmodule",
+    "swift-dependencies": "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/InfoPlistConfiguration.swiftdeps",
+    "diagnostics": "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/InfoPlistConfiguration.dia"
+  },
   "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Core/JSONValue.swift": {
     "dependencies": "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/JSONValue.d",
     "object": "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/JSONValue.swift.o",
@@ -50,6 +57,13 @@
     "swiftmodule": "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/NrovaTransport~partial.swiftmodule",
     "swift-dependencies": "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/NrovaTransport.swiftdeps",
     "diagnostics": "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/NrovaTransport.dia"
+  },
+  "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Core/NrovaVersion.swift": {
+    "dependencies": "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/NrovaVersion.d",
+    "object": "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/NrovaVersion.swift.o",
+    "swiftmodule": "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/NrovaVersion~partial.swiftmodule",
+    "swift-dependencies": "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/NrovaVersion.swiftdeps",
+    "diagnostics": "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/NrovaVersion.dia"
   },
   "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Core/SharedModels.swift": {
     "dependencies": "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/SharedModels.d",

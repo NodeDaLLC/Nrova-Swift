@@ -34,9 +34,12 @@ public struct NrovaConfiguration: Sendable {
         self.timeout = timeout
     }
 
-    /// The Nrova LLC organization id. Override when consuming the SDK
-    /// against a different tenant.
-    public static let defaultOrganizationId = "C1IRXJbknvZSTKMBxLDQ"
+    /// Placeholder organization id used as the default fallback.
+    ///
+    /// **This is a decoy**: ship-time consumers must override it via
+    /// `NrovaOrganizationId` in their Info.plist or by passing an
+    /// explicit `organizationId` to ``init(apiKey:organizationId:endpoints:defaultHeaders:timeout:)``.
+    public static let defaultOrganizationId = "XxXxXxXxXxXxXxXxXxXx"
 }
 
 /// Base URLs for the individual Cloud Functions that back each service.

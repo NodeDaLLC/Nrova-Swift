@@ -1,5 +1,7 @@
 # Nrova Swift
 
+**Current version: `1.0.0`** &nbsp;·&nbsp; available at runtime as `Nrova.version`.
+
 The official Swift package for the **Nrova** HTTP APIs. One typed
 client, one auth scheme, every public service Nrova exposes — built
 on `async`/`await`, `Codable`, and pure `URLSession`. No third-party
@@ -8,7 +10,8 @@ dependencies.
 ```swift
 import Nrova
 
-let client = NrovaClient(apiKey: ProcessInfo.processInfo.environment["NROVA_KEY"]!)
+// Reads `NrovaAPIKey` (and optional `NrovaOrganizationId`) from Info.plist.
+let client = try NrovaClient.fromInfoPlist()
 
 let latest = try await client.distribution.latest(
     appId: "acme-notes",
@@ -16,12 +19,15 @@ let latest = try await client.distribution.latest(
     channel: .stable
 )
 print("Latest version:", latest.artifact.version ?? latest.release.version)
+print("SDK version:", Nrova.version) // "1.0.0"
 ```
 
 ## Table of contents
 
+- [Version](#version)
 - [Requirements](#requirements)
 - [Installation](#installation)
+- [Configuration via Info.plist](#configuration-via-infoplist)
 - [Authentication](#authentication)
 - [Top-level client](#top-level-client)
 - [Services](#services)
@@ -38,6 +44,23 @@ print("Latest version:", latest.artifact.version ?? latest.release.version)
 - [Configuration reference](#configuration-reference)
 - [License](#license)
 
+---
+
+## Version
+
+| | |
+| --- | --- |
+| **SDK version** | `1.0.0` |
+| **Runtime constant** | `Nrova.version` |
+| **Schema** | `nrova.distribution.v1` (Distribution API) |
+
+`Nrova.version` is updated in lockstep with the released git tag — log
+it at startup to make support tickets easier to triage:
+
+```swift
+print("Nrova SDK \(Nrova.version) booted at \(Date())")
+```
+
 ## Requirements
 
 | Platform | Minimum |
@@ -53,11 +76,23 @@ Tested on Swift 6.x. No third-party dependencies — only Foundation.
 
 ## Installation
 
-Add the package to your `Package.swift`:
+### Swift Package Manager (Xcode)
+
+1. **File → Add Package Dependencies…**
+2. Paste the repo URL: `https://github.com/Nrova-LLC/Nrova-Swift.git`
+3. **Dependency Rule:** *Up to Next Major Version* → **`1.0.0`**
+4. Add the `Nrova` product to your app target.
+
+### Swift Package Manager (`Package.swift`)
+
+Pin to the **1.x** line:
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/Nrova-LLC/Nrova-Swift.git", from: "1.0.0")
+    .package(
+        url: "https://github.com/Nrova-LLC/Nrova-Swift.git",
+        from: "1.0.0"          // 1.0.0 ≤ Nrova < 2.0.0
+    )
 ]
 ```
 
@@ -72,8 +107,100 @@ Then declare the dependency on the `Nrova` library:
 )
 ```
 
-Or, in Xcode: **File → Add Package Dependencies…** and paste the
-repository URL.
+## Configuration via Info.plist
+
+> **Don't hardcode your API key.** Drop it into your target's
+> `Info.plist` and load it with
+> `NrovaClient.fromInfoPlist()` — that way you keep secrets out of
+> source control and out of compiled binaries (e.g. via per-build
+> `.xcconfig` or CI substitution).
+
+### 1. Add the keys
+
+Open your app target's `Info.plist` in Xcode and add:
+
+| Key | Type | Required | Description |
+| --- | --- | --- | --- |
+| `NrovaAPIKey` | String | ✅ | API key issued by the Nrova dashboard. |
+| `NrovaOrganizationId` | String | ✅ recommended | The in-source default (`NrovaConfiguration.defaultOrganizationId`) is a placeholder decoy — production apps must override it with their real organization id. |
+
+Source-level equivalent:
+
+```xml
+<key>NrovaAPIKey</key>
+<string>sk_live_replace_me</string>
+
+<key>NrovaOrganizationId</key>
+<string>YOUR_ORG_ID_HERE</string>
+```
+
+### 2. Build the client
+
+```swift
+import Nrova
+
+@main
+struct MyApp: App {
+    let nrova: NrovaClient
+
+    init() {
+        do {
+            self.nrova = try NrovaClient.fromInfoPlist()
+        } catch {
+            fatalError("Nrova: \(error.localizedDescription)")
+        }
+    }
+
+    var body: some Scene { /* … */ }
+}
+```
+
+`fromInfoPlist()` throws `NrovaConfiguration.InfoPlistError` if the
+required entries are missing — fail fast at launch instead of
+mysteriously 401'ing later:
+
+```swift
+do {
+    let client = try NrovaClient.fromInfoPlist()
+} catch NrovaConfiguration.InfoPlistError.missingAPIKey(let key, _) {
+    print("Add `\(key)` to Info.plist before launching.")
+}
+```
+
+### 3. (Optional) Rename the plist keys
+
+If you want to namespace under your app's bundle identifier:
+
+```swift
+let keys = NrovaConfiguration.InfoPlistKeys(
+    apiKey: "MyApp.NrovaAPIKey",
+    organizationId: "MyApp.NrovaOrganizationId"
+)
+let client = try NrovaClient.fromInfoPlist(keys: keys)
+```
+
+### 4. (Optional) Keep the key out of `Info.plist` itself
+
+For higher-security setups, leave `NrovaAPIKey` as `$(NROVA_API_KEY)`
+in `Info.plist` and inject the real value via an `.xcconfig`
+(`NROVA_API_KEY = $(NROVA_API_KEY_PROD)`) or CI environment variable
+before the build. Xcode rewrites the placeholder at build time, so
+the compiled binary still resolves it through `NrovaClient.fromInfoPlist()`.
+
+### Loading from a non-Info.plist file
+
+`NrovaConfiguration` can also be built from any in-memory dictionary
+(useful for reading a custom plist, a JSON config, the Keychain, or a
+remote config):
+
+```swift
+let plistURL = Bundle.main.url(forResource: "Nrova", withExtension: "plist")!
+let data = try Data(contentsOf: plistURL)
+let dictionary = try PropertyListSerialization
+    .propertyList(from: data, options: [], format: nil) as! [String: Any]
+
+let client = try NrovaClient.fromInfoDictionary(dictionary)
+```
 
 ## Authentication
 
@@ -83,10 +210,26 @@ Every authenticated request sends **both** the `Authorization: Bearer
 the Distribution API exposes a `GET /applications/public` feed that
 is also unauthenticated.
 
+The recommended path is the [Info.plist loader](#configuration-via-infoplist):
+
 ```swift
+let client = try NrovaClient.fromInfoPlist()
+```
+
+If you absolutely need to construct the client by hand (CLI tools,
+server-side Swift, tests) you can pass an explicit `apiKey` — but
+read it from an environment variable, keychain, or remote config,
+never a hardcoded string literal:
+
+```swift
+let env = ProcessInfo.processInfo.environment
+guard let apiKey = env["NROVA_API_KEY"],
+      let orgId  = env["NROVA_ORGANIZATION_ID"] else {
+    fatalError("NROVA_API_KEY / NROVA_ORGANIZATION_ID missing from environment")
+}
 let client = NrovaClient(
-    apiKey: "sk_live_…",
-    organizationId: NrovaConfiguration.defaultOrganizationId // "C1IRXJbknvZSTKMBxLDQ"
+    apiKey: apiKey,
+    organizationId: orgId // never a hardcoded literal
 )
 ```
 
@@ -122,6 +265,7 @@ client.legal           // LegalService
 Quick health check across every service in parallel:
 
 ```swift
+let client = try NrovaClient.fromInfoPlist()
 let report = try await client.healthAll()
 report.forEach { print("\($0.key): \($0.value.ok)") }
 ```
@@ -483,16 +627,31 @@ implementation.
 
 ## Configuration reference
 
+The canonical way to build a configuration is from `Info.plist`
+(see [Configuration via Info.plist](#configuration-via-infoplist)),
+but the underlying struct is fully public if you need to compose it
+manually:
+
 ```swift
 let configuration = NrovaConfiguration(
-    apiKey: "sk_live_…",
+    apiKey: keychainStoredKey,                                     // never hardcoded
     organizationId: NrovaConfiguration.defaultOrganizationId,
-    endpoints: .production, // override any individual URL to point at staging
+    endpoints: .production,                                        // override per-service URL for staging
     defaultHeaders: ["X-Trace-Id": traceId],
     timeout: 60
 )
 
 let client = NrovaClient(configuration: configuration)
+```
+
+You can also build it from any dictionary — handy when reading from a
+custom plist, JSON file, or remote config:
+
+```swift
+let configuration = try NrovaConfiguration.fromInfoDictionary([
+    "NrovaAPIKey": keychainStoredKey,
+    "NrovaOrganizationId": tenantId
+])
 ```
 
 `ServiceEndpoints.production` returns the default URLs for every
@@ -507,4 +666,4 @@ let configuration = NrovaConfiguration(apiKey: "local", endpoints: endpoints)
 
 ## License
 
-Copyright © Nrova LLC. All rights reserved.
+Copyright © 2026 NodeDa LLC. All rights reserved.

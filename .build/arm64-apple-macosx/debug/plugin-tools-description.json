@@ -40,6 +40,10 @@
         },
         {
           "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Core/InfoPlistConfiguration.swift"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Core/JSONValue.swift"
         },
         {
@@ -53,6 +57,10 @@
         {
           "kind" : "file",
           "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Core/NrovaTransport.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Core/NrovaVersion.swift"
         },
         {
           "kind" : "file",
@@ -134,10 +142,12 @@
         "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/CareersModels.swift.o",
         "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/CareersService.swift.o",
         "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/HTTPClient.swift.o",
+        "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/InfoPlistConfiguration.swift.o",
         "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/JSONValue.swift.o",
         "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/NrovaConfiguration.swift.o",
         "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/NrovaError.swift.o",
         "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/NrovaTransport.swift.o",
+        "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/NrovaVersion.swift.o",
         "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/SharedModels.swift.o",
         "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/DistributionModels.swift.o",
         "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/DistributionService.swift.o",
@@ -220,6 +230,10 @@
         },
         {
           "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/InfoPlistConfiguration.swift.o"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/JSONValue.swift.o"
         },
         {
@@ -233,6 +247,10 @@
         {
           "kind" : "file",
           "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/NrovaTransport.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/NrovaVersion.swift.o"
         },
         {
           "kind" : "file",
@@ -308,10 +326,12 @@
         "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Careers/CareersModels.swift",
         "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Careers/CareersService.swift",
         "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Core/HTTPClient.swift",
+        "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Core/InfoPlistConfiguration.swift",
         "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Core/JSONValue.swift",
         "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Core/NrovaConfiguration.swift",
         "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Core/NrovaError.swift",
         "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Core/NrovaTransport.swift",
+        "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Core/NrovaVersion.swift",
         "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Core/SharedModels.swift",
         "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Distribution/DistributionModels.swift",
         "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Distribution/DistributionService.swift",
@@ -546,10 +566,12 @@
       "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Careers/CareersModels.swift",
       "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Careers/CareersService.swift",
       "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Core/HTTPClient.swift",
+      "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Core/InfoPlistConfiguration.swift",
       "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Core/JSONValue.swift",
       "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Core/NrovaConfiguration.swift",
       "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Core/NrovaError.swift",
       "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Core/NrovaTransport.swift",
+      "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Core/NrovaVersion.swift",
       "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Core/SharedModels.swift",
       "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Distribution/DistributionModels.swift",
       "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Distribution/DistributionService.swift",
@@ -794,6 +816,10 @@
         },
         {
           "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Core/InfoPlistConfiguration.swift"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Core/JSONValue.swift"
         },
         {
@@ -807,6 +833,10 @@
         {
           "kind" : "file",
           "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Core/NrovaTransport.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Core/NrovaVersion.swift"
         },
         {
           "kind" : "file",
@@ -926,6 +956,10 @@
         },
         {
           "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/InfoPlistConfiguration.swift.o"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/JSONValue.swift.o"
         },
         {
@@ -959,6 +993,10 @@
         {
           "kind" : "file",
           "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/NrovaTransport.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/NrovaVersion.swift.o"
         },
         {
           "kind" : "file",
