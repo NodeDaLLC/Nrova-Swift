@@ -1,0 +1,1039 @@
+{
+  "builtTestProducts" : [
+    {
+      "binaryPath" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/NrovaPackageTests.xctest/Contents/MacOS/NrovaPackageTests",
+      "packagePath" : "/Users/anthony/Documents/GitHub/Nrova Swift",
+      "productName" : "NrovaPackageTests"
+    }
+  ],
+  "copyCommands" : {
+
+  },
+  "explicitTargetDependencyImportCheckingMode" : {
+    "none" : {
+
+    }
+  },
+  "generatedSourceTargetSet" : [
+
+  ],
+  "pluginDescriptions" : [
+
+  ],
+  "swiftCommands" : {
+    "C.Nrova-arm64-apple-macosx-debug.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/sources",
+      "importPath" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Careers/CareersModels.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Careers/CareersService.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Core/HTTPClient.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Core/JSONValue.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Core/NrovaConfiguration.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Core/NrovaError.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Core/NrovaTransport.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Core/SharedModels.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Distribution/DistributionModels.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Distribution/DistributionService.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/FeatureFlags/FeatureFlagsModels.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/FeatureFlags/FeatureFlagsService.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Legal/LegalModels.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Legal/LegalService.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Newsroom/NewsroomModels.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Newsroom/NewsroomService.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/NrovaClient.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Sales/SalesModels.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Sales/SalesService.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Support/SupportModels.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Support/SupportService.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/SystemStatus/SystemStatusModels.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/SystemStatus/SystemStatusService.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "Nrova",
+      "moduleOutputPath" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Modules/Nrova.swiftmodule",
+      "objects" : [
+        "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/CareersModels.swift.o",
+        "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/CareersService.swift.o",
+        "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/HTTPClient.swift.o",
+        "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/JSONValue.swift.o",
+        "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/NrovaConfiguration.swift.o",
+        "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/NrovaError.swift.o",
+        "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/NrovaTransport.swift.o",
+        "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/SharedModels.swift.o",
+        "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/DistributionModels.swift.o",
+        "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/DistributionService.swift.o",
+        "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/FeatureFlagsModels.swift.o",
+        "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/FeatureFlagsService.swift.o",
+        "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/LegalModels.swift.o",
+        "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/LegalService.swift.o",
+        "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/NewsroomModels.swift.o",
+        "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/NewsroomService.swift.o",
+        "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/NrovaClient.swift.o",
+        "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/SalesModels.swift.o",
+        "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/SalesService.swift.o",
+        "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/SupportModels.swift.o",
+        "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/SupportService.swift.o",
+        "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/SystemStatusModels.swift.o",
+        "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/SystemStatusService.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx12.0",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-j10",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/include/Nrova-Swift.h",
+        "-swift-version",
+        "5",
+        "-plugin-path",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "nrova_swift"
+      ],
+      "outputFileMapPath" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/CareersModels.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/CareersService.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/HTTPClient.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/JSONValue.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/NrovaConfiguration.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/NrovaError.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/NrovaTransport.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/SharedModels.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/DistributionModels.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/DistributionService.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/FeatureFlagsModels.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/FeatureFlagsService.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/LegalModels.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/LegalService.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/NewsroomModels.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/NewsroomService.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/NrovaClient.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/SalesModels.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/SalesService.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/SupportModels.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/SupportService.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/SystemStatusModels.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/SystemStatusService.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Modules/Nrova.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Careers/CareersModels.swift",
+        "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Careers/CareersService.swift",
+        "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Core/HTTPClient.swift",
+        "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Core/JSONValue.swift",
+        "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Core/NrovaConfiguration.swift",
+        "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Core/NrovaError.swift",
+        "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Core/NrovaTransport.swift",
+        "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Core/SharedModels.swift",
+        "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Distribution/DistributionModels.swift",
+        "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Distribution/DistributionService.swift",
+        "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/FeatureFlags/FeatureFlagsModels.swift",
+        "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/FeatureFlags/FeatureFlagsService.swift",
+        "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Legal/LegalModels.swift",
+        "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Legal/LegalService.swift",
+        "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Newsroom/NewsroomModels.swift",
+        "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Newsroom/NewsroomService.swift",
+        "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/NrovaClient.swift",
+        "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Sales/SalesModels.swift",
+        "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Sales/SalesService.swift",
+        "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Support/SupportModels.swift",
+        "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Support/SupportService.swift",
+        "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/SystemStatus/SystemStatusModels.swift",
+        "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/SystemStatus/SystemStatusService.swift"
+      ],
+      "tempsPath" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.NrovaPackageTests-arm64-apple-macosx-debug.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/NrovaPackageTests.build/sources",
+      "importPath" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/NrovaPackageTests.derived/runner.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Modules/NrovaTests.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/NrovaPackageTests.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "NrovaPackageTests",
+      "moduleOutputPath" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Modules/NrovaPackageTests.swiftmodule",
+      "objects" : [
+        "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/NrovaPackageTests.build/runner.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx12.0",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-Xfrontend",
+        "-enable-cross-import-overlays",
+        "-j10",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/NrovaPackageTests.build/include/NrovaPackageTests-Swift.h",
+        "-plugin-path",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "nrova_swift"
+      ],
+      "outputFileMapPath" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/NrovaPackageTests.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/NrovaPackageTests.build/runner.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Modules/NrovaPackageTests.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/NrovaPackageTests.derived/runner.swift"
+      ],
+      "tempsPath" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/NrovaPackageTests.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.NrovaTests-arm64-apple-macosx-debug.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/NrovaTests.build/sources",
+      "importPath" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/Tests/NrovaTests/MockTransport.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/Tests/NrovaTests/NrovaClientTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Modules/Nrova.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/NrovaTests.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "NrovaTests",
+      "moduleOutputPath" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Modules/NrovaTests.swiftmodule",
+      "objects" : [
+        "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/NrovaTests.build/MockTransport.swift.o",
+        "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/NrovaTests.build/NrovaClientTests.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx14.0",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-Xfrontend",
+        "-enable-cross-import-overlays",
+        "-j10",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-swift-version",
+        "5",
+        "-plugin-path",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "nrova_swift"
+      ],
+      "outputFileMapPath" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/NrovaTests.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/NrovaTests.build/MockTransport.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/NrovaTests.build/NrovaClientTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Modules/NrovaTests.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/anthony/Documents/GitHub/Nrova Swift/Tests/NrovaTests/MockTransport.swift",
+        "/Users/anthony/Documents/GitHub/Nrova Swift/Tests/NrovaTests/NrovaClientTests.swift"
+      ],
+      "tempsPath" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/NrovaTests.build",
+      "wholeModuleOptimization" : false
+    }
+  },
+  "swiftFrontendCommands" : {
+
+  },
+  "swiftTargetScanArgs" : {
+    "Nrova" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "Nrova",
+      "-package-name",
+      "nrova_swift",
+      "-c",
+      "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Careers/CareersModels.swift",
+      "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Careers/CareersService.swift",
+      "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Core/HTTPClient.swift",
+      "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Core/JSONValue.swift",
+      "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Core/NrovaConfiguration.swift",
+      "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Core/NrovaError.swift",
+      "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Core/NrovaTransport.swift",
+      "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Core/SharedModels.swift",
+      "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Distribution/DistributionModels.swift",
+      "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Distribution/DistributionService.swift",
+      "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/FeatureFlags/FeatureFlagsModels.swift",
+      "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/FeatureFlags/FeatureFlagsService.swift",
+      "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Legal/LegalModels.swift",
+      "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Legal/LegalService.swift",
+      "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Newsroom/NewsroomModels.swift",
+      "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Newsroom/NewsroomService.swift",
+      "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/NrovaClient.swift",
+      "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Sales/SalesModels.swift",
+      "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Sales/SalesService.swift",
+      "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Support/SupportModels.swift",
+      "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Support/SupportService.swift",
+      "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/SystemStatus/SystemStatusModels.swift",
+      "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/SystemStatus/SystemStatusService.swift",
+      "-I",
+      "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx12.0",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-index-store-path",
+      "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-j10",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-emit-objc-header",
+      "-emit-objc-header-path",
+      "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/include/Nrova-Swift.h",
+      "-swift-version",
+      "5",
+      "-plugin-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "nrova_swift",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ],
+    "NrovaPackageTests" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "NrovaPackageTests",
+      "-package-name",
+      "nrova_swift",
+      "-c",
+      "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/NrovaPackageTests.derived/runner.swift",
+      "-I",
+      "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx12.0",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-index-store-path",
+      "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-Xfrontend",
+      "-enable-cross-import-overlays",
+      "-j10",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-emit-objc-header",
+      "-emit-objc-header-path",
+      "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/NrovaPackageTests.build/include/NrovaPackageTests-Swift.h",
+      "-plugin-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "nrova_swift",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ],
+    "NrovaTests" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "NrovaTests",
+      "-package-name",
+      "nrova_swift",
+      "-c",
+      "/Users/anthony/Documents/GitHub/Nrova Swift/Tests/NrovaTests/MockTransport.swift",
+      "/Users/anthony/Documents/GitHub/Nrova Swift/Tests/NrovaTests/NrovaClientTests.swift",
+      "-I",
+      "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx14.0",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-index-store-path",
+      "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-Xfrontend",
+      "-enable-cross-import-overlays",
+      "-j10",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-swift-version",
+      "5",
+      "-plugin-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "nrova_swift",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ]
+  },
+  "targetDependencyMap" : {
+    "Nrova" : [
+
+    ],
+    "NrovaPackageTests" : [
+      "NrovaTests",
+      "Nrova"
+    ],
+    "NrovaTests" : [
+      "Nrova"
+    ]
+  },
+  "testDiscoveryCommands" : {
+
+  },
+  "testEntryPointCommands" : {
+    "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/NrovaPackageTests.derived/runner.swift" : {
+      "inputs" : [
+
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/NrovaPackageTests.derived/runner.swift"
+        }
+      ]
+    }
+  },
+  "traitConfiguration" : {
+    "default" : {
+
+    }
+  },
+  "writeCommands" : {
+    "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Careers/CareersModels.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Careers/CareersService.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Core/HTTPClient.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Core/JSONValue.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Core/NrovaConfiguration.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Core/NrovaError.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Core/NrovaTransport.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Core/SharedModels.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Distribution/DistributionModels.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Distribution/DistributionService.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/FeatureFlags/FeatureFlagsModels.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/FeatureFlags/FeatureFlagsService.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Legal/LegalModels.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Legal/LegalService.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Newsroom/NewsroomModels.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Newsroom/NewsroomService.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/NrovaClient.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Sales/SalesModels.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Sales/SalesService.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Support/SupportModels.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/Support/SupportService.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/SystemStatus/SystemStatusModels.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/Nrova/SystemStatus/SystemStatusService.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/sources"
+    },
+    "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/NrovaPackageTests.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/NrovaPackageTests.derived/runner.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/NrovaPackageTests.build/sources"
+    },
+    "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/NrovaPackageTests.product/Objects.LinkFileList" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<link-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/CareersModels.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/CareersService.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/DistributionModels.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/DistributionService.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/FeatureFlagsModels.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/FeatureFlagsService.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/HTTPClient.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/JSONValue.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/LegalModels.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/LegalService.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/NewsroomModels.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/NewsroomService.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/NrovaClient.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/NrovaConfiguration.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/NrovaError.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/NrovaTransport.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/SalesModels.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/SalesService.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/SharedModels.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/SupportModels.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/SupportService.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/SystemStatusModels.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/Nrova.build/SystemStatusService.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/NrovaPackageTests.build/runner.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/NrovaTests.build/MockTransport.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/NrovaTests.build/NrovaClientTests.swift.o"
+        }
+      ],
+      "outputFilePath" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/NrovaPackageTests.product/Objects.LinkFileList"
+    },
+    "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/NrovaTests.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/Tests/NrovaTests/MockTransport.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/Tests/NrovaTests/NrovaClientTests.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/NrovaTests.build/sources"
+    },
+    "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt" : {
+      "alwaysOutOfDate" : true,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<swift-get-version>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+        }
+      ],
+      "outputFilePath" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+    }
+  }
+}
