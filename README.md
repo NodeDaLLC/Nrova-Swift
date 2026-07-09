@@ -1,6 +1,6 @@
-# Nrova Swift
+#NodeDa Kit
 
-**Current version: `1.0.0`** &nbsp;·&nbsp; available at runtime as `Nrova.version`.
+**Current version: `1.1.0`** &nbsp;·&nbsp; available at runtime as `Nrova.version`.
 
 The official Swift package for the **Nrova** HTTP APIs. One typed
 client, one auth scheme, every public service Nrova exposes — built
