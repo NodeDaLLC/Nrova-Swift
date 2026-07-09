@@ -1,17 +1,17 @@
-# Nrova Swift
+# NodeDa Vertex
 
-**Current version: `1.0.0`** &nbsp;·&nbsp; available at runtime as `Nrova.version`.
+**Current version: `1.1.0`** &nbsp;·&nbsp; available at runtime as `NodeDa.version`.
 
-The official Swift package for the **Nrova** HTTP APIs. One typed
-client, one auth scheme, every public service Nrova exposes — built
+The official Swift package for the **NodeDa Vertex** HTTP APIs. One typed
+client, one auth scheme, every public service NodeDa Vertex exposes — built
 on `async`/`await`, `Codable`, and pure `URLSession`. No third-party
 dependencies.
 
 ```swift
-import Nrova
+import NodeDa
 
-// Reads `NrovaAPIKey` (and optional `NrovaOrganizationId`) from Info.plist.
-let client = try NrovaClient.fromInfoPlist()
+// Reads `NodeDaAPIKey` (and optional `NodeDaOrganizationId`) from Info.plist.
+let client = try NodeDaClient.fromInfoPlist()
 
 let latest = try await client.distribution.latest(
     appId: "acme-notes",
@@ -19,7 +19,7 @@ let latest = try await client.distribution.latest(
     channel: .stable
 )
 print("Latest version:", latest.artifact.version ?? latest.release.version)
-print("SDK version:", Nrova.version) // "1.0.0"
+print("SDK version:", NodeDa.version) // "1.1.0"
 ```
 
 ## Table of contents
@@ -50,15 +50,17 @@ print("SDK version:", Nrova.version) // "1.0.0"
 
 | | |
 | --- | --- |
-| **SDK version** | `1.0.0` |
-| **Runtime constant** | `Nrova.version` |
+| **SDK version** | `1.1.0` |
+| **Runtime constant** | `NodeDa.version` |
+| **API base** | `https://api.nodeda.com` |
+| **Default org id** | `C1IRXJbknvZSTKMBxLDQ` |
 | **Schema** | `nrova.distribution.v1` (Distribution API) |
 
-`Nrova.version` is updated in lockstep with the released git tag — log
+`NodeDa.version` is updated in lockstep with the released git tag — log
 it at startup to make support tickets easier to triage:
 
 ```swift
-print("Nrova SDK \(Nrova.version) booted at \(Date())")
+print("NodeDa Vertex SDK \(NodeDa.version) booted at \(Date())")
 ```
 
 ## Requirements
@@ -79,9 +81,9 @@ Tested on Swift 6.x. No third-party dependencies — only Foundation.
 ### Swift Package Manager (Xcode)
 
 1. **File → Add Package Dependencies…**
-2. Paste the repo URL: `https://github.com/Nrova-LLC/Nrova-Swift.git`
-3. **Dependency Rule:** *Up to Next Major Version* → **`1.0.0`**
-4. Add the `Nrova` product to your app target.
+2. Paste the repo URL: `https://github.com/NodeDaLLC/Nrova-Swift.git`
+3. **Dependency Rule:** *Up to Next Major Version* → **`1.1.0`**
+4. Add the `NodeDa` product to your app target.
 
 ### Swift Package Manager (`Package.swift`)
 
@@ -90,19 +92,19 @@ Pin to the **1.x** line:
 ```swift
 dependencies: [
     .package(
-        url: "https://github.com/Nrova-LLC/Nrova-Swift.git",
-        from: "1.0.0"          // 1.0.0 ≤ Nrova < 2.0.0
+        url: "https://github.com/NodeDaLLC/Nrova-Swift.git",
+        from: "1.1.0"          // 1.1.0 ≤ NodeDa < 2.0.0
     )
 ]
 ```
 
-Then declare the dependency on the `Nrova` library:
+Then declare the dependency on the `NodeDa` library:
 
 ```swift
 .target(
     name: "MyApp",
     dependencies: [
-        .product(name: "Nrova", package: "Nrova-Swift")
+        .product(name: "NodeDa", package: "Nrova-Swift")
     ]
 )
 ```
@@ -111,7 +113,7 @@ Then declare the dependency on the `Nrova` library:
 
 > **Don't hardcode your API key.** Drop it into your target's
 > `Info.plist` and load it with
-> `NrovaClient.fromInfoPlist()` — that way you keep secrets out of
+> `NodeDaClient.fromInfoPlist()` — that way you keep secrets out of
 > source control and out of compiled binaries (e.g. via per-build
 > `.xcconfig` or CI substitution).
 
@@ -121,33 +123,37 @@ Open your app target's `Info.plist` in Xcode and add:
 
 | Key | Type | Required | Description |
 | --- | --- | --- | --- |
-| `NrovaAPIKey` | String | ✅ | API key issued by the Nrova dashboard. |
-| `NrovaOrganizationId` | String | ✅ recommended | The in-source default (`NrovaConfiguration.defaultOrganizationId`) is a placeholder decoy — production apps must override it with their real organization id. |
+| `NodeDaAPIKey` | String | ✅ | Your API key. Start with the placeholder `YOUR_NODEDA_API_KEY`, then replace it with a real key from the NodeDa Vertex dashboard (Developer → API keys). Leaving the placeholder in place makes `fromInfoPlist()` fail with a paste-ready snippet. |
+| `NodeDaOrganizationId` | String | ✅ | Organization id — use `C1IRXJbknvZSTKMBxLDQ`. |
 
 Source-level equivalent:
 
 ```xml
-<key>NrovaAPIKey</key>
-<string>sk_live_replace_me</string>
+<key>NodeDaAPIKey</key>
+<string>YOUR_NODEDA_API_KEY</string>
 
-<key>NrovaOrganizationId</key>
-<string>YOUR_ORG_ID_HERE</string>
+<key>NodeDaOrganizationId</key>
+<string>C1IRXJbknvZSTKMBxLDQ</string>
 ```
+
+If either key is missing (or the API key is still `YOUR_NODEDA_API_KEY`),
+`NodeDaClient.fromInfoPlist()` fails immediately and the error message
+includes that exact snippet so you can paste it into Info.plist.
 
 ### 2. Build the client
 
 ```swift
-import Nrova
+import NodeDa
 
 @main
 struct MyApp: App {
-    let nrova: NrovaClient
+    let client: NodeDaClient
 
     init() {
         do {
-            self.nrova = try NrovaClient.fromInfoPlist()
+            self.client = try NodeDaClient.fromInfoPlist()
         } catch {
-            fatalError("Nrova: \(error.localizedDescription)")
+            fatalError("NodeDa: \(error.localizedDescription)")
         }
     }
 
@@ -155,15 +161,16 @@ struct MyApp: App {
 }
 ```
 
-`fromInfoPlist()` throws `NrovaConfiguration.InfoPlistError` if the
-required entries are missing — fail fast at launch instead of
-mysteriously 401'ing later:
+`fromInfoPlist()` throws `NodeDaConfiguration.InfoPlistError` if the
+required entries are missing or still placeholders — fail fast at
+launch instead of mysteriously 401'ing later:
 
 ```swift
 do {
-    let client = try NrovaClient.fromInfoPlist()
-} catch NrovaConfiguration.InfoPlistError.missingAPIKey(let key, _) {
-    print("Add `\(key)` to Info.plist before launching.")
+    let client = try NodeDaClient.fromInfoPlist()
+} catch let error as NodeDaConfiguration.InfoPlistError {
+    // Prints the exact <key>/<string> pairs to paste into Info.plist.
+    fatalError(error.localizedDescription)
 }
 ```
 
@@ -172,34 +179,34 @@ do {
 If you want to namespace under your app's bundle identifier:
 
 ```swift
-let keys = NrovaConfiguration.InfoPlistKeys(
-    apiKey: "MyApp.NrovaAPIKey",
-    organizationId: "MyApp.NrovaOrganizationId"
+let keys = NodeDaConfiguration.InfoPlistKeys(
+    apiKey: "MyApp.NodeDaAPIKey",
+    organizationId: "MyApp.NodeDaOrganizationId"
 )
-let client = try NrovaClient.fromInfoPlist(keys: keys)
+let client = try NodeDaClient.fromInfoPlist(keys: keys)
 ```
 
 ### 4. (Optional) Keep the key out of `Info.plist` itself
 
-For higher-security setups, leave `NrovaAPIKey` as `$(NROVA_API_KEY)`
+For higher-security setups, leave `NodeDaAPIKey` as `$(NODEDA_API_KEY)`
 in `Info.plist` and inject the real value via an `.xcconfig`
-(`NROVA_API_KEY = $(NROVA_API_KEY_PROD)`) or CI environment variable
+(`NODEDA_API_KEY = $(NODEDA_API_KEY_PROD)`) or CI environment variable
 before the build. Xcode rewrites the placeholder at build time, so
-the compiled binary still resolves it through `NrovaClient.fromInfoPlist()`.
+the compiled binary still resolves it through `NodeDaClient.fromInfoPlist()`.
 
 ### Loading from a non-Info.plist file
 
-`NrovaConfiguration` can also be built from any in-memory dictionary
+`NodeDaConfiguration` can also be built from any in-memory dictionary
 (useful for reading a custom plist, a JSON config, the Keychain, or a
 remote config):
 
 ```swift
-let plistURL = Bundle.main.url(forResource: "Nrova", withExtension: "plist")!
+let plistURL = Bundle.main.url(forResource: "NodeDa", withExtension: "plist")!
 let data = try Data(contentsOf: plistURL)
 let dictionary = try PropertyListSerialization
     .propertyList(from: data, options: [], format: nil) as! [String: Any]
 
-let client = try NrovaClient.fromInfoDictionary(dictionary)
+let client = try NodeDaClient.fromInfoDictionary(dictionary)
 ```
 
 ## Authentication
@@ -213,7 +220,7 @@ is also unauthenticated.
 The recommended path is the [Info.plist loader](#configuration-via-infoplist):
 
 ```swift
-let client = try NrovaClient.fromInfoPlist()
+let client = try NodeDaClient.fromInfoPlist()
 ```
 
 If you absolutely need to construct the client by hand (CLI tools,
@@ -223,11 +230,11 @@ never a hardcoded string literal:
 
 ```swift
 let env = ProcessInfo.processInfo.environment
-guard let apiKey = env["NROVA_API_KEY"],
-      let orgId  = env["NROVA_ORGANIZATION_ID"] else {
-    fatalError("NROVA_API_KEY / NROVA_ORGANIZATION_ID missing from environment")
+guard let apiKey = env["NODEDA_API_KEY"],
+      let orgId  = env["NODEDA_ORGANIZATION_ID"] else {
+    fatalError("NODEDA_API_KEY / NODEDA_ORGANIZATION_ID missing from environment")
 }
-let client = NrovaClient(
+let client = NodeDaClient(
     apiKey: apiKey,
     organizationId: orgId // never a hardcoded literal
 )
@@ -248,8 +255,8 @@ Scopes you'll see across the SDK:
 
 ## Top-level client
 
-`NrovaClient` is the entry point and exposes one strongly-typed
-service per Nrova API:
+`NodeDaClient` is the entry point and exposes one strongly-typed
+service per NodeDa Vertex API:
 
 ```swift
 client.distribution    // DistributionService
@@ -265,7 +272,7 @@ client.legal           // LegalService
 Quick health check across every service in parallel:
 
 ```swift
-let client = try NrovaClient.fromInfoPlist()
+let client = try NodeDaClient.fromInfoPlist()
 let report = try await client.healthAll()
 report.forEach { print("\($0.key): \($0.value.ok)") }
 ```
@@ -570,23 +577,23 @@ for section in privacy.sections.sorted(by: { ($0.sortOrder ?? 0) < ($1.sortOrder
 
 ## Error handling
 
-Every call throws `NrovaError`. The API-level failure case carries
+Every call throws `NodeDaError`. The API-level failure case carries
 the documented slug (`invalid_api_key`, `not_found`, …) so you can
 branch on it without parsing strings:
 
 ```swift
 do {
     _ = try await client.distribution.getApplication(appId: "missing")
-} catch let NrovaError.api(error) where error.code == "not_found" {
+} catch let NodeDaError.api(error) where error.code == "not_found" {
     // App was recycled or never existed.
-} catch let NrovaError.api(error) where error.status == 401 {
+} catch let NodeDaError.api(error) where error.status == 401 {
     // Bad / missing key.
 } catch {
     // Transport, decoding, or unexpected status.
 }
 ```
 
-`NrovaError` cases:
+`NodeDaError` cases:
 
 - `invalidURL(String)` – path could not be composed (programmer error)
 - `transport(Error)` – underlying `URLSession` failure
@@ -596,10 +603,10 @@ do {
 
 ## Custom transports & testing
 
-The SDK talks to the network through the `NrovaTransport` protocol:
+The SDK talks to the network through the `NodeDaTransport` protocol:
 
 ```swift
-public protocol NrovaTransport: Sendable {
+public protocol NodeDaTransport: Sendable {
     func send(_ request: URLRequest) async throws -> (Data, URLResponse)
 }
 ```
@@ -607,22 +614,22 @@ public protocol NrovaTransport: Sendable {
 `URLSession` already conforms, but you can plug in your own:
 
 ```swift
-struct LoggingTransport: NrovaTransport {
-    let underlying: NrovaTransport
+struct LoggingTransport: NodeDaTransport {
+    let underlying: NodeDaTransport
     func send(_ request: URLRequest) async throws -> (Data, URLResponse) {
         print("→", request.httpMethod ?? "?", request.url?.absoluteString ?? "")
         return try await underlying.send(request)
     }
 }
 
-let client = NrovaClient(
+let client = NodeDaClient(
     apiKey: "…",
     transport: LoggingTransport(underlying: URLSession.shared)
 )
 ```
 
 This is also how the package tests stub the network — see
-`Tests/NrovaTests/MockTransport.swift` for a reference
+`Tests/NodeDaTests/MockTransport.swift` for a reference
 implementation.
 
 ## Configuration reference
@@ -633,35 +640,44 @@ but the underlying struct is fully public if you need to compose it
 manually:
 
 ```swift
-let configuration = NrovaConfiguration(
+let configuration = NodeDaConfiguration(
     apiKey: keychainStoredKey,                                     // never hardcoded
-    organizationId: NrovaConfiguration.defaultOrganizationId,
-    endpoints: .production,                                        // override per-service URL for staging
+    organizationId: NodeDaConfiguration.defaultOrganizationId,     // C1IRXJbknvZSTKMBxLDQ
+    endpoints: .production,                                        // https://api.nodeda.com
     defaultHeaders: ["X-Trace-Id": traceId],
     timeout: 60
 )
 
-let client = NrovaClient(configuration: configuration)
+let client = NodeDaClient(configuration: configuration)
 ```
 
 You can also build it from any dictionary — handy when reading from a
 custom plist, JSON file, or remote config:
 
 ```swift
-let configuration = try NrovaConfiguration.fromInfoDictionary([
-    "NrovaAPIKey": keychainStoredKey,
-    "NrovaOrganizationId": tenantId
+let configuration = try NodeDaConfiguration.fromInfoDictionary([
+    "NodeDaAPIKey": keychainStoredKey,
+    "NodeDaOrganizationId": tenantId
 ])
 ```
 
-`ServiceEndpoints.production` returns the default URLs for every
-service. To redirect a single service (handy for local development
-against the emulator) replace just that URL:
+`ServiceEndpoints.production` points every service at the unified
+gateway (`https://api.nodeda.com`, no trailing slash). Paths are
+unchanged — only the host migrated from the legacy Cloud Function
+URLs (sunset November 1, 2026). To redirect a single surface at a
+proxy or emulator, replace just that URL:
 
 ```swift
 var endpoints = ServiceEndpoints.production
-endpoints.distribution = URL(string: "http://localhost:5001/nrovallc/us-central1/distributionApi")!
-let configuration = NrovaConfiguration(apiKey: "local", endpoints: endpoints)
+endpoints.distribution = URL(string: "http://localhost:8080")!
+let configuration = NodeDaConfiguration(apiKey: "local", endpoints: endpoints)
+```
+
+Or point everything at a custom base:
+
+```swift
+let endpoints = ServiceEndpoints(baseURL: URL(string: "https://staging.api.nodeda.com")!)
+let configuration = NodeDaConfiguration(apiKey: "staging", endpoints: endpoints)
 ```
 
 ## License

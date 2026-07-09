@@ -1,0 +1,23 @@
+{
+  "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/NodeDa/Core/SharedModels.swift" : {
+    "const-values" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/SharedModels.swiftconstvalues",
+    "dependencies" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/SharedModels.d",
+    "diagnostics" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/SharedModels.dia",
+    "object" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/SharedModels.o",
+    "swift-dependencies" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/SharedModels.swiftdeps"
+  },
+  "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/NodeDa/Distribution/DistributionModels.swift" : {
+    "const-values" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/DistributionModels.swiftconstvalues",
+    "dependencies" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/DistributionModels.d",
+    "diagnostics" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/DistributionModels.dia",
+    "object" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/DistributionModels.o",
+    "swift-dependencies" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/DistributionModels.swiftdeps"
+  },
+  "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/NodeDa/Distribution/DistributionService.swift" : {
+    "const-values" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/DistributionService.swiftconstvalues",
+    "dependencies" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/DistributionService.d",
+    "diagnostics" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/DistributionService.dia",
+    "object" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/DistributionService.o",
+    "swift-dependencies" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/DistributionService.swiftdeps"
+  }
+}

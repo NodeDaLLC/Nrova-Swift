@@ -2,7 +2,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "Nrova",
+    name: "NodeDa",
     platforms: [
         .iOS(.v15),
         .macOS(.v12),
@@ -12,19 +12,19 @@ let package = Package(
     ],
     products: [
         .library(
-            name: "Nrova",
-            targets: ["Nrova"]
+            name: "NodeDa",
+            targets: ["NodeDa"]
         )
     ],
     targets: [
         .target(
-            name: "Nrova",
-            path: "Sources/Nrova"
+            name: "NodeDa",
+            path: "Sources/NodeDa"
         ),
         .testTarget(
-            name: "NrovaTests",
-            dependencies: ["Nrova"],
-            path: "Tests/NrovaTests"
+            name: "NodeDaTests",
+            dependencies: ["NodeDa"],
+            path: "Tests/NodeDaTests"
         )
     ]
 )

@@ -1,0 +1,403 @@
+import XCTest
+@testable import NodeDa
+
+final class NodeDaClientTests: XCTestCase {
+    // MARK: - Configuration
+
+    func testDefaultConfigurationUsesProductionEndpoints() {
+        let configuration = NodeDaConfiguration(apiKey: "test")
+        let unified = NodeDaConfiguration.unifiedAPIBaseURL.absoluteString
+
+        XCTAssertEqual(configuration.organizationId, "C1IRXJbknvZSTKMBxLDQ")
+        XCTAssertEqual(configuration.organizationId, NodeDaConfiguration.defaultOrganizationId)
+        XCTAssertEqual(configuration.endpoints.distribution.absoluteString, unified)
+        XCTAssertEqual(configuration.endpoints.support.absoluteString, unified)
+        XCTAssertEqual(configuration.endpoints.sales.absoluteString, unified)
+        XCTAssertEqual(configuration.endpoints.careers.absoluteString, unified)
+        XCTAssertEqual(configuration.endpoints.newsroom.absoluteString, unified)
+        XCTAssertEqual(configuration.endpoints.developer.absoluteString, unified)
+        XCTAssertEqual(configuration.endpoints.systemStatus.absoluteString, unified)
+        XCTAssertEqual(configuration.endpoints.legalPolicies.absoluteString, unified)
+    }
+
+    func testClientExposesEveryService() {
+        let client = NodeDaClient(apiKey: "test", transport: MockTransport())
+        _ = client.distribution
+        _ = client.support
+        _ = client.sales
+        _ = client.careers
+        _ = client.newsroom
+        _ = client.featureFlags
+        _ = client.systemStatus
+        _ = client.legal
+    }
+
+    // MARK: - Distribution wiring
+
+    func testDistributionListApplicationsRequest() async throws {
+        let orgId = NodeDaConfiguration.defaultOrganizationId
+        let mock = MockTransport(responder: { request in
+            XCTAssertEqual(request.httpMethod, "GET")
+            XCTAssertEqual(
+                request.url?.absoluteString,
+                "https://api.nodeda.com/v1/organizations/\(orgId)/applications"
+            )
+            XCTAssertEqual(request.value(forHTTPHeaderField: "Authorization"), "Bearer test-key")
+            XCTAssertEqual(request.value(forHTTPHeaderField: "X-API-Key"), "test-key")
+
+            let json = """
+            {
+              "schema": "nrova.distribution.v1",
+              "orgId": "\(orgId)",
+              "applications": [
+                {
+                  "id": "acme-notes",
+                  "slug": "acme-notes",
+                  "name": "Acme Notes",
+                  "platforms": ["macos", "windows"],
+                  "createdAt": "2026-04-09T12:00:00.000Z",
+                  "updatedAt": "2026-06-01T14:00:00.000Z"
+                }
+              ]
+            }
+            """
+            return (Data(json.utf8), MockTransport.response(for: request, status: 200))
+        })
+
+        let client = NodeDaClient(apiKey: "test-key", transport: mock)
+        let response = try await client.distribution.listApplications()
+        XCTAssertEqual(response.applications.count, 1)
+        XCTAssertEqual(response.applications.first?.id, "acme-notes")
+        XCTAssertEqual(response.applications.first?.platforms, [.macos, .windows])
+    }
+
+    func testDistributionLatestEncodesQueryAndDecodesPayload() async throws {
+        let orgId = NodeDaConfiguration.defaultOrganizationId
+        let mock = MockTransport(responder: { request in
+            XCTAssertEqual(request.httpMethod, "GET")
+            let url = request.url!
+            XCTAssertEqual(url.path, "/v1/organizations/\(orgId)/applications/acme-notes/latest")
+            let items = URLComponents(url: url, resolvingAgainstBaseURL: false)?.queryItems ?? []
+            XCTAssertTrue(items.contains(URLQueryItem(name: "platform", value: "macos")))
+            XCTAssertTrue(items.contains(URLQueryItem(name: "channel", value: "stable")))
+            XCTAssertTrue(items.contains(URLQueryItem(name: "purpose", value: "install")))
+
+            let json = """
+            {
+              "schema": "nrova.distribution.v1",
+              "appId": "acme-notes",
+              "channel": "stable",
+              "platform": "macos",
+              "release": {
+                "id": "rel_abc",
+                "version": "1.2.3",
+                "channel": "stable",
+                "isYanked": false,
+                "artifacts": [
+                  {
+                    "platform": "macos",
+                    "fileName": "Acme-Notes-1.2.3.dmg",
+                    "downloadUrl": "https://example.com/file.dmg",
+                    "sizeBytes": 100,
+                    "contentType": "application/x-apple-diskimage",
+                    "installPurpose": "install"
+                  }
+                ]
+              },
+              "artifact": {
+                "platform": "macos",
+                "fileName": "Acme-Notes-1.2.3.dmg",
+                "downloadUrl": "https://example.com/file.dmg",
+                "sizeBytes": 100,
+                "contentType": "application/x-apple-diskimage",
+                "installPurpose": "install"
+              }
+            }
+            """
+            return (Data(json.utf8), MockTransport.response(for: request, status: 200))
+        })
+
+        let client = NodeDaClient(apiKey: "test-key", transport: mock)
+        let latest = try await client.distribution.latest(
+            appId: "acme-notes",
+            platform: .macos,
+            channel: .stable,
+            purpose: .install
+        )
+        XCTAssertEqual(latest.appId, "acme-notes")
+        XCTAssertEqual(latest.platform, .macos)
+        XCTAssertEqual(latest.artifact.fileName, "Acme-Notes-1.2.3.dmg")
+        XCTAssertEqual(latest.artifact.installPurpose, .install)
+    }
+
+    func testDistributionPublishReleaseSendsBody() async throws {
+        let mock = MockTransport(responder: { request in
+            XCTAssertEqual(request.httpMethod, "POST")
+            XCTAssertEqual(request.value(forHTTPHeaderField: "Content-Type"), "application/json")
+
+            let body = try XCTUnwrap(request.httpBody)
+            let decoded = try JSONDecoder().decode(PublishReleaseRequest.self, from: body)
+            XCTAssertEqual(decoded.version, "1.2.4")
+            XCTAssertEqual(decoded.channel, .stable)
+            XCTAssertEqual(decoded.artifacts.first?.fileName, "Acme.zip")
+
+            let json = """
+            {
+              "schema": "nrova.distribution.v1",
+              "release": {
+                "id": "rel_new",
+                "version": "1.2.4",
+                "channel": "stable",
+                "isYanked": false,
+                "artifacts": [
+                  {
+                    "platform": "macos",
+                    "fileName": "Acme.zip",
+                    "downloadUrl": "https://example.com/file.zip",
+                    "sizeBytes": 200,
+                    "contentType": "application/zip"
+                  }
+                ]
+              }
+            }
+            """
+            return (Data(json.utf8), MockTransport.response(for: request, status: 200))
+        })
+
+        let client = NodeDaClient(apiKey: "test-key", transport: mock)
+        let request = PublishReleaseRequest(
+            version: "1.2.4",
+            channel: .stable,
+            artifacts: [
+                DistributionArtifact(
+                    platform: .macos,
+                    fileName: "Acme.zip",
+                    downloadUrl: "https://example.com/file.zip",
+                    sizeBytes: 200,
+                    contentType: "application/zip"
+                )
+            ]
+        )
+        let release = try await client.distribution.publishRelease(appId: "acme-notes", request: request)
+        XCTAssertEqual(release.id, "rel_new")
+    }
+
+    // MARK: - Error mapping
+
+    func testAPIErrorIsSurfaced() async {
+        let mock = MockTransport(responder: { request in
+            let payload = #"{"error":"invalid_api_key","message":"Missing or unrecognized key."}"#
+            return (Data(payload.utf8), MockTransport.response(for: request, status: 401))
+        })
+
+        let client = NodeDaClient(apiKey: "bad", transport: mock)
+        do {
+            _ = try await client.distribution.listApplications()
+            XCTFail("Expected NodeDaError.api to be thrown")
+        } catch let NodeDaError.api(apiError) {
+            XCTAssertEqual(apiError.status, 401)
+            XCTAssertEqual(apiError.code, "invalid_api_key")
+            XCTAssertEqual(apiError.message, "Missing or unrecognized key.")
+        } catch {
+            XCTFail("Unexpected error: \(error)")
+        }
+    }
+
+    // MARK: - Feature flags
+
+    func testFeatureFlagsEvaluatePostsBody() async throws {
+        let orgId = NodeDaConfiguration.defaultOrganizationId
+        let mock = MockTransport(responder: { request in
+            XCTAssertEqual(request.httpMethod, "POST")
+            XCTAssertEqual(
+                request.url?.absoluteString,
+                "https://api.nodeda.com/v1/organizations/\(orgId)/evaluate"
+            )
+
+            let body = try XCTUnwrap(request.httpBody)
+            struct Sent: Decodable { let subjectId: String; let countryCode: String?; let flagKeys: [String]? }
+            let sent = try JSONDecoder().decode(Sent.self, from: body)
+            XCTAssertEqual(sent.subjectId, "user-1")
+            XCTAssertEqual(sent.countryCode, "US")
+            XCTAssertEqual(sent.flagKeys, ["dark_mode"])
+
+            let json = """
+            {
+              "orgId": "\(orgId)",
+              "subjectId": "user-1",
+              "countryCode": "US",
+              "evaluatedAt": "2026-06-09T00:00:00.000Z",
+              "results": { "dark_mode": true }
+            }
+            """
+            return (Data(json.utf8), MockTransport.response(for: request, status: 200))
+        })
+
+        let client = NodeDaClient(apiKey: "test-key", transport: mock)
+        let enabled = try await client.featureFlags.isEnabled(
+            flagKey: "dark_mode",
+            subjectId: "user-1",
+            countryCode: "US"
+        )
+        XCTAssertTrue(enabled)
+    }
+
+    // MARK: - Info.plist loader
+
+    func testInfoDictionaryLoaderUsesProvidedKeyAndOrg() throws {
+        let configuration = try NodeDaConfiguration.fromInfoDictionary([
+            "NodeDaAPIKey": "sk_test_abc",
+            "NodeDaOrganizationId": "TenantXYZ"
+        ])
+        XCTAssertEqual(configuration.apiKey, "sk_test_abc")
+        XCTAssertEqual(configuration.organizationId, "TenantXYZ")
+    }
+
+    func testInfoDictionaryLoaderTrimsWhitespace() throws {
+        let configuration = try NodeDaConfiguration.fromInfoDictionary([
+            "NodeDaAPIKey": "  sk_test_abc  ",
+            "NodeDaOrganizationId": "  TenantXYZ  "
+        ])
+        XCTAssertEqual(configuration.apiKey, "sk_test_abc")
+        XCTAssertEqual(configuration.organizationId, "TenantXYZ")
+    }
+
+    func testInfoDictionaryLoaderHonoursCustomKeyNames() throws {
+        let keys = NodeDaConfiguration.InfoPlistKeys(
+            apiKey: "MyApp.NodeDaKey",
+            organizationId: "MyApp.NodeDaOrg"
+        )
+        let configuration = try NodeDaConfiguration.fromInfoDictionary(
+            [
+                "MyApp.NodeDaKey": "sk_test_abc",
+                "MyApp.NodeDaOrg": "TenantXYZ"
+            ],
+            keys: keys
+        )
+        XCTAssertEqual(configuration.apiKey, "sk_test_abc")
+        XCTAssertEqual(configuration.organizationId, "TenantXYZ")
+    }
+
+    func testInfoDictionaryLoaderThrowsWhenAPIKeyMissing() {
+        XCTAssertThrowsError(try NodeDaConfiguration.fromInfoDictionary([:])) { error in
+            guard case NodeDaConfiguration.InfoPlistError.missingAPIKey(let keys, _) = error else {
+                XCTFail("Expected missingAPIKey, got \(error)")
+                return
+            }
+            XCTAssertEqual(keys.apiKey, "NodeDaAPIKey")
+            let description = (error as LocalizedError).errorDescription ?? ""
+            XCTAssertTrue(description.contains("<key>NodeDaAPIKey</key>"))
+            XCTAssertTrue(description.contains("<string>YOUR_NODEDA_API_KEY</string>"))
+            XCTAssertTrue(description.contains("<key>NodeDaOrganizationId</key>"))
+            XCTAssertTrue(description.contains("<string>C1IRXJbknvZSTKMBxLDQ</string>"))
+        }
+    }
+
+    func testInfoDictionaryLoaderThrowsWhenAPIKeyEmpty() {
+        XCTAssertThrowsError(
+            try NodeDaConfiguration.fromInfoDictionary(["NodeDaAPIKey": "   "])
+        ) { error in
+            guard case NodeDaConfiguration.InfoPlistError.missingAPIKey = error else {
+                XCTFail("Expected missingAPIKey, got \(error)")
+                return
+            }
+        }
+    }
+
+    func testInfoDictionaryLoaderThrowsWhenAPIKeyIsPlaceholder() {
+        XCTAssertThrowsError(
+            try NodeDaConfiguration.fromInfoDictionary([
+                "NodeDaAPIKey": NodeDaConfiguration.apiKeyPlaceholder,
+                "NodeDaOrganizationId": NodeDaConfiguration.defaultOrganizationId
+            ])
+        ) { error in
+            guard case NodeDaConfiguration.InfoPlistError.unresolvedAPIKeyPlaceholder(let keys, let placeholder, _) = error else {
+                XCTFail("Expected unresolvedAPIKeyPlaceholder, got \(error)")
+                return
+            }
+            XCTAssertEqual(keys.apiKey, "NodeDaAPIKey")
+            XCTAssertEqual(placeholder, "YOUR_NODEDA_API_KEY")
+            let description = (error as LocalizedError).errorDescription ?? ""
+            XCTAssertTrue(description.contains("YOUR_NODEDA_API_KEY"))
+            XCTAssertTrue(description.contains("C1IRXJbknvZSTKMBxLDQ"))
+        }
+    }
+
+    func testInfoDictionaryLoaderThrowsWhenOrganizationEmpty() {
+        XCTAssertThrowsError(
+            try NodeDaConfiguration.fromInfoDictionary([
+                "NodeDaAPIKey": "sk_test_abc",
+                "NodeDaOrganizationId": ""
+            ])
+        ) { error in
+            guard case NodeDaConfiguration.InfoPlistError.missingOrganizationId(let keys, _) = error else {
+                XCTFail("Expected missingOrganizationId, got \(error)")
+                return
+            }
+            XCTAssertEqual(keys.organizationId, "NodeDaOrganizationId")
+        }
+    }
+
+    func testInfoDictionaryLoaderThrowsWhenOrganizationMissing() {
+        XCTAssertThrowsError(
+            try NodeDaConfiguration.fromInfoDictionary([
+                "NodeDaAPIKey": "sk_test_abc"
+            ])
+        ) { error in
+            guard case NodeDaConfiguration.InfoPlistError.missingOrganizationId(let keys, _) = error else {
+                XCTFail("Expected missingOrganizationId, got \(error)")
+                return
+            }
+            XCTAssertEqual(keys.organizationId, "NodeDaOrganizationId")
+            let description = (error as LocalizedError).errorDescription ?? ""
+            XCTAssertTrue(description.contains("C1IRXJbknvZSTKMBxLDQ"))
+        }
+    }
+
+    func testInfoPlistSetupSnippetUsesKnownPlaceholders() {
+        let snippet = NodeDaConfiguration.infoPlistSetupSnippet()
+        XCTAssertEqual(
+            snippet,
+            """
+            <key>NodeDaAPIKey</key>
+            <string>YOUR_NODEDA_API_KEY</string>
+            <key>NodeDaOrganizationId</key>
+            <string>C1IRXJbknvZSTKMBxLDQ</string>
+            """
+        )
+    }
+
+    func testNodeDaClientFromInfoDictionaryWiresEverything() throws {
+        let client = try NodeDaClient.fromInfoDictionary(
+            [
+                "NodeDaAPIKey": "sk_test_abc",
+                "NodeDaOrganizationId": NodeDaConfiguration.defaultOrganizationId
+            ],
+            transport: MockTransport()
+        )
+        XCTAssertEqual(client.configuration.apiKey, "sk_test_abc")
+        XCTAssertEqual(client.configuration.organizationId, NodeDaConfiguration.defaultOrganizationId)
+    }
+
+    // MARK: - Version constant
+
+    func testSDKVersionIsExposed() {
+        XCTAssertFalse(NodeDa.version.isEmpty)
+        XCTAssertEqual(NodeDa.version, "1.1.0")
+    }
+
+    // MARK: - Health
+
+    func testHealthEndpointSkipsAuth() async throws {
+        let mock = MockTransport(responder: { request in
+            XCTAssertNil(request.value(forHTTPHeaderField: "Authorization"))
+            XCTAssertNil(request.value(forHTTPHeaderField: "X-API-Key"))
+            let json = #"{"ok":true,"service":"nrova-api"}"#
+            return (Data(json.utf8), MockTransport.response(for: request, status: 200))
+        })
+        let client = NodeDaClient(apiKey: "test-key", transport: mock)
+        let health = try await client.distribution.health()
+        XCTAssertTrue(health.ok)
+        XCTAssertEqual(health.service, "nrova-api")
+    }
+}

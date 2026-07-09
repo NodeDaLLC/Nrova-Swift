@@ -1,0 +1,23 @@
+{
+  "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/NodeDa/Careers/CareersModels.swift" : {
+    "const-values" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/CareersModels.swiftconstvalues",
+    "dependencies" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/CareersModels.d",
+    "diagnostics" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/CareersModels.dia",
+    "object" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/CareersModels.o",
+    "swift-dependencies" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/CareersModels.swiftdeps"
+  },
+  "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/NodeDa/Careers/CareersService.swift" : {
+    "const-values" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/CareersService.swiftconstvalues",
+    "dependencies" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/CareersService.d",
+    "diagnostics" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/CareersService.dia",
+    "object" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/CareersService.o",
+    "swift-dependencies" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/CareersService.swiftdeps"
+  },
+  "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/NodeDa/Core/HTTPClient.swift" : {
+    "const-values" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/HTTPClient.swiftconstvalues",
+    "dependencies" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/HTTPClient.d",
+    "diagnostics" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/HTTPClient.dia",
+    "object" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/HTTPClient.o",
+    "swift-dependencies" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/HTTPClient.swiftdeps"
+  }
+}
