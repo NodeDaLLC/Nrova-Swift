@@ -1,0 +1,23 @@
+{
+  "/Users/anthony/Documents/GitHub/NodeDa-Kit/Sources/NodeDa/LLMHub/LLMHubService.swift" : {
+    "const-values" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/LLMHubService.swiftconstvalues",
+    "dependencies" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/LLMHubService.d",
+    "diagnostics" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/LLMHubService.dia",
+    "object" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/LLMHubService.o",
+    "swift-dependencies" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/LLMHubService.swiftdeps"
+  },
+  "/Users/anthony/Documents/GitHub/NodeDa-Kit/Sources/NodeDa/Legal/LegalModels.swift" : {
+    "const-values" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/LegalModels.swiftconstvalues",
+    "dependencies" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/LegalModels.d",
+    "diagnostics" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/LegalModels.dia",
+    "object" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/LegalModels.o",
+    "swift-dependencies" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/LegalModels.swiftdeps"
+  },
+  "/Users/anthony/Documents/GitHub/NodeDa-Kit/Sources/NodeDa/Legal/LegalService.swift" : {
+    "const-values" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/LegalService.swiftconstvalues",
+    "dependencies" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/LegalService.d",
+    "diagnostics" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/LegalService.dia",
+    "object" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/LegalService.o",
+    "swift-dependencies" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/LegalService.swiftdeps"
+  }
+}

@@ -1,15 +1,15 @@
 [
   {
     "contents" : {
-      "guid" : "Workspace:/Users/anthony/Documents/GitHub/Nrova Swift",
+      "guid" : "Workspace:/Users/anthony/Documents/GitHub/NodeDa-Kit",
       "name" : "NodeDa",
-      "path" : "/Users/anthony/Documents/GitHub/Nrova Swift",
+      "path" : "/Users/anthony/Documents/GitHub/NodeDa-Kit",
       "projects" : [
-        "facbcb36cd6004ef2e329ecfe7eb111e3c16c0284eb46916d9321aa61babad12",
-        "818edd0dec935aa6e7eaa4b2af8433a064b61514a6624356e712439551034a0b"
+        "5755ad4be1dbd13d1c0cd7e53e181a010fc3057e8a4e35d688c8f097a60adec8",
+        "3c72f3039762abfd5ae2a522428f5458d30141590e5e9ad25cb1b7ebaa70c3fb"
       ]
     },
-    "signature" : "2fcfba1264adae7e4496b85d9f599b4324aa6bbc0d105843745e93d1edc5458a",
+    "signature" : "42e4fa4b122699a941feb13a16af96f156b856c2070daf31ad97582f0afb76a5",
     "type" : "workspace"
   },
   {
@@ -100,7 +100,7 @@
             "WATCHOS_DEPLOYMENT_TARGET" : "9.0",
             "XROS_DEPLOYMENT_TARGET" : "1.0"
           },
-          "guid" : "PACKAGE:nrova swift::BUILDCONFIG_0",
+          "guid" : "PACKAGE:nodeda-kit::BUILDCONFIG_0",
           "impartedBuildProperties" : {
             "buildSettings" : {
 
@@ -188,7 +188,7 @@
             "WATCHOS_DEPLOYMENT_TARGET" : "9.0",
             "XROS_DEPLOYMENT_TARGET" : "1.0"
           },
-          "guid" : "PACKAGE:nrova swift::BUILDCONFIG_1",
+          "guid" : "PACKAGE:nodeda-kit::BUILDCONFIG_1",
           "impartedBuildProperties" : {
             "buildSettings" : {
 
@@ -204,7 +204,7 @@
             "children" : [
 
             ],
-            "guid" : "PACKAGE:nrova swift::MAINGROUP::REF_0",
+            "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_0",
             "name" : "AdditionalFiles",
             "path" : "/",
             "sourceTree" : "<absolute>",
@@ -214,7 +214,7 @@
             "children" : [
 
             ],
-            "guid" : "PACKAGE:nrova swift::MAINGROUP::REF_1",
+            "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_1",
             "name" : "Binaries",
             "path" : "/",
             "sourceTree" : "<absolute>",
@@ -224,7 +224,7 @@
             "children" : [
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nrova swift::MAINGROUP::REF_2::REF_0",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_2::REF_0",
                 "name" : "MockTransport.swift",
                 "path" : "MockTransport.swift",
                 "sourceTree" : "<group>",
@@ -232,16 +232,16 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nrova swift::MAINGROUP::REF_2::REF_1",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_2::REF_1",
                 "name" : "NodeDaClientTests.swift",
                 "path" : "NodeDaClientTests.swift",
                 "sourceTree" : "<group>",
                 "type" : "file"
               }
             ],
-            "guid" : "PACKAGE:nrova swift::MAINGROUP::REF_2",
-            "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/Tests/NodeDaTests",
-            "path" : "/Users/anthony/Documents/GitHub/Nrova Swift/Tests/NodeDaTests",
+            "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_2",
+            "name" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/Tests/NodeDaTests",
+            "path" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/Tests/NodeDaTests",
             "sourceTree" : "<absolute>",
             "type" : "group"
           },
@@ -249,7 +249,7 @@
             "children" : [
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nrova swift::MAINGROUP::REF_3::REF_0",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_0",
                 "name" : "Careers/CareersModels.swift",
                 "path" : "Careers/CareersModels.swift",
                 "sourceTree" : "<group>",
@@ -257,7 +257,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nrova swift::MAINGROUP::REF_3::REF_1",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_1",
                 "name" : "Careers/CareersService.swift",
                 "path" : "Careers/CareersService.swift",
                 "sourceTree" : "<group>",
@@ -265,7 +265,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nrova swift::MAINGROUP::REF_3::REF_2",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_2",
                 "name" : "Core/HTTPClient.swift",
                 "path" : "Core/HTTPClient.swift",
                 "sourceTree" : "<group>",
@@ -273,7 +273,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nrova swift::MAINGROUP::REF_3::REF_3",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_3",
                 "name" : "Core/InfoPlistConfiguration.swift",
                 "path" : "Core/InfoPlistConfiguration.swift",
                 "sourceTree" : "<group>",
@@ -281,7 +281,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nrova swift::MAINGROUP::REF_3::REF_4",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_4",
                 "name" : "Core/JSONValue.swift",
                 "path" : "Core/JSONValue.swift",
                 "sourceTree" : "<group>",
@@ -289,7 +289,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nrova swift::MAINGROUP::REF_3::REF_5",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_5",
                 "name" : "Core/NodeDaConfiguration.swift",
                 "path" : "Core/NodeDaConfiguration.swift",
                 "sourceTree" : "<group>",
@@ -297,7 +297,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nrova swift::MAINGROUP::REF_3::REF_6",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_6",
                 "name" : "Core/NodeDaError.swift",
                 "path" : "Core/NodeDaError.swift",
                 "sourceTree" : "<group>",
@@ -305,7 +305,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nrova swift::MAINGROUP::REF_3::REF_7",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_7",
                 "name" : "Core/NodeDaTransport.swift",
                 "path" : "Core/NodeDaTransport.swift",
                 "sourceTree" : "<group>",
@@ -313,7 +313,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nrova swift::MAINGROUP::REF_3::REF_8",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_8",
                 "name" : "Core/NodeDaVersion.swift",
                 "path" : "Core/NodeDaVersion.swift",
                 "sourceTree" : "<group>",
@@ -321,7 +321,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nrova swift::MAINGROUP::REF_3::REF_9",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_9",
                 "name" : "Core/SharedModels.swift",
                 "path" : "Core/SharedModels.swift",
                 "sourceTree" : "<group>",
@@ -329,7 +329,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nrova swift::MAINGROUP::REF_3::REF_10",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_10",
                 "name" : "Distribution/DistributionModels.swift",
                 "path" : "Distribution/DistributionModels.swift",
                 "sourceTree" : "<group>",
@@ -337,7 +337,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nrova swift::MAINGROUP::REF_3::REF_11",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_11",
                 "name" : "Distribution/DistributionService.swift",
                 "path" : "Distribution/DistributionService.swift",
                 "sourceTree" : "<group>",
@@ -345,7 +345,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nrova swift::MAINGROUP::REF_3::REF_12",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_12",
                 "name" : "FeatureFlags/FeatureFlagsModels.swift",
                 "path" : "FeatureFlags/FeatureFlagsModels.swift",
                 "sourceTree" : "<group>",
@@ -353,7 +353,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nrova swift::MAINGROUP::REF_3::REF_13",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_13",
                 "name" : "FeatureFlags/FeatureFlagsService.swift",
                 "path" : "FeatureFlags/FeatureFlagsService.swift",
                 "sourceTree" : "<group>",
@@ -361,7 +361,23 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nrova swift::MAINGROUP::REF_3::REF_14",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_14",
+                "name" : "LLMHub/LLMHubModels.swift",
+                "path" : "LLMHub/LLMHubModels.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_15",
+                "name" : "LLMHub/LLMHubService.swift",
+                "path" : "LLMHub/LLMHubService.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_16",
                 "name" : "Legal/LegalModels.swift",
                 "path" : "Legal/LegalModels.swift",
                 "sourceTree" : "<group>",
@@ -369,7 +385,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nrova swift::MAINGROUP::REF_3::REF_15",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_17",
                 "name" : "Legal/LegalService.swift",
                 "path" : "Legal/LegalService.swift",
                 "sourceTree" : "<group>",
@@ -377,7 +393,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nrova swift::MAINGROUP::REF_3::REF_16",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_18",
                 "name" : "Newsroom/NewsroomModels.swift",
                 "path" : "Newsroom/NewsroomModels.swift",
                 "sourceTree" : "<group>",
@@ -385,7 +401,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nrova swift::MAINGROUP::REF_3::REF_17",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_19",
                 "name" : "Newsroom/NewsroomService.swift",
                 "path" : "Newsroom/NewsroomService.swift",
                 "sourceTree" : "<group>",
@@ -393,7 +409,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nrova swift::MAINGROUP::REF_3::REF_18",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_20",
                 "name" : "NodeDaClient.swift",
                 "path" : "NodeDaClient.swift",
                 "sourceTree" : "<group>",
@@ -401,7 +417,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nrova swift::MAINGROUP::REF_3::REF_19",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_21",
                 "name" : "Sales/SalesModels.swift",
                 "path" : "Sales/SalesModels.swift",
                 "sourceTree" : "<group>",
@@ -409,7 +425,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nrova swift::MAINGROUP::REF_3::REF_20",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_22",
                 "name" : "Sales/SalesService.swift",
                 "path" : "Sales/SalesService.swift",
                 "sourceTree" : "<group>",
@@ -417,7 +433,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nrova swift::MAINGROUP::REF_3::REF_21",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_23",
                 "name" : "Support/SupportModels.swift",
                 "path" : "Support/SupportModels.swift",
                 "sourceTree" : "<group>",
@@ -425,7 +441,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nrova swift::MAINGROUP::REF_3::REF_22",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_24",
                 "name" : "Support/SupportService.swift",
                 "path" : "Support/SupportService.swift",
                 "sourceTree" : "<group>",
@@ -433,7 +449,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nrova swift::MAINGROUP::REF_3::REF_23",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_25",
                 "name" : "SystemStatus/SystemStatusModels.swift",
                 "path" : "SystemStatus/SystemStatusModels.swift",
                 "sourceTree" : "<group>",
@@ -441,16 +457,16 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nrova swift::MAINGROUP::REF_3::REF_24",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_26",
                 "name" : "SystemStatus/SystemStatusService.swift",
                 "path" : "SystemStatus/SystemStatusService.swift",
                 "sourceTree" : "<group>",
                 "type" : "file"
               }
             ],
-            "guid" : "PACKAGE:nrova swift::MAINGROUP::REF_3",
-            "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/NodeDa",
-            "path" : "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/NodeDa",
+            "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3",
+            "name" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/Sources/NodeDa",
+            "path" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/Sources/NodeDa",
             "sourceTree" : "<absolute>",
             "type" : "group"
           },
@@ -458,7 +474,7 @@
             "children" : [
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nrova swift::MAINGROUP::REF_4::REF_0",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_0",
                 "name" : "Careers/CareersModels.swift",
                 "path" : "Careers/CareersModels.swift",
                 "sourceTree" : "<group>",
@@ -466,7 +482,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nrova swift::MAINGROUP::REF_4::REF_1",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_1",
                 "name" : "Careers/CareersService.swift",
                 "path" : "Careers/CareersService.swift",
                 "sourceTree" : "<group>",
@@ -474,7 +490,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nrova swift::MAINGROUP::REF_4::REF_2",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_2",
                 "name" : "Core/HTTPClient.swift",
                 "path" : "Core/HTTPClient.swift",
                 "sourceTree" : "<group>",
@@ -482,7 +498,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nrova swift::MAINGROUP::REF_4::REF_3",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_3",
                 "name" : "Core/InfoPlistConfiguration.swift",
                 "path" : "Core/InfoPlistConfiguration.swift",
                 "sourceTree" : "<group>",
@@ -490,7 +506,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nrova swift::MAINGROUP::REF_4::REF_4",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_4",
                 "name" : "Core/JSONValue.swift",
                 "path" : "Core/JSONValue.swift",
                 "sourceTree" : "<group>",
@@ -498,7 +514,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nrova swift::MAINGROUP::REF_4::REF_5",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_5",
                 "name" : "Core/NodeDaConfiguration.swift",
                 "path" : "Core/NodeDaConfiguration.swift",
                 "sourceTree" : "<group>",
@@ -506,7 +522,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nrova swift::MAINGROUP::REF_4::REF_6",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_6",
                 "name" : "Core/NodeDaError.swift",
                 "path" : "Core/NodeDaError.swift",
                 "sourceTree" : "<group>",
@@ -514,7 +530,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nrova swift::MAINGROUP::REF_4::REF_7",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_7",
                 "name" : "Core/NodeDaTransport.swift",
                 "path" : "Core/NodeDaTransport.swift",
                 "sourceTree" : "<group>",
@@ -522,7 +538,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nrova swift::MAINGROUP::REF_4::REF_8",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_8",
                 "name" : "Core/NodeDaVersion.swift",
                 "path" : "Core/NodeDaVersion.swift",
                 "sourceTree" : "<group>",
@@ -530,7 +546,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nrova swift::MAINGROUP::REF_4::REF_9",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_9",
                 "name" : "Core/SharedModels.swift",
                 "path" : "Core/SharedModels.swift",
                 "sourceTree" : "<group>",
@@ -538,7 +554,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nrova swift::MAINGROUP::REF_4::REF_10",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_10",
                 "name" : "Distribution/DistributionModels.swift",
                 "path" : "Distribution/DistributionModels.swift",
                 "sourceTree" : "<group>",
@@ -546,7 +562,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nrova swift::MAINGROUP::REF_4::REF_11",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_11",
                 "name" : "Distribution/DistributionService.swift",
                 "path" : "Distribution/DistributionService.swift",
                 "sourceTree" : "<group>",
@@ -554,7 +570,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nrova swift::MAINGROUP::REF_4::REF_12",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_12",
                 "name" : "FeatureFlags/FeatureFlagsModels.swift",
                 "path" : "FeatureFlags/FeatureFlagsModels.swift",
                 "sourceTree" : "<group>",
@@ -562,7 +578,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nrova swift::MAINGROUP::REF_4::REF_13",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_13",
                 "name" : "FeatureFlags/FeatureFlagsService.swift",
                 "path" : "FeatureFlags/FeatureFlagsService.swift",
                 "sourceTree" : "<group>",
@@ -570,7 +586,23 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nrova swift::MAINGROUP::REF_4::REF_14",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_14",
+                "name" : "LLMHub/LLMHubModels.swift",
+                "path" : "LLMHub/LLMHubModels.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_15",
+                "name" : "LLMHub/LLMHubService.swift",
+                "path" : "LLMHub/LLMHubService.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_16",
                 "name" : "Legal/LegalModels.swift",
                 "path" : "Legal/LegalModels.swift",
                 "sourceTree" : "<group>",
@@ -578,7 +610,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nrova swift::MAINGROUP::REF_4::REF_15",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_17",
                 "name" : "Legal/LegalService.swift",
                 "path" : "Legal/LegalService.swift",
                 "sourceTree" : "<group>",
@@ -586,7 +618,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nrova swift::MAINGROUP::REF_4::REF_16",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_18",
                 "name" : "Newsroom/NewsroomModels.swift",
                 "path" : "Newsroom/NewsroomModels.swift",
                 "sourceTree" : "<group>",
@@ -594,7 +626,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nrova swift::MAINGROUP::REF_4::REF_17",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_19",
                 "name" : "Newsroom/NewsroomService.swift",
                 "path" : "Newsroom/NewsroomService.swift",
                 "sourceTree" : "<group>",
@@ -602,7 +634,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nrova swift::MAINGROUP::REF_4::REF_18",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_20",
                 "name" : "NodeDaClient.swift",
                 "path" : "NodeDaClient.swift",
                 "sourceTree" : "<group>",
@@ -610,7 +642,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nrova swift::MAINGROUP::REF_4::REF_19",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_21",
                 "name" : "Sales/SalesModels.swift",
                 "path" : "Sales/SalesModels.swift",
                 "sourceTree" : "<group>",
@@ -618,7 +650,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nrova swift::MAINGROUP::REF_4::REF_20",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_22",
                 "name" : "Sales/SalesService.swift",
                 "path" : "Sales/SalesService.swift",
                 "sourceTree" : "<group>",
@@ -626,7 +658,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nrova swift::MAINGROUP::REF_4::REF_21",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_23",
                 "name" : "Support/SupportModels.swift",
                 "path" : "Support/SupportModels.swift",
                 "sourceTree" : "<group>",
@@ -634,7 +666,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nrova swift::MAINGROUP::REF_4::REF_22",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_24",
                 "name" : "Support/SupportService.swift",
                 "path" : "Support/SupportService.swift",
                 "sourceTree" : "<group>",
@@ -642,7 +674,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nrova swift::MAINGROUP::REF_4::REF_23",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_25",
                 "name" : "SystemStatus/SystemStatusModels.swift",
                 "path" : "SystemStatus/SystemStatusModels.swift",
                 "sourceTree" : "<group>",
@@ -650,41 +682,41 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nrova swift::MAINGROUP::REF_4::REF_24",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_26",
                 "name" : "SystemStatus/SystemStatusService.swift",
                 "path" : "SystemStatus/SystemStatusService.swift",
                 "sourceTree" : "<group>",
                 "type" : "file"
               }
             ],
-            "guid" : "PACKAGE:nrova swift::MAINGROUP::REF_4",
-            "name" : "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/NodeDa",
-            "path" : "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/NodeDa",
+            "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4",
+            "name" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/Sources/NodeDa",
+            "path" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/Sources/NodeDa",
             "sourceTree" : "<absolute>",
             "type" : "group"
           }
         ],
-        "guid" : "PACKAGE:nrova swift::MAINGROUP",
+        "guid" : "PACKAGE:nodeda-kit::MAINGROUP",
         "name" : "",
         "path" : "",
         "sourceTree" : "<group>",
         "type" : "group"
       },
-      "guid" : "PACKAGE:nrova swift",
-      "path" : "/Users/anthony/Documents/GitHub/Nrova Swift/Package.swift",
-      "projectDirectory" : "/Users/anthony/Documents/GitHub/Nrova Swift",
+      "guid" : "PACKAGE:nodeda-kit",
+      "path" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/Package.swift",
+      "projectDirectory" : "/Users/anthony/Documents/GitHub/NodeDa-Kit",
       "projectIsPackage" : "true",
       "projectName" : "NodeDa",
       "targets" : [
-        "31f3f2ef1a46a554774df5d014d0ac03ad32b96ad843384a1056cc66b1a34858",
-        "c2d07dca10f3b2a9ec025405d526521075cfe7f74a6a1f52be0a0d1f48bb0d13",
-        "285f9a24ed36a41c3700dc25c9fd172ab3c053c1998ef0b2b3f4f5f3f3807616",
-        "afc47c4c0322bacc50b296b2d272906e8f6980fc6daec7956cea836c85bf7fdb",
-        "92f5e8c322442e4c1b1699405476f5fb5701d6d173cd305e166e1a43548b94a6",
-        "5c4c389e067c0348b3db9f9675ebbc181a41f50a044f4196122d01a0b9b81d4f"
+        "6fc995753e121fba2d2614d873faaab2503345f2e1ba5de03de42f762336cc9e",
+        "a37ca13b5d769aa08dd32c6a4647606370c98a9ae0042b61d47ff58b04425e85",
+        "060136de42159bf4ef5ff3dde97606062c5f9c7350a6e4deb6016742233cbff1",
+        "c8b3ebdbcd9599cb7795cbb559fe170c2d9c4e4c2e937408dcaef387edb11006",
+        "33ae3d6b71341c4fa356e555f1d93010d2a9e9ead139592bb34f82910555d217",
+        "39b6b472dfdd6f502e36b4decdcdcd94a9292f875e81bb1f6a5f0e1232e66e30"
       ]
     },
-    "signature" : "facbcb36cd6004ef2e329ecfe7eb111e3c16c0284eb46916d9321aa61babad12",
+    "signature" : "5755ad4be1dbd13d1c0cd7e53e181a010fc3057e8a4e35d688c8f097a60adec8",
     "type" : "project"
   },
   {
@@ -703,16 +735,16 @@
             "GENERATE_INFOPLIST_FILE" : "YES",
             "GENERATE_RESOURCE_ACCESSORS" : "YES",
             "INDEX_ENABLE_DATA_STORE" : "YES",
-            "IPHONEOS_DEPLOYMENT_TARGET" : "15.0",
-            "IPHONEOS_DEPLOYMENT_TARGET[__platform_filter=ios-maccatalyst]" : "15.0",
+            "IPHONEOS_DEPLOYMENT_TARGET" : "17.0",
+            "IPHONEOS_DEPLOYMENT_TARGET[__platform_filter=ios-maccatalyst]" : "17.0",
             "LD_RUNPATH_SEARCH_PATHS" : [
               "$(RPATH_ORIGIN)/Frameworks",
               "$(RPATH_ORIGIN)/../Frameworks",
               "$(inherited)"
             ],
-            "MACOSX_DEPLOYMENT_TARGET" : "12.0",
+            "MACOSX_DEPLOYMENT_TARGET" : "14.0",
             "PACKAGE_RESOURCE_TARGET_KIND" : "regular",
-            "PRODUCT_BUNDLE_IDENTIFIER" : "nrova-swift.NodeDaTests",
+            "PRODUCT_BUNDLE_IDENTIFIER" : "nodeda-kit.NodeDaTests",
             "PRODUCT_MODULE_NAME" : "NodeDaTests",
             "PRODUCT_NAME" : "$(TARGET_NAME)",
             "SDKROOT" : "auto",
@@ -724,17 +756,17 @@
             "SWIFT_DISABLE_PARSE_AS_LIBRARY" : "NO",
             "SWIFT_ENABLE_BARE_SLASH_REGEX" : "NO",
             "SWIFT_LIBRARIES_ONLY" : "YES",
-            "SWIFT_PACKAGE_NAME" : "nrova_swift",
+            "SWIFT_PACKAGE_NAME" : "nodeda_kit",
             "SWIFT_VERSION" : "5",
             "SYMBOL_GRAPH_EXTRACTOR_OUTPUT_DIR" : "$(TARGET_BUILD_DIR)/$(CURRENT_ARCH)/NodeDaTests.symbolgraphs",
             "TAPI_EXTRACT_API_OUTPUT_DIR" : "$(TARGET_BUILD_DIR)/$(CURRENT_ARCH)/NodeDaTests.symbolgraphs",
             "TARGET_NAME" : "NodeDaTests",
             "TARGET_TEMP_DIR_SUFFIX" : "-p",
-            "TVOS_DEPLOYMENT_TARGET" : "15.0",
-            "WATCHOS_DEPLOYMENT_TARGET" : "9.0",
+            "TVOS_DEPLOYMENT_TARGET" : "17.0",
+            "WATCHOS_DEPLOYMENT_TARGET" : "26.0",
             "XROS_DEPLOYMENT_TARGET" : "1.0"
           },
-          "guid" : "PACKAGE-PRODUCT:nrova swift_NodeDaTests.NodeDaTests::BUILDCONFIG_0",
+          "guid" : "PACKAGE-PRODUCT:nodeda-kit_NodeDaTests.NodeDaTests::BUILDCONFIG_0",
           "impartedBuildProperties" : {
             "buildSettings" : {
 
@@ -754,16 +786,16 @@
             "GENERATE_INFOPLIST_FILE" : "YES",
             "GENERATE_RESOURCE_ACCESSORS" : "YES",
             "INDEX_ENABLE_DATA_STORE" : "YES",
-            "IPHONEOS_DEPLOYMENT_TARGET" : "15.0",
-            "IPHONEOS_DEPLOYMENT_TARGET[__platform_filter=ios-maccatalyst]" : "15.0",
+            "IPHONEOS_DEPLOYMENT_TARGET" : "17.0",
+            "IPHONEOS_DEPLOYMENT_TARGET[__platform_filter=ios-maccatalyst]" : "17.0",
             "LD_RUNPATH_SEARCH_PATHS" : [
               "$(RPATH_ORIGIN)/Frameworks",
               "$(RPATH_ORIGIN)/../Frameworks",
               "$(inherited)"
             ],
-            "MACOSX_DEPLOYMENT_TARGET" : "12.0",
+            "MACOSX_DEPLOYMENT_TARGET" : "14.0",
             "PACKAGE_RESOURCE_TARGET_KIND" : "regular",
-            "PRODUCT_BUNDLE_IDENTIFIER" : "nrova-swift.NodeDaTests",
+            "PRODUCT_BUNDLE_IDENTIFIER" : "nodeda-kit.NodeDaTests",
             "PRODUCT_MODULE_NAME" : "NodeDaTests",
             "PRODUCT_NAME" : "$(TARGET_NAME)",
             "SDKROOT" : "auto",
@@ -775,17 +807,17 @@
             "SWIFT_DISABLE_PARSE_AS_LIBRARY" : "NO",
             "SWIFT_ENABLE_BARE_SLASH_REGEX" : "NO",
             "SWIFT_LIBRARIES_ONLY" : "YES",
-            "SWIFT_PACKAGE_NAME" : "nrova_swift",
+            "SWIFT_PACKAGE_NAME" : "nodeda_kit",
             "SWIFT_VERSION" : "5",
             "SYMBOL_GRAPH_EXTRACTOR_OUTPUT_DIR" : "$(TARGET_BUILD_DIR)/$(CURRENT_ARCH)/NodeDaTests.symbolgraphs",
             "TAPI_EXTRACT_API_OUTPUT_DIR" : "$(TARGET_BUILD_DIR)/$(CURRENT_ARCH)/NodeDaTests.symbolgraphs",
             "TARGET_NAME" : "NodeDaTests",
             "TARGET_TEMP_DIR_SUFFIX" : "-p",
-            "TVOS_DEPLOYMENT_TARGET" : "15.0",
-            "WATCHOS_DEPLOYMENT_TARGET" : "9.0",
+            "TVOS_DEPLOYMENT_TARGET" : "17.0",
+            "WATCHOS_DEPLOYMENT_TARGET" : "26.0",
             "XROS_DEPLOYMENT_TARGET" : "1.0"
           },
-          "guid" : "PACKAGE-PRODUCT:nrova swift_NodeDaTests.NodeDaTests::BUILDCONFIG_1",
+          "guid" : "PACKAGE-PRODUCT:nodeda-kit_NodeDaTests.NodeDaTests::BUILDCONFIG_1",
           "impartedBuildProperties" : {
             "buildSettings" : {
 
@@ -799,8 +831,8 @@
           "buildFiles" : [
             {
               "codeSignOnCopy" : "false",
-              "fileReference" : "PACKAGE:nrova swift::MAINGROUP::REF_2::REF_0",
-              "guid" : "PACKAGE-PRODUCT:nrova swift_NodeDaTests.NodeDaTests::BUILDPHASE_0::0",
+              "fileReference" : "PACKAGE:nodeda-kit::MAINGROUP::REF_2::REF_0",
+              "guid" : "PACKAGE-PRODUCT:nodeda-kit_NodeDaTests.NodeDaTests::BUILDPHASE_0::0",
               "platformFilters" : [
 
               ],
@@ -808,28 +840,28 @@
             },
             {
               "codeSignOnCopy" : "false",
-              "fileReference" : "PACKAGE:nrova swift::MAINGROUP::REF_2::REF_1",
-              "guid" : "PACKAGE-PRODUCT:nrova swift_NodeDaTests.NodeDaTests::BUILDPHASE_0::1",
+              "fileReference" : "PACKAGE:nodeda-kit::MAINGROUP::REF_2::REF_1",
+              "guid" : "PACKAGE-PRODUCT:nodeda-kit_NodeDaTests.NodeDaTests::BUILDPHASE_0::1",
               "platformFilters" : [
 
               ],
               "removeHeadersOnCopy" : "false"
             }
           ],
-          "guid" : "PACKAGE-PRODUCT:nrova swift_NodeDaTests.NodeDaTests::BUILDPHASE_0",
+          "guid" : "PACKAGE-PRODUCT:nodeda-kit_NodeDaTests.NodeDaTests::BUILDPHASE_0",
           "type" : "com.apple.buildphase.sources"
         },
         {
           "buildFiles" : [
             {
-              "guid" : "PACKAGE-PRODUCT:nrova swift_NodeDaTests.NodeDaTests::BUILDPHASE_1::0",
+              "guid" : "PACKAGE-PRODUCT:nodeda-kit_NodeDaTests.NodeDaTests::BUILDPHASE_1::0",
               "platformFilters" : [
 
               ],
               "targetReference" : "PACKAGE-TARGET:NodeDa"
             }
           ],
-          "guid" : "PACKAGE-PRODUCT:nrova swift_NodeDaTests.NodeDaTests::BUILDPHASE_1",
+          "guid" : "PACKAGE-PRODUCT:nodeda-kit_NodeDaTests.NodeDaTests::BUILDPHASE_1",
           "type" : "com.apple.buildphase.frameworks"
         }
       ],
@@ -847,17 +879,17 @@
           ]
         }
       ],
-      "guid" : "PACKAGE-PRODUCT:nrova swift_NodeDaTests.NodeDaTests",
+      "guid" : "PACKAGE-PRODUCT:nodeda-kit_NodeDaTests.NodeDaTests",
       "name" : "NodeDaTests-product",
       "productReference" : {
-        "guid" : "PRODUCTREF-PACKAGE-PRODUCT:nrova swift_NodeDaTests.NodeDaTests",
+        "guid" : "PRODUCTREF-PACKAGE-PRODUCT:nodeda-kit_NodeDaTests.NodeDaTests",
         "name" : "$(EXECUTABLE_NAME)",
         "type" : "file"
       },
       "productTypeIdentifier" : "com.apple.product-type.bundle.unit-test",
       "type" : "standard"
     },
-    "signature" : "31f3f2ef1a46a554774df5d014d0ac03ad32b96ad843384a1056cc66b1a34858",
+    "signature" : "6fc995753e121fba2d2614d873faaab2503345f2e1ba5de03de42f762336cc9e",
     "type" : "target"
   },
   {
@@ -867,16 +899,16 @@
         {
           "buildSettings" : {
             "DRIVERKIT_DEPLOYMENT_TARGET" : "21.0",
-            "IPHONEOS_DEPLOYMENT_TARGET" : "15.0",
-            "IPHONEOS_DEPLOYMENT_TARGET[__platform_filter=ios-maccatalyst]" : "15.0",
+            "IPHONEOS_DEPLOYMENT_TARGET" : "17.0",
+            "IPHONEOS_DEPLOYMENT_TARGET[__platform_filter=ios-maccatalyst]" : "17.0",
             "LD_RUNPATH_SEARCH_PATHS" : [
               "$(inherited)",
               "$(RPATH_ORIGIN)"
             ],
             "LINKER_DRIVER" : "swiftc",
-            "MACOSX_DEPLOYMENT_TARGET" : "12.0",
+            "MACOSX_DEPLOYMENT_TARGET" : "14.0",
             "PACKAGE_RESOURCE_TARGET_KIND" : "regular",
-            "PRODUCT_BUNDLE_IDENTIFIER" : "nrova-swift.NodeDaTests-test-runner",
+            "PRODUCT_BUNDLE_IDENTIFIER" : "nodeda-kit.NodeDaTests-test-runner",
             "PRODUCT_MODULE_NAME" : "NodeDaTests_test_runner",
             "PRODUCT_NAME" : "$(TARGET_NAME)",
             "SDKROOT" : "auto",
@@ -884,8 +916,8 @@
             "SKIP_INSTALL" : "NO",
             "SWIFT_VERSION" : "5.0",
             "TARGET_NAME" : "NodeDaTests-test-runner",
-            "TVOS_DEPLOYMENT_TARGET" : "15.0",
-            "WATCHOS_DEPLOYMENT_TARGET" : "9.0",
+            "TVOS_DEPLOYMENT_TARGET" : "17.0",
+            "WATCHOS_DEPLOYMENT_TARGET" : "26.0",
             "XROS_DEPLOYMENT_TARGET" : "1.0"
           },
           "guid" : "PACKAGE-TARGET:NodeDaTests_test_runner::BUILDCONFIG_0",
@@ -899,16 +931,16 @@
         {
           "buildSettings" : {
             "DRIVERKIT_DEPLOYMENT_TARGET" : "21.0",
-            "IPHONEOS_DEPLOYMENT_TARGET" : "15.0",
-            "IPHONEOS_DEPLOYMENT_TARGET[__platform_filter=ios-maccatalyst]" : "15.0",
+            "IPHONEOS_DEPLOYMENT_TARGET" : "17.0",
+            "IPHONEOS_DEPLOYMENT_TARGET[__platform_filter=ios-maccatalyst]" : "17.0",
             "LD_RUNPATH_SEARCH_PATHS" : [
               "$(inherited)",
               "$(RPATH_ORIGIN)"
             ],
             "LINKER_DRIVER" : "swiftc",
-            "MACOSX_DEPLOYMENT_TARGET" : "12.0",
+            "MACOSX_DEPLOYMENT_TARGET" : "14.0",
             "PACKAGE_RESOURCE_TARGET_KIND" : "regular",
-            "PRODUCT_BUNDLE_IDENTIFIER" : "nrova-swift.NodeDaTests-test-runner",
+            "PRODUCT_BUNDLE_IDENTIFIER" : "nodeda-kit.NodeDaTests-test-runner",
             "PRODUCT_MODULE_NAME" : "NodeDaTests_test_runner",
             "PRODUCT_NAME" : "$(TARGET_NAME)",
             "SDKROOT" : "auto",
@@ -916,8 +948,8 @@
             "SKIP_INSTALL" : "NO",
             "SWIFT_VERSION" : "5.0",
             "TARGET_NAME" : "NodeDaTests-test-runner",
-            "TVOS_DEPLOYMENT_TARGET" : "15.0",
-            "WATCHOS_DEPLOYMENT_TARGET" : "9.0",
+            "TVOS_DEPLOYMENT_TARGET" : "17.0",
+            "WATCHOS_DEPLOYMENT_TARGET" : "26.0",
             "XROS_DEPLOYMENT_TARGET" : "1.0"
           },
           "guid" : "PACKAGE-TARGET:NodeDaTests_test_runner::BUILDCONFIG_1",
@@ -944,7 +976,7 @@
               "platformFilters" : [
 
               ],
-              "targetReference" : "PACKAGE-PRODUCT:nrova swift_NodeDaTests.NodeDaTests"
+              "targetReference" : "PACKAGE-PRODUCT:nodeda-kit_NodeDaTests.NodeDaTests"
             }
           ],
           "guid" : "PACKAGE-TARGET:NodeDaTests_test_runner::BUILDPHASE_1",
@@ -959,7 +991,7 @@
       ],
       "dependencies" : [
         {
-          "guid" : "PACKAGE-PRODUCT:nrova swift_NodeDaTests.NodeDaTests",
+          "guid" : "PACKAGE-PRODUCT:nodeda-kit_NodeDaTests.NodeDaTests",
           "platformFilters" : [
 
           ]
@@ -975,7 +1007,7 @@
       "productTypeIdentifier" : "com.apple.product-type.tool.swiftpm-test-runner",
       "type" : "standard"
     },
-    "signature" : "c2d07dca10f3b2a9ec025405d526521075cfe7f74a6a1f52be0a0d1f48bb0d13",
+    "signature" : "a37ca13b5d769aa08dd32c6a4647606370c98a9ae0042b61d47ff58b04425e85",
     "type" : "target"
   },
   {
@@ -993,7 +1025,7 @@
             "TARGET_TEMP_DIR_SUFFIX" : "-p",
             "USES_SWIFTPM_UNSAFE_FLAGS" : "NO"
           },
-          "guid" : "PACKAGE-PRODUCT:nrova swift_NodeDa.NodeDa::BUILDCONFIG_0",
+          "guid" : "PACKAGE-PRODUCT:nodeda-kit_NodeDa.NodeDa::BUILDCONFIG_0",
           "impartedBuildProperties" : {
             "buildSettings" : {
 
@@ -1012,7 +1044,7 @@
             "TARGET_TEMP_DIR_SUFFIX" : "-p",
             "USES_SWIFTPM_UNSAFE_FLAGS" : "NO"
           },
-          "guid" : "PACKAGE-PRODUCT:nrova swift_NodeDa.NodeDa::BUILDCONFIG_1",
+          "guid" : "PACKAGE-PRODUCT:nodeda-kit_NodeDa.NodeDa::BUILDCONFIG_1",
           "impartedBuildProperties" : {
             "buildSettings" : {
 
@@ -1025,21 +1057,21 @@
         {
           "buildFiles" : [
             {
-              "guid" : "PACKAGE-PRODUCT:nrova swift_NodeDa.NodeDa::BUILDPHASE_0::0",
+              "guid" : "PACKAGE-PRODUCT:nodeda-kit_NodeDa.NodeDa::BUILDPHASE_0::0",
               "platformFilters" : [
 
               ],
               "targetReference" : "PACKAGE-TARGET:NodeDa"
             }
           ],
-          "guid" : "PACKAGE-PRODUCT:nrova swift_NodeDa.NodeDa::BUILDPHASE_0",
+          "guid" : "PACKAGE-PRODUCT:nodeda-kit_NodeDa.NodeDa::BUILDPHASE_0",
           "type" : "com.apple.buildphase.frameworks"
         },
         {
           "buildFiles" : [
 
           ],
-          "guid" : "PACKAGE-PRODUCT:nrova swift_NodeDa.NodeDa::BUILDPHASE_1",
+          "guid" : "PACKAGE-PRODUCT:nodeda-kit_NodeDa.NodeDa::BUILDPHASE_1",
           "type" : "com.apple.buildphase.sources"
         }
       ],
@@ -1057,17 +1089,17 @@
           ]
         }
       ],
-      "guid" : "PACKAGE-PRODUCT:nrova swift_NodeDa.NodeDa",
+      "guid" : "PACKAGE-PRODUCT:nodeda-kit_NodeDa.NodeDa",
       "name" : "NodeDa-product",
       "productReference" : {
-        "guid" : "PRODUCTREF-PACKAGE-PRODUCT:nrova swift_NodeDa.NodeDa",
+        "guid" : "PRODUCTREF-PACKAGE-PRODUCT:nodeda-kit_NodeDa.NodeDa",
         "name" : "$(EXECUTABLE_NAME)",
         "type" : "file"
       },
       "productTypeIdentifier" : "com.apple.product-type.library.static",
       "type" : "standard"
     },
-    "signature" : "285f9a24ed36a41c3700dc25c9fd172ab3c053c1998ef0b2b3f4f5f3f3807616",
+    "signature" : "060136de42159bf4ef5ff3dde97606062c5f9c7350a6e4deb6016742233cbff1",
     "type" : "target"
   },
   {
@@ -1082,7 +1114,7 @@
             "MODULEMAP_FILE_CONTENTS" : "module NodeDa {\nheader \"NodeDa-Swift.h\"\nexport *\n}",
             "MODULEMAP_PATH" : "$(GENERATED_MODULEMAP_DIR)/NodeDa.modulemap",
             "PACKAGE_RESOURCE_TARGET_KIND" : "regular",
-            "PRODUCT_BUNDLE_IDENTIFIER" : "nrova-swift.NodeDa",
+            "PRODUCT_BUNDLE_IDENTIFIER" : "nodeda-kit.NodeDa",
             "PRODUCT_MODULE_NAME" : "NodeDa",
             "PRODUCT_NAME" : "$(TARGET_NAME)",
             "SDKROOT" : "auto",
@@ -1098,7 +1130,7 @@
             "SWIFT_LIBRARIES_ONLY" : "YES",
             "SWIFT_OBJC_INTERFACE_HEADER_DIR" : "$(GENERATED_MODULEMAP_DIR)",
             "SWIFT_OBJC_INTERFACE_HEADER_NAME" : "NodeDa-Swift.h",
-            "SWIFT_PACKAGE_NAME" : "nrova_swift",
+            "SWIFT_PACKAGE_NAME" : "nodeda_kit",
             "SWIFT_VERSION" : "5",
             "SYMBOL_GRAPH_EXTRACTOR_OUTPUT_DIR" : "$(TARGET_BUILD_DIR)/$(CURRENT_ARCH)/NodeDa.symbolgraphs",
             "TAPI_DYLIB_INSTALL_NAME" : "NodeDa",
@@ -1135,7 +1167,7 @@
             "MODULEMAP_FILE_CONTENTS" : "module NodeDa {\nheader \"NodeDa-Swift.h\"\nexport *\n}",
             "MODULEMAP_PATH" : "$(GENERATED_MODULEMAP_DIR)/NodeDa.modulemap",
             "PACKAGE_RESOURCE_TARGET_KIND" : "regular",
-            "PRODUCT_BUNDLE_IDENTIFIER" : "nrova-swift.NodeDa",
+            "PRODUCT_BUNDLE_IDENTIFIER" : "nodeda-kit.NodeDa",
             "PRODUCT_MODULE_NAME" : "NodeDa",
             "PRODUCT_NAME" : "$(TARGET_NAME)",
             "SDKROOT" : "auto",
@@ -1151,7 +1183,7 @@
             "SWIFT_LIBRARIES_ONLY" : "YES",
             "SWIFT_OBJC_INTERFACE_HEADER_DIR" : "$(GENERATED_MODULEMAP_DIR)",
             "SWIFT_OBJC_INTERFACE_HEADER_NAME" : "NodeDa-Swift.h",
-            "SWIFT_PACKAGE_NAME" : "nrova_swift",
+            "SWIFT_PACKAGE_NAME" : "nodeda_kit",
             "SWIFT_VERSION" : "5",
             "SYMBOL_GRAPH_EXTRACTOR_OUTPUT_DIR" : "$(TARGET_BUILD_DIR)/$(CURRENT_ARCH)/NodeDa.symbolgraphs",
             "TAPI_DYLIB_INSTALL_NAME" : "NodeDa",
@@ -1185,7 +1217,7 @@
           "buildFiles" : [
             {
               "codeSignOnCopy" : "false",
-              "fileReference" : "PACKAGE:nrova swift::MAINGROUP::REF_3::REF_0",
+              "fileReference" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_0",
               "guid" : "PACKAGE-TARGET:NodeDa::BUILDPHASE_0::0",
               "platformFilters" : [
 
@@ -1194,7 +1226,7 @@
             },
             {
               "codeSignOnCopy" : "false",
-              "fileReference" : "PACKAGE:nrova swift::MAINGROUP::REF_3::REF_1",
+              "fileReference" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_1",
               "guid" : "PACKAGE-TARGET:NodeDa::BUILDPHASE_0::1",
               "platformFilters" : [
 
@@ -1203,7 +1235,7 @@
             },
             {
               "codeSignOnCopy" : "false",
-              "fileReference" : "PACKAGE:nrova swift::MAINGROUP::REF_3::REF_2",
+              "fileReference" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_2",
               "guid" : "PACKAGE-TARGET:NodeDa::BUILDPHASE_0::2",
               "platformFilters" : [
 
@@ -1212,7 +1244,7 @@
             },
             {
               "codeSignOnCopy" : "false",
-              "fileReference" : "PACKAGE:nrova swift::MAINGROUP::REF_3::REF_3",
+              "fileReference" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_3",
               "guid" : "PACKAGE-TARGET:NodeDa::BUILDPHASE_0::3",
               "platformFilters" : [
 
@@ -1221,7 +1253,7 @@
             },
             {
               "codeSignOnCopy" : "false",
-              "fileReference" : "PACKAGE:nrova swift::MAINGROUP::REF_3::REF_4",
+              "fileReference" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_4",
               "guid" : "PACKAGE-TARGET:NodeDa::BUILDPHASE_0::4",
               "platformFilters" : [
 
@@ -1230,7 +1262,7 @@
             },
             {
               "codeSignOnCopy" : "false",
-              "fileReference" : "PACKAGE:nrova swift::MAINGROUP::REF_3::REF_5",
+              "fileReference" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_5",
               "guid" : "PACKAGE-TARGET:NodeDa::BUILDPHASE_0::5",
               "platformFilters" : [
 
@@ -1239,7 +1271,7 @@
             },
             {
               "codeSignOnCopy" : "false",
-              "fileReference" : "PACKAGE:nrova swift::MAINGROUP::REF_3::REF_6",
+              "fileReference" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_6",
               "guid" : "PACKAGE-TARGET:NodeDa::BUILDPHASE_0::6",
               "platformFilters" : [
 
@@ -1248,7 +1280,7 @@
             },
             {
               "codeSignOnCopy" : "false",
-              "fileReference" : "PACKAGE:nrova swift::MAINGROUP::REF_3::REF_7",
+              "fileReference" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_7",
               "guid" : "PACKAGE-TARGET:NodeDa::BUILDPHASE_0::7",
               "platformFilters" : [
 
@@ -1257,7 +1289,7 @@
             },
             {
               "codeSignOnCopy" : "false",
-              "fileReference" : "PACKAGE:nrova swift::MAINGROUP::REF_3::REF_8",
+              "fileReference" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_8",
               "guid" : "PACKAGE-TARGET:NodeDa::BUILDPHASE_0::8",
               "platformFilters" : [
 
@@ -1266,7 +1298,7 @@
             },
             {
               "codeSignOnCopy" : "false",
-              "fileReference" : "PACKAGE:nrova swift::MAINGROUP::REF_3::REF_9",
+              "fileReference" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_9",
               "guid" : "PACKAGE-TARGET:NodeDa::BUILDPHASE_0::9",
               "platformFilters" : [
 
@@ -1275,7 +1307,7 @@
             },
             {
               "codeSignOnCopy" : "false",
-              "fileReference" : "PACKAGE:nrova swift::MAINGROUP::REF_3::REF_10",
+              "fileReference" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_10",
               "guid" : "PACKAGE-TARGET:NodeDa::BUILDPHASE_0::10",
               "platformFilters" : [
 
@@ -1284,7 +1316,7 @@
             },
             {
               "codeSignOnCopy" : "false",
-              "fileReference" : "PACKAGE:nrova swift::MAINGROUP::REF_3::REF_11",
+              "fileReference" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_11",
               "guid" : "PACKAGE-TARGET:NodeDa::BUILDPHASE_0::11",
               "platformFilters" : [
 
@@ -1293,7 +1325,7 @@
             },
             {
               "codeSignOnCopy" : "false",
-              "fileReference" : "PACKAGE:nrova swift::MAINGROUP::REF_3::REF_12",
+              "fileReference" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_12",
               "guid" : "PACKAGE-TARGET:NodeDa::BUILDPHASE_0::12",
               "platformFilters" : [
 
@@ -1302,7 +1334,7 @@
             },
             {
               "codeSignOnCopy" : "false",
-              "fileReference" : "PACKAGE:nrova swift::MAINGROUP::REF_3::REF_13",
+              "fileReference" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_13",
               "guid" : "PACKAGE-TARGET:NodeDa::BUILDPHASE_0::13",
               "platformFilters" : [
 
@@ -1311,7 +1343,7 @@
             },
             {
               "codeSignOnCopy" : "false",
-              "fileReference" : "PACKAGE:nrova swift::MAINGROUP::REF_3::REF_14",
+              "fileReference" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_14",
               "guid" : "PACKAGE-TARGET:NodeDa::BUILDPHASE_0::14",
               "platformFilters" : [
 
@@ -1320,7 +1352,7 @@
             },
             {
               "codeSignOnCopy" : "false",
-              "fileReference" : "PACKAGE:nrova swift::MAINGROUP::REF_3::REF_15",
+              "fileReference" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_15",
               "guid" : "PACKAGE-TARGET:NodeDa::BUILDPHASE_0::15",
               "platformFilters" : [
 
@@ -1329,7 +1361,7 @@
             },
             {
               "codeSignOnCopy" : "false",
-              "fileReference" : "PACKAGE:nrova swift::MAINGROUP::REF_3::REF_16",
+              "fileReference" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_16",
               "guid" : "PACKAGE-TARGET:NodeDa::BUILDPHASE_0::16",
               "platformFilters" : [
 
@@ -1338,7 +1370,7 @@
             },
             {
               "codeSignOnCopy" : "false",
-              "fileReference" : "PACKAGE:nrova swift::MAINGROUP::REF_3::REF_17",
+              "fileReference" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_17",
               "guid" : "PACKAGE-TARGET:NodeDa::BUILDPHASE_0::17",
               "platformFilters" : [
 
@@ -1347,7 +1379,7 @@
             },
             {
               "codeSignOnCopy" : "false",
-              "fileReference" : "PACKAGE:nrova swift::MAINGROUP::REF_3::REF_18",
+              "fileReference" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_18",
               "guid" : "PACKAGE-TARGET:NodeDa::BUILDPHASE_0::18",
               "platformFilters" : [
 
@@ -1356,7 +1388,7 @@
             },
             {
               "codeSignOnCopy" : "false",
-              "fileReference" : "PACKAGE:nrova swift::MAINGROUP::REF_3::REF_19",
+              "fileReference" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_19",
               "guid" : "PACKAGE-TARGET:NodeDa::BUILDPHASE_0::19",
               "platformFilters" : [
 
@@ -1365,7 +1397,7 @@
             },
             {
               "codeSignOnCopy" : "false",
-              "fileReference" : "PACKAGE:nrova swift::MAINGROUP::REF_3::REF_20",
+              "fileReference" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_20",
               "guid" : "PACKAGE-TARGET:NodeDa::BUILDPHASE_0::20",
               "platformFilters" : [
 
@@ -1374,7 +1406,7 @@
             },
             {
               "codeSignOnCopy" : "false",
-              "fileReference" : "PACKAGE:nrova swift::MAINGROUP::REF_3::REF_21",
+              "fileReference" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_21",
               "guid" : "PACKAGE-TARGET:NodeDa::BUILDPHASE_0::21",
               "platformFilters" : [
 
@@ -1383,7 +1415,7 @@
             },
             {
               "codeSignOnCopy" : "false",
-              "fileReference" : "PACKAGE:nrova swift::MAINGROUP::REF_3::REF_22",
+              "fileReference" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_22",
               "guid" : "PACKAGE-TARGET:NodeDa::BUILDPHASE_0::22",
               "platformFilters" : [
 
@@ -1392,7 +1424,7 @@
             },
             {
               "codeSignOnCopy" : "false",
-              "fileReference" : "PACKAGE:nrova swift::MAINGROUP::REF_3::REF_23",
+              "fileReference" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_23",
               "guid" : "PACKAGE-TARGET:NodeDa::BUILDPHASE_0::23",
               "platformFilters" : [
 
@@ -1401,8 +1433,26 @@
             },
             {
               "codeSignOnCopy" : "false",
-              "fileReference" : "PACKAGE:nrova swift::MAINGROUP::REF_3::REF_24",
+              "fileReference" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_24",
               "guid" : "PACKAGE-TARGET:NodeDa::BUILDPHASE_0::24",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_25",
+              "guid" : "PACKAGE-TARGET:NodeDa::BUILDPHASE_0::25",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_26",
+              "guid" : "PACKAGE-TARGET:NodeDa::BUILDPHASE_0::26",
               "platformFilters" : [
 
               ],
@@ -1433,7 +1483,7 @@
       "productTypeIdentifier" : "org.swift.product-type.library.static",
       "type" : "standard"
     },
-    "signature" : "afc47c4c0322bacc50b296b2d272906e8f6980fc6daec7956cea836c85bf7fdb",
+    "signature" : "c8b3ebdbcd9599cb7795cbb559fe170c2d9c4e4c2e937408dcaef387edb11006",
     "type" : "target"
   },
   {
@@ -1443,7 +1493,7 @@
           "buildSettings" : {
 
           },
-          "guid" : "PACKAGE-PRODUCT:nrova swift-NodeDaPackageTests.NodeDaPackageTests::BUILDCONFIG_0",
+          "guid" : "PACKAGE-PRODUCT:nodeda-kit-NodeDaPackageTests.NodeDaPackageTests::BUILDCONFIG_0",
           "impartedBuildProperties" : {
             "buildSettings" : {
 
@@ -1455,7 +1505,7 @@
           "buildSettings" : {
 
           },
-          "guid" : "PACKAGE-PRODUCT:nrova swift-NodeDaPackageTests.NodeDaPackageTests::BUILDCONFIG_1",
+          "guid" : "PACKAGE-PRODUCT:nodeda-kit-NodeDaPackageTests.NodeDaPackageTests::BUILDCONFIG_1",
           "impartedBuildProperties" : {
             "buildSettings" : {
 
@@ -1475,7 +1525,7 @@
       ],
       "dependencies" : [
         {
-          "guid" : "PACKAGE-PRODUCT:nrova swift_NodeDaTests.NodeDaTests",
+          "guid" : "PACKAGE-PRODUCT:nodeda-kit_NodeDaTests.NodeDaTests",
           "platformFilters" : [
 
           ]
@@ -1487,11 +1537,11 @@
           ]
         }
       ],
-      "guid" : "PACKAGE-PRODUCT:nrova swift-NodeDaPackageTests.NodeDaPackageTests",
+      "guid" : "PACKAGE-PRODUCT:nodeda-kit-NodeDaPackageTests.NodeDaPackageTests",
       "name" : "NodeDaPackageTests-product",
       "type" : "aggregate"
     },
-    "signature" : "5c4c389e067c0348b3db9f9675ebbc181a41f50a044f4196122d01a0b9b81d4f",
+    "signature" : "39b6b472dfdd6f502e36b4decdcdcd94a9292f875e81bb1f6a5f0e1232e66e30",
     "type" : "target"
   },
   {
@@ -1507,7 +1557,7 @@
             "MODULEMAP_FILE_CONTENTS" : "module NodeDa {\nheader \"NodeDa-Swift.h\"\nexport *\n}",
             "MODULEMAP_PATH" : "$(GENERATED_MODULEMAP_DIR)/NodeDa.modulemap",
             "PACKAGE_RESOURCE_TARGET_KIND" : "regular",
-            "PRODUCT_BUNDLE_IDENTIFIER" : "nrova-swift.NodeDa",
+            "PRODUCT_BUNDLE_IDENTIFIER" : "nodeda-kit.NodeDa",
             "PRODUCT_MODULE_NAME" : "NodeDa",
             "PRODUCT_NAME" : "NodeDa",
             "SDKROOT" : "auto",
@@ -1522,7 +1572,7 @@
             "SWIFT_LIBRARIES_ONLY" : "YES",
             "SWIFT_OBJC_INTERFACE_HEADER_DIR" : "$(GENERATED_MODULEMAP_DIR)",
             "SWIFT_OBJC_INTERFACE_HEADER_NAME" : "NodeDa-Swift.h",
-            "SWIFT_PACKAGE_NAME" : "nrova_swift",
+            "SWIFT_PACKAGE_NAME" : "nodeda_kit",
             "SWIFT_VERSION" : "5",
             "SYMBOL_GRAPH_EXTRACTOR_OUTPUT_DIR" : "$(TARGET_BUILD_DIR)/$(CURRENT_ARCH)/NodeDa.symbolgraphs",
             "TAPI_EXTRACT_API_OUTPUT_DIR" : "$(TARGET_BUILD_DIR)/$(CURRENT_ARCH)/NodeDa.symbolgraphs",
@@ -1559,7 +1609,7 @@
             "MODULEMAP_FILE_CONTENTS" : "module NodeDa {\nheader \"NodeDa-Swift.h\"\nexport *\n}",
             "MODULEMAP_PATH" : "$(GENERATED_MODULEMAP_DIR)/NodeDa.modulemap",
             "PACKAGE_RESOURCE_TARGET_KIND" : "regular",
-            "PRODUCT_BUNDLE_IDENTIFIER" : "nrova-swift.NodeDa",
+            "PRODUCT_BUNDLE_IDENTIFIER" : "nodeda-kit.NodeDa",
             "PRODUCT_MODULE_NAME" : "NodeDa",
             "PRODUCT_NAME" : "NodeDa",
             "SDKROOT" : "auto",
@@ -1574,7 +1624,7 @@
             "SWIFT_LIBRARIES_ONLY" : "YES",
             "SWIFT_OBJC_INTERFACE_HEADER_DIR" : "$(GENERATED_MODULEMAP_DIR)",
             "SWIFT_OBJC_INTERFACE_HEADER_NAME" : "NodeDa-Swift.h",
-            "SWIFT_PACKAGE_NAME" : "nrova_swift",
+            "SWIFT_PACKAGE_NAME" : "nodeda_kit",
             "SWIFT_VERSION" : "5",
             "SYMBOL_GRAPH_EXTRACTOR_OUTPUT_DIR" : "$(TARGET_BUILD_DIR)/$(CURRENT_ARCH)/NodeDa.symbolgraphs",
             "TAPI_EXTRACT_API_OUTPUT_DIR" : "$(TARGET_BUILD_DIR)/$(CURRENT_ARCH)/NodeDa.symbolgraphs",
@@ -1607,7 +1657,7 @@
           "buildFiles" : [
             {
               "codeSignOnCopy" : "false",
-              "fileReference" : "PACKAGE:nrova swift::MAINGROUP::REF_4::REF_0",
+              "fileReference" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_0",
               "guid" : "PACKAGE-TARGET:NodeDa-1A7BF9913F2E71-dynamic::BUILDPHASE_0::0",
               "platformFilters" : [
 
@@ -1616,7 +1666,7 @@
             },
             {
               "codeSignOnCopy" : "false",
-              "fileReference" : "PACKAGE:nrova swift::MAINGROUP::REF_4::REF_1",
+              "fileReference" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_1",
               "guid" : "PACKAGE-TARGET:NodeDa-1A7BF9913F2E71-dynamic::BUILDPHASE_0::1",
               "platformFilters" : [
 
@@ -1625,7 +1675,7 @@
             },
             {
               "codeSignOnCopy" : "false",
-              "fileReference" : "PACKAGE:nrova swift::MAINGROUP::REF_4::REF_2",
+              "fileReference" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_2",
               "guid" : "PACKAGE-TARGET:NodeDa-1A7BF9913F2E71-dynamic::BUILDPHASE_0::2",
               "platformFilters" : [
 
@@ -1634,7 +1684,7 @@
             },
             {
               "codeSignOnCopy" : "false",
-              "fileReference" : "PACKAGE:nrova swift::MAINGROUP::REF_4::REF_3",
+              "fileReference" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_3",
               "guid" : "PACKAGE-TARGET:NodeDa-1A7BF9913F2E71-dynamic::BUILDPHASE_0::3",
               "platformFilters" : [
 
@@ -1643,7 +1693,7 @@
             },
             {
               "codeSignOnCopy" : "false",
-              "fileReference" : "PACKAGE:nrova swift::MAINGROUP::REF_4::REF_4",
+              "fileReference" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_4",
               "guid" : "PACKAGE-TARGET:NodeDa-1A7BF9913F2E71-dynamic::BUILDPHASE_0::4",
               "platformFilters" : [
 
@@ -1652,7 +1702,7 @@
             },
             {
               "codeSignOnCopy" : "false",
-              "fileReference" : "PACKAGE:nrova swift::MAINGROUP::REF_4::REF_5",
+              "fileReference" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_5",
               "guid" : "PACKAGE-TARGET:NodeDa-1A7BF9913F2E71-dynamic::BUILDPHASE_0::5",
               "platformFilters" : [
 
@@ -1661,7 +1711,7 @@
             },
             {
               "codeSignOnCopy" : "false",
-              "fileReference" : "PACKAGE:nrova swift::MAINGROUP::REF_4::REF_6",
+              "fileReference" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_6",
               "guid" : "PACKAGE-TARGET:NodeDa-1A7BF9913F2E71-dynamic::BUILDPHASE_0::6",
               "platformFilters" : [
 
@@ -1670,7 +1720,7 @@
             },
             {
               "codeSignOnCopy" : "false",
-              "fileReference" : "PACKAGE:nrova swift::MAINGROUP::REF_4::REF_7",
+              "fileReference" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_7",
               "guid" : "PACKAGE-TARGET:NodeDa-1A7BF9913F2E71-dynamic::BUILDPHASE_0::7",
               "platformFilters" : [
 
@@ -1679,7 +1729,7 @@
             },
             {
               "codeSignOnCopy" : "false",
-              "fileReference" : "PACKAGE:nrova swift::MAINGROUP::REF_4::REF_8",
+              "fileReference" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_8",
               "guid" : "PACKAGE-TARGET:NodeDa-1A7BF9913F2E71-dynamic::BUILDPHASE_0::8",
               "platformFilters" : [
 
@@ -1688,7 +1738,7 @@
             },
             {
               "codeSignOnCopy" : "false",
-              "fileReference" : "PACKAGE:nrova swift::MAINGROUP::REF_4::REF_9",
+              "fileReference" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_9",
               "guid" : "PACKAGE-TARGET:NodeDa-1A7BF9913F2E71-dynamic::BUILDPHASE_0::9",
               "platformFilters" : [
 
@@ -1697,7 +1747,7 @@
             },
             {
               "codeSignOnCopy" : "false",
-              "fileReference" : "PACKAGE:nrova swift::MAINGROUP::REF_4::REF_10",
+              "fileReference" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_10",
               "guid" : "PACKAGE-TARGET:NodeDa-1A7BF9913F2E71-dynamic::BUILDPHASE_0::10",
               "platformFilters" : [
 
@@ -1706,7 +1756,7 @@
             },
             {
               "codeSignOnCopy" : "false",
-              "fileReference" : "PACKAGE:nrova swift::MAINGROUP::REF_4::REF_11",
+              "fileReference" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_11",
               "guid" : "PACKAGE-TARGET:NodeDa-1A7BF9913F2E71-dynamic::BUILDPHASE_0::11",
               "platformFilters" : [
 
@@ -1715,7 +1765,7 @@
             },
             {
               "codeSignOnCopy" : "false",
-              "fileReference" : "PACKAGE:nrova swift::MAINGROUP::REF_4::REF_12",
+              "fileReference" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_12",
               "guid" : "PACKAGE-TARGET:NodeDa-1A7BF9913F2E71-dynamic::BUILDPHASE_0::12",
               "platformFilters" : [
 
@@ -1724,7 +1774,7 @@
             },
             {
               "codeSignOnCopy" : "false",
-              "fileReference" : "PACKAGE:nrova swift::MAINGROUP::REF_4::REF_13",
+              "fileReference" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_13",
               "guid" : "PACKAGE-TARGET:NodeDa-1A7BF9913F2E71-dynamic::BUILDPHASE_0::13",
               "platformFilters" : [
 
@@ -1733,7 +1783,7 @@
             },
             {
               "codeSignOnCopy" : "false",
-              "fileReference" : "PACKAGE:nrova swift::MAINGROUP::REF_4::REF_14",
+              "fileReference" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_14",
               "guid" : "PACKAGE-TARGET:NodeDa-1A7BF9913F2E71-dynamic::BUILDPHASE_0::14",
               "platformFilters" : [
 
@@ -1742,7 +1792,7 @@
             },
             {
               "codeSignOnCopy" : "false",
-              "fileReference" : "PACKAGE:nrova swift::MAINGROUP::REF_4::REF_15",
+              "fileReference" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_15",
               "guid" : "PACKAGE-TARGET:NodeDa-1A7BF9913F2E71-dynamic::BUILDPHASE_0::15",
               "platformFilters" : [
 
@@ -1751,7 +1801,7 @@
             },
             {
               "codeSignOnCopy" : "false",
-              "fileReference" : "PACKAGE:nrova swift::MAINGROUP::REF_4::REF_16",
+              "fileReference" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_16",
               "guid" : "PACKAGE-TARGET:NodeDa-1A7BF9913F2E71-dynamic::BUILDPHASE_0::16",
               "platformFilters" : [
 
@@ -1760,7 +1810,7 @@
             },
             {
               "codeSignOnCopy" : "false",
-              "fileReference" : "PACKAGE:nrova swift::MAINGROUP::REF_4::REF_17",
+              "fileReference" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_17",
               "guid" : "PACKAGE-TARGET:NodeDa-1A7BF9913F2E71-dynamic::BUILDPHASE_0::17",
               "platformFilters" : [
 
@@ -1769,7 +1819,7 @@
             },
             {
               "codeSignOnCopy" : "false",
-              "fileReference" : "PACKAGE:nrova swift::MAINGROUP::REF_4::REF_18",
+              "fileReference" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_18",
               "guid" : "PACKAGE-TARGET:NodeDa-1A7BF9913F2E71-dynamic::BUILDPHASE_0::18",
               "platformFilters" : [
 
@@ -1778,7 +1828,7 @@
             },
             {
               "codeSignOnCopy" : "false",
-              "fileReference" : "PACKAGE:nrova swift::MAINGROUP::REF_4::REF_19",
+              "fileReference" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_19",
               "guid" : "PACKAGE-TARGET:NodeDa-1A7BF9913F2E71-dynamic::BUILDPHASE_0::19",
               "platformFilters" : [
 
@@ -1787,7 +1837,7 @@
             },
             {
               "codeSignOnCopy" : "false",
-              "fileReference" : "PACKAGE:nrova swift::MAINGROUP::REF_4::REF_20",
+              "fileReference" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_20",
               "guid" : "PACKAGE-TARGET:NodeDa-1A7BF9913F2E71-dynamic::BUILDPHASE_0::20",
               "platformFilters" : [
 
@@ -1796,7 +1846,7 @@
             },
             {
               "codeSignOnCopy" : "false",
-              "fileReference" : "PACKAGE:nrova swift::MAINGROUP::REF_4::REF_21",
+              "fileReference" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_21",
               "guid" : "PACKAGE-TARGET:NodeDa-1A7BF9913F2E71-dynamic::BUILDPHASE_0::21",
               "platformFilters" : [
 
@@ -1805,7 +1855,7 @@
             },
             {
               "codeSignOnCopy" : "false",
-              "fileReference" : "PACKAGE:nrova swift::MAINGROUP::REF_4::REF_22",
+              "fileReference" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_22",
               "guid" : "PACKAGE-TARGET:NodeDa-1A7BF9913F2E71-dynamic::BUILDPHASE_0::22",
               "platformFilters" : [
 
@@ -1814,7 +1864,7 @@
             },
             {
               "codeSignOnCopy" : "false",
-              "fileReference" : "PACKAGE:nrova swift::MAINGROUP::REF_4::REF_23",
+              "fileReference" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_23",
               "guid" : "PACKAGE-TARGET:NodeDa-1A7BF9913F2E71-dynamic::BUILDPHASE_0::23",
               "platformFilters" : [
 
@@ -1823,8 +1873,26 @@
             },
             {
               "codeSignOnCopy" : "false",
-              "fileReference" : "PACKAGE:nrova swift::MAINGROUP::REF_4::REF_24",
+              "fileReference" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_24",
               "guid" : "PACKAGE-TARGET:NodeDa-1A7BF9913F2E71-dynamic::BUILDPHASE_0::24",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_25",
+              "guid" : "PACKAGE-TARGET:NodeDa-1A7BF9913F2E71-dynamic::BUILDPHASE_0::25",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_26",
+              "guid" : "PACKAGE-TARGET:NodeDa-1A7BF9913F2E71-dynamic::BUILDPHASE_0::26",
               "platformFilters" : [
 
               ],
@@ -1854,7 +1922,7 @@
       "productTypeIdentifier" : "com.apple.product-type.library.dynamic",
       "type" : "standard"
     },
-    "signature" : "92f5e8c322442e4c1b1699405476f5fb5701d6d173cd305e166e1a43548b94a6",
+    "signature" : "33ae3d6b71341c4fa356e555f1d93010d2a9e9ead139592bb34f82910555d217",
     "type" : "target"
   },
   {
@@ -1910,16 +1978,16 @@
         "type" : "group"
       },
       "guid" : "AGGREGATE",
-      "path" : "/Users/anthony/Documents/GitHub/Nrova Swift/Package.swift",
-      "projectDirectory" : "/Users/anthony/Documents/GitHub/Nrova Swift",
+      "path" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/Package.swift",
+      "projectDirectory" : "/Users/anthony/Documents/GitHub/NodeDa-Kit",
       "projectIsPackage" : "true",
       "projectName" : "Aggregate",
       "targets" : [
-        "aedb7b1fa8a344ac7a69888251ea643d57c1521e9eb5b3bcf75fb82049f7f53d",
-        "e409ad439e72b70bd8cd926ace4f722be007c2a0e3c9a67e9670e201219e17a0"
+        "028962beb47038f97c66b0ace1058bcf2c4efd2851c76163559d6deb6d678ae5",
+        "7a0b65b4172ca37121e49a5708b37ff1824071f0238860b596e8aad6f4ce3cba"
       ]
     },
-    "signature" : "818edd0dec935aa6e7eaa4b2af8433a064b61514a6624356e712439551034a0b",
+    "signature" : "3c72f3039762abfd5ae2a522428f5458d30141590e5e9ad25cb1b7ebaa70c3fb",
     "type" : "project"
   },
   {
@@ -1961,7 +2029,7 @@
       ],
       "dependencies" : [
         {
-          "guid" : "PACKAGE-PRODUCT:nrova swift_NodeDaTests.NodeDaTests",
+          "guid" : "PACKAGE-PRODUCT:nodeda-kit_NodeDaTests.NodeDaTests",
           "platformFilters" : [
 
           ]
@@ -1973,7 +2041,7 @@
           ]
         },
         {
-          "guid" : "PACKAGE-PRODUCT:nrova swift_NodeDa.NodeDa",
+          "guid" : "PACKAGE-PRODUCT:nodeda-kit_NodeDa.NodeDa",
           "platformFilters" : [
 
           ]
@@ -1989,7 +2057,7 @@
       "name" : "AllIncludingTests",
       "type" : "aggregate"
     },
-    "signature" : "aedb7b1fa8a344ac7a69888251ea643d57c1521e9eb5b3bcf75fb82049f7f53d",
+    "signature" : "028962beb47038f97c66b0ace1058bcf2c4efd2851c76163559d6deb6d678ae5",
     "type" : "target"
   },
   {
@@ -2031,7 +2099,7 @@
       ],
       "dependencies" : [
         {
-          "guid" : "PACKAGE-PRODUCT:nrova swift_NodeDa.NodeDa",
+          "guid" : "PACKAGE-PRODUCT:nodeda-kit_NodeDa.NodeDa",
           "platformFilters" : [
 
           ]
@@ -2047,7 +2115,7 @@
       "name" : "AllExcludingTests",
       "type" : "aggregate"
     },
-    "signature" : "e409ad439e72b70bd8cd926ace4f722be007c2a0e3c9a67e9670e201219e17a0",
+    "signature" : "7a0b65b4172ca37121e49a5708b37ff1824071f0238860b596e8aad6f4ce3cba",
     "type" : "target"
   }
 ]

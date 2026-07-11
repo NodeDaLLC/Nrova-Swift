@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>com.apple.application-identifier</key>
-	<string>nrova-swift.NodeDaTests</string>
+	<string>nodeda-kit.NodeDaTests</string>
 	<key>com.apple.security.get-task-allow</key>
 	<true/>
 </dict>

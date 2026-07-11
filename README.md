@@ -1,6 +1,6 @@
 # NodeDa Vertex
 
-**Current version: `1.1.0`** &nbsp;·&nbsp; available at runtime as `NodeDa.version`.
+**Current version: `1.2.0`** &nbsp;·&nbsp; available at runtime as `NodeDa.version`.
 
 The official Swift package for the **NodeDa Vertex** HTTP APIs. One typed
 client, one auth scheme, every public service NodeDa Vertex exposes — built
@@ -19,7 +19,7 @@ let latest = try await client.distribution.latest(
     channel: .stable
 )
 print("Latest version:", latest.artifact.version ?? latest.release.version)
-print("SDK version:", NodeDa.version) // "1.1.0"
+print("SDK version:", NodeDa.version) // "1.2.0"
 ```
 
 ## Table of contents
@@ -39,6 +39,7 @@ print("SDK version:", NodeDa.version) // "1.1.0"
   - [Feature Flags API](#feature-flags-api)
   - [System Status API](#system-status-api)
   - [Legal Policies API](#legal-policies-api)
+  - [LLM Hub API](#llm-hub-api)
 - [Error handling](#error-handling)
 - [Custom transports & testing](#custom-transports--testing)
 - [Configuration reference](#configuration-reference)
@@ -50,7 +51,7 @@ print("SDK version:", NodeDa.version) // "1.1.0"
 
 | | |
 | --- | --- |
-| **SDK version** | `1.1.0` |
+| **SDK version** | `1.2.0` |
 | **Runtime constant** | `NodeDa.version` |
 | **API base** | `https://api.nodeda.com` |
 | **Default org id** | `C1IRXJbknvZSTKMBxLDQ` |
@@ -82,7 +83,7 @@ Tested on Swift 6.x. No third-party dependencies — only Foundation.
 
 1. **File → Add Package Dependencies…**
 2. Paste the repo URL: `https://github.com/NodeDaLLC/Nrova-Swift.git`
-3. **Dependency Rule:** *Up to Next Major Version* → **`1.1.0`**
+3. **Dependency Rule:** *Up to Next Major Version* → **`1.2.0`**
 4. Add the `NodeDa` product to your app target.
 
 ### Swift Package Manager (`Package.swift`)
@@ -93,7 +94,7 @@ Pin to the **1.x** line:
 dependencies: [
     .package(
         url: "https://github.com/NodeDaLLC/Nrova-Swift.git",
-        from: "1.1.0"          // 1.1.0 ≤ NodeDa < 2.0.0
+        from: "1.2.0"          // 1.2.0 ≤ NodeDa < 2.0.0
     )
 ]
 ```
@@ -252,6 +253,7 @@ Scopes you'll see across the SDK:
 | `flags:read` / `evaluate` | `client.featureFlags` |
 | `status:read` / `status:write` | `client.systemStatus` |
 | `legal:read` / `legal:write` | `client.legal` |
+| `llm:invoke` | `client.llmHub` |
 
 ## Top-level client
 
@@ -267,6 +269,7 @@ client.newsroom        // NewsroomService
 client.featureFlags    // FeatureFlagsService
 client.systemStatus    // SystemStatusService
 client.legal           // LegalService
+client.llmHub          // LLMHubService
 ```
 
 Quick health check across every service in parallel:
@@ -573,6 +576,33 @@ for section in privacy.sections.sorted(by: { ($0.sortOrder ?? 0) < ($1.sortOrder
     print("##", section.title ?? "")
     print(section.body)
 }
+```
+
+### LLM Hub API
+
+OpenAI-compatible chat completions via the Vertex LLM Hub gateway.
+Requires a developer API key with the `llm:invoke` scope. Omit `model`
+to use the org’s configured default; catalog ids live on `LLMHubModelID`.
+
+| Method | Endpoint | Scope |
+| --- | --- | --- |
+| `llmHub.health()` | `GET /health` | none |
+| `llmHub.createChatCompletion(_:)` | `POST …/llm/chat/completions` | `llm:invoke` |
+| `llmHub.chat(messages:model:temperature:maxTokens:)` | `POST …/llm/chat/completions` | `llm:invoke` |
+
+```swift
+let completion = try await client.llmHub.createChatCompletion(
+    ChatCompletionRequest(
+        messages: [
+            ChatMessage(role: .system, content: "You are a helpful assistant."),
+            ChatMessage(role: .user, content: "Summarize our release notes in two sentences.")
+        ],
+        model: LLMHubModelID.gemini31FlashLite,
+        temperature: 0.2,
+        maxTokens: 512
+    )
+)
+print(completion.firstContent ?? "")
 ```
 
 ## Error handling

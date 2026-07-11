@@ -2,327 +2,327 @@
   {
     "isFramework" : true,
     "moduleName" : "Combine",
-    "modulePath" : "\/Users\/anthony\/Documents\/GitHub\/Nrova Swift\/.build\/out\/SDKExplicitPrecompiledModules\/Combine-M0SX40SH27V2.swiftmodule"
+    "modulePath" : "\/Applications\/Xcode-beta.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/lib\/swift\/macosx\/prebuilt-modules\/27.0\/Combine.swiftmodule\/arm64e-apple-macos.swiftmodule"
   },
   {
     "isFramework" : false,
     "moduleName" : "CoreFoundation",
-    "modulePath" : "\/Users\/anthony\/Documents\/GitHub\/Nrova Swift\/.build\/out\/SDKExplicitPrecompiledModules\/CoreFoundation-1UL6M95QJI9HX.swiftmodule"
+    "modulePath" : "\/Applications\/Xcode-beta.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/lib\/swift\/macosx\/prebuilt-modules\/27.0\/CoreFoundation.swiftmodule\/arm64e-apple-macos.swiftmodule"
   },
   {
     "isFramework" : false,
     "moduleName" : "Darwin",
-    "modulePath" : "\/Users\/anthony\/Documents\/GitHub\/Nrova Swift\/.build\/out\/SDKExplicitPrecompiledModules\/Darwin-9JKU8N26XD1Q.swiftmodule"
+    "modulePath" : "\/Applications\/Xcode-beta.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/lib\/swift\/macosx\/prebuilt-modules\/27.0\/Darwin.swiftmodule\/arm64e-apple-macos.swiftmodule"
   },
   {
     "isFramework" : false,
     "moduleName" : "Dispatch",
-    "modulePath" : "\/Users\/anthony\/Documents\/GitHub\/Nrova Swift\/.build\/out\/SDKExplicitPrecompiledModules\/Dispatch-91FFFB4Z0S24.swiftmodule"
+    "modulePath" : "\/Applications\/Xcode-beta.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/lib\/swift\/macosx\/prebuilt-modules\/27.0\/Dispatch.swiftmodule\/arm64e-apple-macos.swiftmodule"
   },
   {
     "isFramework" : true,
     "moduleName" : "Foundation",
-    "modulePath" : "\/Users\/anthony\/Documents\/GitHub\/Nrova Swift\/.build\/out\/SDKExplicitPrecompiledModules\/Foundation-1GDBOD0NETRXZ.swiftmodule"
+    "modulePath" : "\/Applications\/Xcode-beta.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/lib\/swift\/macosx\/prebuilt-modules\/27.0\/Foundation.swiftmodule\/arm64e-apple-macos.swiftmodule"
   },
   {
     "isFramework" : false,
     "moduleName" : "IOKit",
-    "modulePath" : "\/Users\/anthony\/Documents\/GitHub\/Nrova Swift\/.build\/out\/SDKExplicitPrecompiledModules\/IOKit-243C8YDKZFMM2.swiftmodule"
+    "modulePath" : "\/Applications\/Xcode-beta.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/lib\/swift\/macosx\/prebuilt-modules\/27.0\/IOKit.swiftmodule\/arm64e-apple-macos.swiftmodule"
   },
   {
     "isFramework" : false,
     "moduleName" : "ObjectiveC",
-    "modulePath" : "\/Users\/anthony\/Documents\/GitHub\/Nrova Swift\/.build\/out\/SDKExplicitPrecompiledModules\/ObjectiveC-5NHCDNF7JG24.swiftmodule"
+    "modulePath" : "\/Applications\/Xcode-beta.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/lib\/swift\/macosx\/prebuilt-modules\/27.0\/ObjectiveC.swiftmodule\/arm64e-apple-macos.swiftmodule"
   },
   {
     "isFramework" : false,
     "moduleName" : "Observation",
-    "modulePath" : "\/Users\/anthony\/Documents\/GitHub\/Nrova Swift\/.build\/out\/SDKExplicitPrecompiledModules\/Observation-ZYXFORCS77QA.swiftmodule"
+    "modulePath" : "\/Applications\/Xcode-beta.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/lib\/swift\/macosx\/prebuilt-modules\/27.0\/Observation.swiftmodule\/arm64e-apple-macos.swiftmodule"
   },
   {
     "isFramework" : false,
     "moduleName" : "Swift",
-    "modulePath" : "\/Users\/anthony\/Documents\/GitHub\/Nrova Swift\/.build\/out\/SDKExplicitPrecompiledModules\/Swift-2GV6F1E38MYCB.swiftmodule"
+    "modulePath" : "\/Applications\/Xcode-beta.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/lib\/swift\/macosx\/prebuilt-modules\/27.0\/Swift.swiftmodule\/arm64e-apple-macos.swiftmodule"
   },
   {
     "isFramework" : false,
     "moduleName" : "SwiftOnoneSupport",
-    "modulePath" : "\/Users\/anthony\/Documents\/GitHub\/Nrova Swift\/.build\/out\/SDKExplicitPrecompiledModules\/SwiftOnoneSupport-3SZRR2ILB65X9.swiftmodule"
+    "modulePath" : "\/Applications\/Xcode-beta.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/lib\/swift\/macosx\/prebuilt-modules\/27.0\/SwiftOnoneSupport.swiftmodule\/arm64e-apple-macos.swiftmodule"
   },
   {
     "isFramework" : false,
     "moduleName" : "System",
-    "modulePath" : "\/Users\/anthony\/Documents\/GitHub\/Nrova Swift\/.build\/out\/SDKExplicitPrecompiledModules\/System-1U5GPZU2YPUPG.swiftmodule"
+    "modulePath" : "\/Applications\/Xcode-beta.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/lib\/swift\/macosx\/prebuilt-modules\/27.0\/System.swiftmodule\/arm64e-apple-macos.swiftmodule"
   },
   {
     "isFramework" : false,
     "moduleName" : "XPC",
-    "modulePath" : "\/Users\/anthony\/Documents\/GitHub\/Nrova Swift\/.build\/out\/SDKExplicitPrecompiledModules\/XPC-3CMZASSOH12NO.swiftmodule"
+    "modulePath" : "\/Applications\/Xcode-beta.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/lib\/swift\/macosx\/prebuilt-modules\/27.0\/XPC.swiftmodule\/arm64e-apple-macos.swiftmodule"
   },
   {
     "isFramework" : false,
     "moduleName" : "_Builtin_float",
-    "modulePath" : "\/Users\/anthony\/Documents\/GitHub\/Nrova Swift\/.build\/out\/SDKExplicitPrecompiledModules\/_Builtin_float-AZ2L4W948AGG.swiftmodule"
+    "modulePath" : "\/Applications\/Xcode-beta.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/lib\/swift\/macosx\/prebuilt-modules\/27.0\/_Builtin_float.swiftmodule\/arm64e-apple-macos.swiftmodule"
   },
   {
     "isFramework" : false,
     "moduleName" : "_Concurrency",
-    "modulePath" : "\/Users\/anthony\/Documents\/GitHub\/Nrova Swift\/.build\/out\/SDKExplicitPrecompiledModules\/_Concurrency-141417FHD6V8J.swiftmodule"
+    "modulePath" : "\/Applications\/Xcode-beta.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/lib\/swift\/macosx\/prebuilt-modules\/27.0\/_Concurrency.swiftmodule\/arm64e-apple-macos.swiftmodule"
   },
   {
     "isFramework" : false,
     "moduleName" : "_DarwinFoundation1",
-    "modulePath" : "\/Users\/anthony\/Documents\/GitHub\/Nrova Swift\/.build\/out\/SDKExplicitPrecompiledModules\/_DarwinFoundation1-2HP15PQ2NUPGK.swiftmodule"
+    "modulePath" : "\/Applications\/Xcode-beta.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/lib\/swift\/macosx\/prebuilt-modules\/27.0\/_DarwinFoundation1.swiftmodule\/arm64e-apple-macos.swiftmodule"
   },
   {
     "isFramework" : false,
     "moduleName" : "_DarwinFoundation2",
-    "modulePath" : "\/Users\/anthony\/Documents\/GitHub\/Nrova Swift\/.build\/out\/SDKExplicitPrecompiledModules\/_DarwinFoundation2-MN9GD40MHR1Z.swiftmodule"
+    "modulePath" : "\/Applications\/Xcode-beta.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/lib\/swift\/macosx\/prebuilt-modules\/27.0\/_DarwinFoundation2.swiftmodule\/arm64e-apple-macos.swiftmodule"
   },
   {
     "isFramework" : false,
     "moduleName" : "_DarwinFoundation3",
-    "modulePath" : "\/Users\/anthony\/Documents\/GitHub\/Nrova Swift\/.build\/out\/SDKExplicitPrecompiledModules\/_DarwinFoundation3-3EDBF04XT75EY.swiftmodule"
+    "modulePath" : "\/Applications\/Xcode-beta.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/lib\/swift\/macosx\/prebuilt-modules\/27.0\/_DarwinFoundation3.swiftmodule\/arm64e-apple-macos.swiftmodule"
   },
   {
     "isFramework" : false,
     "moduleName" : "_StringProcessing",
-    "modulePath" : "\/Users\/anthony\/Documents\/GitHub\/Nrova Swift\/.build\/out\/SDKExplicitPrecompiledModules\/_StringProcessing-2DICMHFK1XL07.swiftmodule"
+    "modulePath" : "\/Applications\/Xcode-beta.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/lib\/swift\/macosx\/prebuilt-modules\/27.0\/_StringProcessing.swiftmodule\/arm64e-apple-macos.swiftmodule"
   },
   {
-    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/SDKs\/MacOSX27.0.sdk\/System\/Library\/Frameworks\/CFNetwork.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/anthony\/Documents\/GitHub\/Nrova Swift\/.build\/out\/SDKExplicitPrecompiledModules\/CFNetwork-CE70O984KR6NAXKR4FCGVJ6AQ.pcm",
+    "clangModuleMapPath" : "\/Applications\/Xcode-beta.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/CFNetwork.framework\/Modules\/module.modulemap",
+    "clangModulePath" : "\/Users\/anthony\/Documents\/GitHub\/NodeDa-Kit\/.build\/out\/SDKExplicitPrecompiledModules\/CFNetwork-4GRHQRASSCB050LZEUPK557MX.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "CFNetwork"
   },
   {
-    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/SDKs\/MacOSX27.0.sdk\/System\/Library\/Frameworks\/CoreFoundation.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/anthony\/Documents\/GitHub\/Nrova Swift\/.build\/out\/SDKExplicitPrecompiledModules\/CoreFoundation-C4YK3JHV07QHUMILYI5AEFS0Q.pcm",
+    "clangModuleMapPath" : "\/Applications\/Xcode-beta.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/CoreFoundation.framework\/Modules\/module.modulemap",
+    "clangModulePath" : "\/Users\/anthony\/Documents\/GitHub\/NodeDa-Kit\/.build\/out\/SDKExplicitPrecompiledModules\/CoreFoundation-AQ9JAI5EJ9RHBUV9VTAR5DV97.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "CoreFoundation"
   },
   {
-    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/SDKs\/MacOSX27.0.sdk\/System\/Library\/Frameworks\/CoreServices.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/anthony\/Documents\/GitHub\/Nrova Swift\/.build\/out\/SDKExplicitPrecompiledModules\/CoreServices-8PA0D8P0KN0T2ULUMHWAKE6AT.pcm",
+    "clangModuleMapPath" : "\/Applications\/Xcode-beta.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/CoreServices.framework\/Modules\/module.modulemap",
+    "clangModulePath" : "\/Users\/anthony\/Documents\/GitHub\/NodeDa-Kit\/.build\/out\/SDKExplicitPrecompiledModules\/CoreServices-C1XPCL58UHV8U56OAG57LQ0QQ.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "CoreServices"
   },
   {
-    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/SDKs\/MacOSX27.0.sdk\/usr\/include\/Darwin.modulemap",
-    "clangModulePath" : "\/Users\/anthony\/Documents\/GitHub\/Nrova Swift\/.build\/out\/SDKExplicitPrecompiledModules\/Darwin-EPJ657H34O7TXJX7LP0SB908O.pcm",
+    "clangModuleMapPath" : "\/Applications\/Xcode-beta.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/Darwin.modulemap",
+    "clangModulePath" : "\/Users\/anthony\/Documents\/GitHub\/NodeDa-Kit\/.build\/out\/SDKExplicitPrecompiledModules\/Darwin-VTNSA62Y7SIBG47CL4LBLJNB.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "Darwin"
   },
   {
-    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/SDKs\/MacOSX27.0.sdk\/System\/Library\/Frameworks\/DiskArbitration.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/anthony\/Documents\/GitHub\/Nrova Swift\/.build\/out\/SDKExplicitPrecompiledModules\/DiskArbitration-GDRP2HHVOJ6ADTDWBZD8GPW0.pcm",
+    "clangModuleMapPath" : "\/Applications\/Xcode-beta.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/DiskArbitration.framework\/Modules\/module.modulemap",
+    "clangModulePath" : "\/Users\/anthony\/Documents\/GitHub\/NodeDa-Kit\/.build\/out\/SDKExplicitPrecompiledModules\/DiskArbitration-1UXLTSDET03RN2FUX3MKLZLOK.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "DiskArbitration"
   },
   {
-    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/SDKs\/MacOSX27.0.sdk\/usr\/include\/dispatch.modulemap",
-    "clangModulePath" : "\/Users\/anthony\/Documents\/GitHub\/Nrova Swift\/.build\/out\/SDKExplicitPrecompiledModules\/Dispatch-AYUEEBWSFOPFH3HJ6SOQTPLIK.pcm",
+    "clangModuleMapPath" : "\/Applications\/Xcode-beta.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/dispatch.modulemap",
+    "clangModulePath" : "\/Users\/anthony\/Documents\/GitHub\/NodeDa-Kit\/.build\/out\/SDKExplicitPrecompiledModules\/Dispatch-2KV64HLT129KQSAZ7HCXZH8BA.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "Dispatch"
   },
   {
-    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/SDKs\/MacOSX27.0.sdk\/System\/Library\/Frameworks\/Foundation.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/anthony\/Documents\/GitHub\/Nrova Swift\/.build\/out\/SDKExplicitPrecompiledModules\/Foundation-8CBP95PT4XWWPZ7CBZ7KS0KCQ.pcm",
+    "clangModuleMapPath" : "\/Applications\/Xcode-beta.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/Foundation.framework\/Modules\/module.modulemap",
+    "clangModulePath" : "\/Users\/anthony\/Documents\/GitHub\/NodeDa-Kit\/.build\/out\/SDKExplicitPrecompiledModules\/Foundation-B3815HB1YT5D6R2U0N13HL05P.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "Foundation"
   },
   {
-    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/SDKs\/MacOSX27.0.sdk\/System\/Library\/Frameworks\/IOKit.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/anthony\/Documents\/GitHub\/Nrova Swift\/.build\/out\/SDKExplicitPrecompiledModules\/IOKit-DBUTCYL3CQI59MTYLR1PU0EY2.pcm",
+    "clangModuleMapPath" : "\/Applications\/Xcode-beta.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/IOKit.framework\/Modules\/module.modulemap",
+    "clangModulePath" : "\/Users\/anthony\/Documents\/GitHub\/NodeDa-Kit\/.build\/out\/SDKExplicitPrecompiledModules\/IOKit-9QF0J3NXDN4NY959J9FLL976K.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "IOKit"
   },
   {
-    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/SDKs\/MacOSX27.0.sdk\/usr\/include\/DarwinBasic.modulemap",
-    "clangModulePath" : "\/Users\/anthony\/Documents\/GitHub\/Nrova Swift\/.build\/out\/SDKExplicitPrecompiledModules\/MachO-CQ0D24FXZTL6IM71TUA3DZYCM.pcm",
+    "clangModuleMapPath" : "\/Applications\/Xcode-beta.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/DarwinBasic.modulemap",
+    "clangModulePath" : "\/Users\/anthony\/Documents\/GitHub\/NodeDa-Kit\/.build\/out\/SDKExplicitPrecompiledModules\/MachO-4M57A9LX6NIZS2FBEGLXALHHO.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "MachO"
   },
   {
-    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/SDKs\/MacOSX27.0.sdk\/usr\/include\/ObjectiveC.modulemap",
-    "clangModulePath" : "\/Users\/anthony\/Documents\/GitHub\/Nrova Swift\/.build\/out\/SDKExplicitPrecompiledModules\/ObjectiveC-6L7AXBS60T2J7O7QNI3X17XCM.pcm",
+    "clangModuleMapPath" : "\/Applications\/Xcode-beta.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/ObjectiveC.modulemap",
+    "clangModulePath" : "\/Users\/anthony\/Documents\/GitHub\/NodeDa-Kit\/.build\/out\/SDKExplicitPrecompiledModules\/ObjectiveC-EEZB9EE1WHGGJH4A8PLUCXE2C.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "ObjectiveC"
   },
   {
-    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/SDKs\/MacOSX27.0.sdk\/System\/Library\/Frameworks\/Security.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/anthony\/Documents\/GitHub\/Nrova Swift\/.build\/out\/SDKExplicitPrecompiledModules\/Security-5CHZ3RALAS6N4NCMAC73HDBD6.pcm",
+    "clangModuleMapPath" : "\/Applications\/Xcode-beta.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/Security.framework\/Modules\/module.modulemap",
+    "clangModulePath" : "\/Users\/anthony\/Documents\/GitHub\/NodeDa-Kit\/.build\/out\/SDKExplicitPrecompiledModules\/Security-CUJM0H1N3NH2PZS0DU6BIKNPO.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "Security"
   },
   {
-    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/SDKs\/MacOSX27.0.sdk\/usr\/lib\/swift\/shims\/module.modulemap",
-    "clangModulePath" : "\/Users\/anthony\/Documents\/GitHub\/Nrova Swift\/.build\/out\/SDKExplicitPrecompiledModules\/SwiftShims-DH1SABHWCTW4XHBXOZVQ4UKBH.pcm",
+    "clangModuleMapPath" : "\/Applications\/Xcode-beta.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/lib\/swift\/shims\/module.modulemap",
+    "clangModulePath" : "\/Users\/anthony\/Documents\/GitHub\/NodeDa-Kit\/.build\/out\/SDKExplicitPrecompiledModules\/SwiftShims-3ORGPEOU66K0D1PNVUBIXQQUI.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "SwiftShims"
   },
   {
-    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/SDKs\/MacOSX27.0.sdk\/usr\/include\/xpc.modulemap",
-    "clangModulePath" : "\/Users\/anthony\/Documents\/GitHub\/Nrova Swift\/.build\/out\/SDKExplicitPrecompiledModules\/XPC-D0O2OFCCLX5QMZ39JYT46JI9E.pcm",
+    "clangModuleMapPath" : "\/Applications\/Xcode-beta.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/xpc.modulemap",
+    "clangModulePath" : "\/Users\/anthony\/Documents\/GitHub\/NodeDa-Kit\/.build\/out\/SDKExplicitPrecompiledModules\/XPC-CVNOH8I5VG3MLCCIN78PVVME2.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "XPC"
   },
   {
-    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/SDKs\/MacOSX27.0.sdk\/usr\/include\/DarwinFoundation1.modulemap",
-    "clangModulePath" : "\/Users\/anthony\/Documents\/GitHub\/Nrova Swift\/.build\/out\/SDKExplicitPrecompiledModules\/_AvailabilityInternal-D3KA367MIRHCYTQFZCHHORO6J.pcm",
+    "clangModuleMapPath" : "\/Applications\/Xcode-beta.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/DarwinFoundation1.modulemap",
+    "clangModulePath" : "\/Users\/anthony\/Documents\/GitHub\/NodeDa-Kit\/.build\/out\/SDKExplicitPrecompiledModules\/_AvailabilityInternal-6XFZC0R883EEG5HQQHQP3E4NJ.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "_AvailabilityInternal"
   },
   {
-    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/usr\/lib\/clang\/21\/include\/module.modulemap",
-    "clangModulePath" : "\/Users\/anthony\/Documents\/GitHub\/Nrova Swift\/.build\/out\/SDKExplicitPrecompiledModules\/_Builtin_float-18DMO6E3XHCRC1P98OHQ43V8Q.pcm",
+    "clangModuleMapPath" : "\/Applications\/Xcode-beta.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/lib\/clang\/21\/include\/module.modulemap",
+    "clangModulePath" : "\/Users\/anthony\/Documents\/GitHub\/NodeDa-Kit\/.build\/out\/SDKExplicitPrecompiledModules\/_Builtin_float-DTCKMDKD0TRFHSHN5HBV0ZWVC.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "_Builtin_float"
   },
   {
-    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/usr\/lib\/clang\/21\/include\/module.modulemap",
-    "clangModulePath" : "\/Users\/anthony\/Documents\/GitHub\/Nrova Swift\/.build\/out\/SDKExplicitPrecompiledModules\/_Builtin_inttypes-84XW9S8V6H1XK1Q81O16O0M6X.pcm",
+    "clangModuleMapPath" : "\/Applications\/Xcode-beta.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/lib\/clang\/21\/include\/module.modulemap",
+    "clangModulePath" : "\/Users\/anthony\/Documents\/GitHub\/NodeDa-Kit\/.build\/out\/SDKExplicitPrecompiledModules\/_Builtin_inttypes-B2O7QG0IVC5GOKET4A8GQKJ6M.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "_Builtin_inttypes"
   },
   {
-    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/usr\/lib\/clang\/21\/include\/module.modulemap",
-    "clangModulePath" : "\/Users\/anthony\/Documents\/GitHub\/Nrova Swift\/.build\/out\/SDKExplicitPrecompiledModules\/_Builtin_limits-BQF90WYV0N1DHVP3DC72LQ6X5.pcm",
+    "clangModuleMapPath" : "\/Applications\/Xcode-beta.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/lib\/clang\/21\/include\/module.modulemap",
+    "clangModulePath" : "\/Users\/anthony\/Documents\/GitHub\/NodeDa-Kit\/.build\/out\/SDKExplicitPrecompiledModules\/_Builtin_limits-3FC3PFMYFH3A9K4HSSU62C0SD.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "_Builtin_limits"
   },
   {
-    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/usr\/lib\/clang\/21\/include\/module.modulemap",
-    "clangModulePath" : "\/Users\/anthony\/Documents\/GitHub\/Nrova Swift\/.build\/out\/SDKExplicitPrecompiledModules\/_Builtin_stdarg-2MTVS2GRF3RD55JZVUT5WQBRW.pcm",
+    "clangModuleMapPath" : "\/Applications\/Xcode-beta.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/lib\/clang\/21\/include\/module.modulemap",
+    "clangModulePath" : "\/Users\/anthony\/Documents\/GitHub\/NodeDa-Kit\/.build\/out\/SDKExplicitPrecompiledModules\/_Builtin_stdarg-B96VVBM8O2RUGZQ0YKIF562XW.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "_Builtin_stdarg"
   },
   {
-    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/usr\/lib\/clang\/21\/include\/module.modulemap",
-    "clangModulePath" : "\/Users\/anthony\/Documents\/GitHub\/Nrova Swift\/.build\/out\/SDKExplicitPrecompiledModules\/_Builtin_stdbool-BJEH53OGT4Y1UNIK51L5339H4.pcm",
+    "clangModuleMapPath" : "\/Applications\/Xcode-beta.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/lib\/clang\/21\/include\/module.modulemap",
+    "clangModulePath" : "\/Users\/anthony\/Documents\/GitHub\/NodeDa-Kit\/.build\/out\/SDKExplicitPrecompiledModules\/_Builtin_stdbool-60ADLAANR8UNW2AWOHVGNMJ8N.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "_Builtin_stdbool"
   },
   {
-    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/usr\/lib\/clang\/21\/include\/module.modulemap",
-    "clangModulePath" : "\/Users\/anthony\/Documents\/GitHub\/Nrova Swift\/.build\/out\/SDKExplicitPrecompiledModules\/_Builtin_stddef-DAYZ5WZ32AILJWXMIPSZD6B6H.pcm",
+    "clangModuleMapPath" : "\/Applications\/Xcode-beta.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/lib\/clang\/21\/include\/module.modulemap",
+    "clangModulePath" : "\/Users\/anthony\/Documents\/GitHub\/NodeDa-Kit\/.build\/out\/SDKExplicitPrecompiledModules\/_Builtin_stddef-9RIO9SDEL4MZ3SE9UHY5MCO5S.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "_Builtin_stddef"
   },
   {
-    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/usr\/lib\/clang\/21\/include\/module.modulemap",
-    "clangModulePath" : "\/Users\/anthony\/Documents\/GitHub\/Nrova Swift\/.build\/out\/SDKExplicitPrecompiledModules\/_Builtin_stdint-7QFJZQYPA5ZSFQXR21XSSXIZX.pcm",
+    "clangModuleMapPath" : "\/Applications\/Xcode-beta.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/lib\/clang\/21\/include\/module.modulemap",
+    "clangModulePath" : "\/Users\/anthony\/Documents\/GitHub\/NodeDa-Kit\/.build\/out\/SDKExplicitPrecompiledModules\/_Builtin_stdint-7ZBG8C7Q54K5RMYXQ5IYF2TD5.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "_Builtin_stdint"
   },
   {
-    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/SDKs\/MacOSX27.0.sdk\/usr\/include\/DarwinFoundation1.modulemap",
-    "clangModulePath" : "\/Users\/anthony\/Documents\/GitHub\/Nrova Swift\/.build\/out\/SDKExplicitPrecompiledModules\/_DarwinFoundation1-8A7GYH79ZVTPXWGOEZMBDA400.pcm",
+    "clangModuleMapPath" : "\/Applications\/Xcode-beta.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/DarwinFoundation1.modulemap",
+    "clangModulePath" : "\/Users\/anthony\/Documents\/GitHub\/NodeDa-Kit\/.build\/out\/SDKExplicitPrecompiledModules\/_DarwinFoundation1-8AU2QKGF7KLGAR58BLGSLTGFE.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "_DarwinFoundation1"
   },
   {
-    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/SDKs\/MacOSX27.0.sdk\/usr\/include\/DarwinFoundation2.modulemap",
-    "clangModulePath" : "\/Users\/anthony\/Documents\/GitHub\/Nrova Swift\/.build\/out\/SDKExplicitPrecompiledModules\/_DarwinFoundation2-MQANUN6U9J1GISNL8N1WK7MQ.pcm",
+    "clangModuleMapPath" : "\/Applications\/Xcode-beta.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/DarwinFoundation2.modulemap",
+    "clangModulePath" : "\/Users\/anthony\/Documents\/GitHub\/NodeDa-Kit\/.build\/out\/SDKExplicitPrecompiledModules\/_DarwinFoundation2-C21J9ZL65824LL26N2MA8D4BX.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "_DarwinFoundation2"
   },
   {
-    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/SDKs\/MacOSX27.0.sdk\/usr\/include\/DarwinFoundation3.modulemap",
-    "clangModulePath" : "\/Users\/anthony\/Documents\/GitHub\/Nrova Swift\/.build\/out\/SDKExplicitPrecompiledModules\/_DarwinFoundation3-DE27NQP1N0OYAF5EPLFOJJLNM.pcm",
+    "clangModuleMapPath" : "\/Applications\/Xcode-beta.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/DarwinFoundation3.modulemap",
+    "clangModulePath" : "\/Users\/anthony\/Documents\/GitHub\/NodeDa-Kit\/.build\/out\/SDKExplicitPrecompiledModules\/_DarwinFoundation3-D4DAOW6RV4P0NFXJ9ILYOWQJ7.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "_DarwinFoundation3"
   },
   {
-    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/SDKs\/MacOSX27.0.sdk\/usr\/lib\/swift\/shims\/module.modulemap",
-    "clangModulePath" : "\/Users\/anthony\/Documents\/GitHub\/Nrova Swift\/.build\/out\/SDKExplicitPrecompiledModules\/_SwiftConcurrencyShims-5X55DV7HNXX7P495LEKCEW4LD.pcm",
+    "clangModuleMapPath" : "\/Applications\/Xcode-beta.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/lib\/swift\/shims\/module.modulemap",
+    "clangModulePath" : "\/Users\/anthony\/Documents\/GitHub\/NodeDa-Kit\/.build\/out\/SDKExplicitPrecompiledModules\/_SwiftConcurrencyShims-E481KHE4J8LS44IU0LC9YUV7X.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "_SwiftConcurrencyShims"
   },
   {
-    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/SDKs\/MacOSX27.0.sdk\/usr\/include\/launch.modulemap",
-    "clangModulePath" : "\/Users\/anthony\/Documents\/GitHub\/Nrova Swift\/.build\/out\/SDKExplicitPrecompiledModules\/launch-RR34RJXP4EMOH5BOQZB3MTF0.pcm",
+    "clangModuleMapPath" : "\/Applications\/Xcode-beta.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/launch.modulemap",
+    "clangModulePath" : "\/Users\/anthony\/Documents\/GitHub\/NodeDa-Kit\/.build\/out\/SDKExplicitPrecompiledModules\/launch-ANRXLX1I09KB917FC5AWN83Q8.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "launch"
   },
   {
-    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/SDKs\/MacOSX27.0.sdk\/usr\/include\/libDER\/module.modulemap",
-    "clangModulePath" : "\/Users\/anthony\/Documents\/GitHub\/Nrova Swift\/.build\/out\/SDKExplicitPrecompiledModules\/libDER-47HX0VQ27QH7NZ3IK0V5DM52I.pcm",
+    "clangModuleMapPath" : "\/Applications\/Xcode-beta.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/libDER\/module.modulemap",
+    "clangModulePath" : "\/Users\/anthony\/Documents\/GitHub\/NodeDa-Kit\/.build\/out\/SDKExplicitPrecompiledModules\/libDER-D66VOMF9LQALRVGVQ3ZVY3ETZ.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "libDER"
   },
   {
-    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/SDKs\/MacOSX27.0.sdk\/usr\/include\/libkern.modulemap",
-    "clangModulePath" : "\/Users\/anthony\/Documents\/GitHub\/Nrova Swift\/.build\/out\/SDKExplicitPrecompiledModules\/libkern-CNOP45BV1M5DF3AAF0ECVBA60.pcm",
+    "clangModuleMapPath" : "\/Applications\/Xcode-beta.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/libkern.modulemap",
+    "clangModulePath" : "\/Users\/anthony\/Documents\/GitHub\/NodeDa-Kit\/.build\/out\/SDKExplicitPrecompiledModules\/libkern-6MMEWIYO8DDFWNT3N5OV4ZXUD.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "libkern"
   },
   {
-    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/SDKs\/MacOSX27.0.sdk\/usr\/include\/os.modulemap",
-    "clangModulePath" : "\/Users\/anthony\/Documents\/GitHub\/Nrova Swift\/.build\/out\/SDKExplicitPrecompiledModules\/os_object-2ZGFECY0QIZAN3TW58FS97ETM.pcm",
+    "clangModuleMapPath" : "\/Applications\/Xcode-beta.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/os.modulemap",
+    "clangModulePath" : "\/Users\/anthony\/Documents\/GitHub\/NodeDa-Kit\/.build\/out\/SDKExplicitPrecompiledModules\/os_object-5U83K9Q6TM0S58RQNWBXSSYTL.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "os_object"
   },
   {
-    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/SDKs\/MacOSX27.0.sdk\/usr\/include\/os.modulemap",
-    "clangModulePath" : "\/Users\/anthony\/Documents\/GitHub\/Nrova Swift\/.build\/out\/SDKExplicitPrecompiledModules\/os_workgroup-3WL4ISLX7A7KNKQW83OCYZOZU.pcm",
+    "clangModuleMapPath" : "\/Applications\/Xcode-beta.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/os.modulemap",
+    "clangModulePath" : "\/Users\/anthony\/Documents\/GitHub\/NodeDa-Kit\/.build\/out\/SDKExplicitPrecompiledModules\/os_workgroup-QF1VSM9MSOV5WDV93UJKWEUW.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "os_workgroup"
   },
   {
-    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/usr\/lib\/clang\/21\/include\/module.modulemap",
-    "clangModulePath" : "\/Users\/anthony\/Documents\/GitHub\/Nrova Swift\/.build\/out\/SDKExplicitPrecompiledModules\/ptrauth-F34GBHNFTW8Q5JIL13YGNTQS0.pcm",
+    "clangModuleMapPath" : "\/Applications\/Xcode-beta.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/lib\/clang\/21\/include\/module.modulemap",
+    "clangModulePath" : "\/Users\/anthony\/Documents\/GitHub\/NodeDa-Kit\/.build\/out\/SDKExplicitPrecompiledModules\/ptrauth-COFYW38ZCGHSHCLC1G6CBS736.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "ptrauth"
   },
   {
-    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/usr\/lib\/clang\/21\/include\/module.modulemap",
-    "clangModulePath" : "\/Users\/anthony\/Documents\/GitHub\/Nrova Swift\/.build\/out\/SDKExplicitPrecompiledModules\/ptrcheck-CIVGZDI9TR82Q794LN3HLY3P2.pcm",
+    "clangModuleMapPath" : "\/Applications\/Xcode-beta.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/lib\/clang\/21\/include\/module.modulemap",
+    "clangModulePath" : "\/Users\/anthony\/Documents\/GitHub\/NodeDa-Kit\/.build\/out\/SDKExplicitPrecompiledModules\/ptrcheck-JQJWO4OHWU02AMY2HW6X1D4X.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "ptrcheck"
   },
   {
-    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/SDKs\/MacOSX27.0.sdk\/usr\/include\/c_standard_library.modulemap",
-    "clangModulePath" : "\/Users\/anthony\/Documents\/GitHub\/Nrova Swift\/.build\/out\/SDKExplicitPrecompiledModules\/string_h-C2QSAJ70VSIG1DSF80ERW83XC.pcm",
+    "clangModuleMapPath" : "\/Applications\/Xcode-beta.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/c_standard_library.modulemap",
+    "clangModulePath" : "\/Users\/anthony\/Documents\/GitHub\/NodeDa-Kit\/.build\/out\/SDKExplicitPrecompiledModules\/string_h-AUZW2LAK6USI02S1DK6G4XLVG.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "string_h"
   },
   {
-    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/SDKs\/MacOSX27.0.sdk\/usr\/include\/DarwinFoundation2.modulemap",
-    "clangModulePath" : "\/Users\/anthony\/Documents\/GitHub\/Nrova Swift\/.build\/out\/SDKExplicitPrecompiledModules\/sys_types-8PTGVW806DP6V0KNTVL8CJZT2.pcm",
+    "clangModuleMapPath" : "\/Applications\/Xcode-beta.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/DarwinFoundation2.modulemap",
+    "clangModulePath" : "\/Users\/anthony\/Documents\/GitHub\/NodeDa-Kit\/.build\/out\/SDKExplicitPrecompiledModules\/sys_types-4BI7L1YFFWW216EZ2D808N8ZY.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "sys_types"

@@ -18,6 +18,7 @@ final class NodeDaClientTests: XCTestCase {
         XCTAssertEqual(configuration.endpoints.developer.absoluteString, unified)
         XCTAssertEqual(configuration.endpoints.systemStatus.absoluteString, unified)
         XCTAssertEqual(configuration.endpoints.legalPolicies.absoluteString, unified)
+        XCTAssertEqual(configuration.endpoints.llmHub.absoluteString, unified)
     }
 
     func testClientExposesEveryService() {
@@ -30,6 +31,7 @@ final class NodeDaClientTests: XCTestCase {
         _ = client.featureFlags
         _ = client.systemStatus
         _ = client.legal
+        _ = client.llmHub
     }
 
     // MARK: - Distribution wiring
@@ -285,7 +287,7 @@ final class NodeDaClientTests: XCTestCase {
                 return
             }
             XCTAssertEqual(keys.apiKey, "NodeDaAPIKey")
-            let description = (error as LocalizedError).errorDescription ?? ""
+            let description = (error as? LocalizedError)?.errorDescription ?? ""
             XCTAssertTrue(description.contains("<key>NodeDaAPIKey</key>"))
             XCTAssertTrue(description.contains("<string>YOUR_NODEDA_API_KEY</string>"))
             XCTAssertTrue(description.contains("<key>NodeDaOrganizationId</key>"))
@@ -317,7 +319,7 @@ final class NodeDaClientTests: XCTestCase {
             }
             XCTAssertEqual(keys.apiKey, "NodeDaAPIKey")
             XCTAssertEqual(placeholder, "YOUR_NODEDA_API_KEY")
-            let description = (error as LocalizedError).errorDescription ?? ""
+            let description = (error as? LocalizedError)?.errorDescription ?? ""
             XCTAssertTrue(description.contains("YOUR_NODEDA_API_KEY"))
             XCTAssertTrue(description.contains("C1IRXJbknvZSTKMBxLDQ"))
         }
@@ -349,7 +351,7 @@ final class NodeDaClientTests: XCTestCase {
                 return
             }
             XCTAssertEqual(keys.organizationId, "NodeDaOrganizationId")
-            let description = (error as LocalizedError).errorDescription ?? ""
+            let description = (error as? LocalizedError)?.errorDescription ?? ""
             XCTAssertTrue(description.contains("C1IRXJbknvZSTKMBxLDQ"))
         }
     }
@@ -383,7 +385,92 @@ final class NodeDaClientTests: XCTestCase {
 
     func testSDKVersionIsExposed() {
         XCTAssertFalse(NodeDa.version.isEmpty)
-        XCTAssertEqual(NodeDa.version, "1.1.0")
+        XCTAssertEqual(NodeDa.version, "1.2.0")
+    }
+
+    // MARK: - LLM Hub
+
+    func testLLMHubCreateChatCompletionEncodesOpenAIBody() async throws {
+        let orgId = NodeDaConfiguration.defaultOrganizationId
+        let mock = MockTransport(responder: { request in
+            XCTAssertEqual(request.httpMethod, "POST")
+            XCTAssertEqual(
+                request.url?.path,
+                "/v1/organizations/\(orgId)/llm/chat/completions"
+            )
+            XCTAssertEqual(request.value(forHTTPHeaderField: "Authorization"), "Bearer test-key")
+            XCTAssertEqual(request.value(forHTTPHeaderField: "Content-Type"), "application/json")
+
+            let body = try XCTUnwrap(request.httpBody)
+            let json = try JSONSerialization.jsonObject(with: body) as? [String: Any]
+            XCTAssertEqual(json?["model"] as? String, "gemini-3.1-flash-lite")
+            let temperature = try XCTUnwrap((json?["temperature"] as? NSNumber)?.doubleValue)
+            XCTAssertEqual(temperature, 0.2, accuracy: 0.0001)
+            XCTAssertEqual((json?["max_tokens"] as? NSNumber)?.intValue, 512)
+            let messages = try XCTUnwrap(json?["messages"] as? [[String: Any]])
+            XCTAssertEqual(messages.count, 2)
+            XCTAssertEqual(messages[0]["role"] as? String, "system")
+            XCTAssertEqual(messages[1]["role"] as? String, "user")
+
+            let responseJSON = """
+            {
+              "id": "chatcmpl_test",
+              "object": "chat.completion",
+              "created": 1752240000,
+              "model": "gemini-3.1-flash-lite",
+              "choices": [
+                {
+                  "index": 0,
+                  "message": { "role": "assistant", "content": "Ship it." },
+                  "finish_reason": "stop"
+                }
+              ],
+              "usage": {
+                "prompt_tokens": 24,
+                "completion_tokens": 3,
+                "total_tokens": 27
+              }
+            }
+            """
+            return (Data(responseJSON.utf8), MockTransport.response(for: request, status: 200))
+        })
+
+        let client = NodeDaClient(apiKey: "test-key", transport: mock)
+        let completion = try await client.llmHub.createChatCompletion(
+            ChatCompletionRequest(
+                messages: [
+                    ChatMessage(role: .system, content: "You are a helpful assistant."),
+                    ChatMessage(role: .user, content: "Summarize our release notes.")
+                ],
+                model: LLMHubModelID.gemini31FlashLite,
+                temperature: 0.2,
+                maxTokens: 512
+            )
+        )
+        XCTAssertEqual(completion.id, "chatcmpl_test")
+        XCTAssertEqual(completion.model, "gemini-3.1-flash-lite")
+        XCTAssertEqual(completion.firstContent, "Ship it.")
+        XCTAssertEqual(completion.usage?.totalTokens, 27)
+        XCTAssertEqual(completion.choices.first?.finishReason, "stop")
+    }
+
+    func testLLMHubChatSugarPostsSameEndpoint() async throws {
+        let orgId = NodeDaConfiguration.defaultOrganizationId
+        let mock = MockTransport(responder: { request in
+            XCTAssertEqual(request.httpMethod, "POST")
+            XCTAssertEqual(
+                request.url?.path,
+                "/v1/organizations/\(orgId)/llm/chat/completions"
+            )
+            let json = #"{"id":"c1","choices":[{"message":{"role":"assistant","content":"Hi"}}]}"#
+            return (Data(json.utf8), MockTransport.response(for: request, status: 200))
+        })
+
+        let client = NodeDaClient(apiKey: "test-key", transport: mock)
+        let completion = try await client.llmHub.chat(
+            messages: [ChatMessage(role: .user, content: "Hello")]
+        )
+        XCTAssertEqual(completion.firstContent, "Hi")
     }
 
     // MARK: - Health

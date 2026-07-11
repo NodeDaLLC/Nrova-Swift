@@ -1,0 +1,23 @@
+{
+  "/Users/anthony/Documents/GitHub/NodeDa-Kit/Sources/NodeDa/Newsroom/NewsroomModels.swift" : {
+    "const-values" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/NewsroomModels.swiftconstvalues",
+    "dependencies" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/NewsroomModels.d",
+    "diagnostics" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/NewsroomModels.dia",
+    "object" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/NewsroomModels.o",
+    "swift-dependencies" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/NewsroomModels.swiftdeps"
+  },
+  "/Users/anthony/Documents/GitHub/NodeDa-Kit/Sources/NodeDa/Newsroom/NewsroomService.swift" : {
+    "const-values" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/NewsroomService.swiftconstvalues",
+    "dependencies" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/NewsroomService.d",
+    "diagnostics" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/NewsroomService.dia",
+    "object" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/NewsroomService.o",
+    "swift-dependencies" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/NewsroomService.swiftdeps"
+  },
+  "/Users/anthony/Documents/GitHub/NodeDa-Kit/Sources/NodeDa/NodeDaClient.swift" : {
+    "const-values" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/NodeDaClient.swiftconstvalues",
+    "dependencies" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/NodeDaClient.d",
+    "diagnostics" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/NodeDaClient.dia",
+    "object" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/NodeDaClient.o",
+    "swift-dependencies" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/NodeDaClient.swiftdeps"
+  }
+}

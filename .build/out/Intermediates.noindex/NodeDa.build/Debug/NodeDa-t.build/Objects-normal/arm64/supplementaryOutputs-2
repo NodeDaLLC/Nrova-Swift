@@ -1,23 +1,23 @@
 {
-  "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/NodeDa/Core/InfoPlistConfiguration.swift" : {
-    "const-values" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/InfoPlistConfiguration.swiftconstvalues",
-    "dependencies" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/InfoPlistConfiguration.d",
-    "diagnostics" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/InfoPlistConfiguration.dia",
-    "object" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/InfoPlistConfiguration.o",
-    "swift-dependencies" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/InfoPlistConfiguration.swiftdeps"
+  "/Users/anthony/Documents/GitHub/NodeDa-Kit/Sources/NodeDa/Core/InfoPlistConfiguration.swift" : {
+    "const-values" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/InfoPlistConfiguration.swiftconstvalues",
+    "dependencies" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/InfoPlistConfiguration.d",
+    "diagnostics" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/InfoPlistConfiguration.dia",
+    "object" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/InfoPlistConfiguration.o",
+    "swift-dependencies" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/InfoPlistConfiguration.swiftdeps"
   },
-  "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/NodeDa/Core/JSONValue.swift" : {
-    "const-values" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/JSONValue.swiftconstvalues",
-    "dependencies" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/JSONValue.d",
-    "diagnostics" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/JSONValue.dia",
-    "object" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/JSONValue.o",
-    "swift-dependencies" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/JSONValue.swiftdeps"
+  "/Users/anthony/Documents/GitHub/NodeDa-Kit/Sources/NodeDa/Core/JSONValue.swift" : {
+    "const-values" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/JSONValue.swiftconstvalues",
+    "dependencies" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/JSONValue.d",
+    "diagnostics" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/JSONValue.dia",
+    "object" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/JSONValue.o",
+    "swift-dependencies" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/JSONValue.swiftdeps"
   },
-  "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/NodeDa/Core/NodeDaConfiguration.swift" : {
-    "const-values" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/NodeDaConfiguration.swiftconstvalues",
-    "dependencies" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/NodeDaConfiguration.d",
-    "diagnostics" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/NodeDaConfiguration.dia",
-    "object" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/NodeDaConfiguration.o",
-    "swift-dependencies" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/NodeDaConfiguration.swiftdeps"
+  "/Users/anthony/Documents/GitHub/NodeDa-Kit/Sources/NodeDa/Core/NodeDaConfiguration.swift" : {
+    "const-values" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/NodeDaConfiguration.swiftconstvalues",
+    "dependencies" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/NodeDaConfiguration.d",
+    "diagnostics" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/NodeDaConfiguration.dia",
+    "object" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/NodeDaConfiguration.o",
+    "swift-dependencies" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/NodeDaConfiguration.swiftdeps"
   }
 }

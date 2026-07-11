@@ -1,23 +1,23 @@
 {
-  "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/NodeDa/FeatureFlags/FeatureFlagsModels.swift" : {
-    "const-values" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/FeatureFlagsModels.swiftconstvalues",
-    "dependencies" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/FeatureFlagsModels.d",
-    "diagnostics" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/FeatureFlagsModels.dia",
-    "object" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/FeatureFlagsModels.o",
-    "swift-dependencies" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/FeatureFlagsModels.swiftdeps"
+  "/Users/anthony/Documents/GitHub/NodeDa-Kit/Sources/NodeDa/FeatureFlags/FeatureFlagsModels.swift" : {
+    "const-values" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/FeatureFlagsModels.swiftconstvalues",
+    "dependencies" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/FeatureFlagsModels.d",
+    "diagnostics" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/FeatureFlagsModels.dia",
+    "object" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/FeatureFlagsModels.o",
+    "swift-dependencies" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/FeatureFlagsModels.swiftdeps"
   },
-  "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/NodeDa/FeatureFlags/FeatureFlagsService.swift" : {
-    "const-values" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/FeatureFlagsService.swiftconstvalues",
-    "dependencies" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/FeatureFlagsService.d",
-    "diagnostics" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/FeatureFlagsService.dia",
-    "object" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/FeatureFlagsService.o",
-    "swift-dependencies" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/FeatureFlagsService.swiftdeps"
+  "/Users/anthony/Documents/GitHub/NodeDa-Kit/Sources/NodeDa/FeatureFlags/FeatureFlagsService.swift" : {
+    "const-values" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/FeatureFlagsService.swiftconstvalues",
+    "dependencies" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/FeatureFlagsService.d",
+    "diagnostics" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/FeatureFlagsService.dia",
+    "object" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/FeatureFlagsService.o",
+    "swift-dependencies" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/FeatureFlagsService.swiftdeps"
   },
-  "/Users/anthony/Documents/GitHub/Nrova Swift/Sources/NodeDa/Legal/LegalModels.swift" : {
-    "const-values" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/LegalModels.swiftconstvalues",
-    "dependencies" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/LegalModels.d",
-    "diagnostics" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/LegalModels.dia",
-    "object" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/LegalModels.o",
-    "swift-dependencies" : "/Users/anthony/Documents/GitHub/Nrova Swift/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/LegalModels.swiftdeps"
+  "/Users/anthony/Documents/GitHub/NodeDa-Kit/Sources/NodeDa/LLMHub/LLMHubModels.swift" : {
+    "const-values" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/LLMHubModels.swiftconstvalues",
+    "dependencies" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/LLMHubModels.d",
+    "diagnostics" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/LLMHubModels.dia",
+    "object" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/LLMHubModels.o",
+    "swift-dependencies" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDa-t.build/Objects-normal/arm64/LLMHubModels.swiftdeps"
   }
 }
