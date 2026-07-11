@@ -473,6 +473,24 @@ final class NodeDaClientTests: XCTestCase {
         XCTAssertEqual(completion.firstContent, "Hi")
     }
 
+    func testLLMHubOmitsNilModelFromWireBody() async throws {
+        let mock = MockTransport(responder: { request in
+            let body = try XCTUnwrap(request.httpBody)
+            let json = try JSONSerialization.jsonObject(with: body) as? [String: Any]
+            XCTAssertNil(json?["model"])
+            XCTAssertNotNil(json?["messages"])
+            let responseJSON = #"{"id":"c2","choices":[{"message":{"role":"assistant","content":"ok"}}]}"#
+            return (Data(responseJSON.utf8), MockTransport.response(for: request, status: 200))
+        })
+
+        let client = NodeDaClient(apiKey: "test-key", transport: mock)
+        _ = try await client.llmHub.createChatCompletion(
+            ChatCompletionRequest(
+                messages: [ChatMessage(role: .user, content: "Hi")]
+            )
+        )
+    }
+
     // MARK: - Health
 
     func testHealthEndpointSkipsAuth() async throws {

@@ -580,15 +580,41 @@ for section in privacy.sections.sorted(by: { ($0.sortOrder ?? 0) < ($1.sortOrder
 
 ### LLM Hub API
 
-OpenAI-compatible chat completions via the Vertex LLM Hub gateway.
-Requires a developer API key with the `llm:invoke` scope. Omit `model`
-to use the org’s configured default; catalog ids live on `LLMHubModelID`.
+OpenAI-compatible chat completions via the Vertex LLM Hub gateway
+(`https://api.nodeda.com`). Requires a developer API key with the
+`llm:invoke` scope (`LLMHubScope.invoke`).
+
+**Server-owned routing:** the gateway picks Nrova Gemini vs BYO from
+Developer → LLM Hub **Routing** (`nrova` | `byo` | `prefer_byo`). Clients
+do not send a provider URL, API key, or routing mode. `model` is an
+optional hint — omit it for the org default (Nrova) or the Custom LLM
+configured model (BYO). Catalog ids for Nrova live on `LLMHubModelID`.
+
+Nrova Gemini usage is metered monthly (provider list price + platform
+margin). BYO routing uses your Org Settings → Custom LLM key; you pay
+your provider for tokens and NodeDa charges only a gateway routing fee.
 
 | Method | Endpoint | Scope |
 | --- | --- | --- |
 | `llmHub.health()` | `GET /health` | none |
 | `llmHub.createChatCompletion(_:)` | `POST …/llm/chat/completions` | `llm:invoke` |
 | `llmHub.chat(messages:model:temperature:maxTokens:)` | `POST …/llm/chat/completions` | `llm:invoke` |
+
+Prefer omitting `model` so Hub defaults apply:
+
+```swift
+let completion = try await client.llmHub.chat(
+    messages: [
+        ChatMessage(role: .system, content: "You are a helpful assistant."),
+        ChatMessage(role: .user, content: "Summarize our release notes in two sentences.")
+    ],
+    temperature: 0.2,
+    maxTokens: 512
+)
+print(completion.firstContent ?? "")
+```
+
+Or pass a catalog id when you need a specific Nrova model:
 
 ```swift
 let completion = try await client.llmHub.createChatCompletion(
@@ -604,6 +630,47 @@ let completion = try await client.llmHub.createChatCompletion(
 )
 print(completion.firstContent ?? "")
 ```
+
+Sugar form with an explicit model:
+
+```swift
+let completion = try await client.llmHub.chat(
+    messages: [
+        ChatMessage(role: .user, content: "Ping")
+    ],
+    model: LLMHubModelID.recommendedDefault,
+    temperature: 0.2,
+    maxTokens: 128
+)
+```
+
+Gateway error slugs (via `NodeDaError.api`): `hub_disabled`,
+`model_not_found`, `byo_not_configured`, `byo_not_ready`,
+`byo_model_missing`, `spend_cap_reached`, `upstream_unavailable`,
+`upstream_error`, `upstream_timeout`, `insufficient_scope`.
+
+#### Catalog model ids (`LLMHubModelID`)
+
+| Constant | Wire id | Notes |
+| --- | --- | --- |
+| `gemini31FlashLite` | `gemini-3.1-flash-lite` | Recommended default (`recommendedDefault`) |
+| `gemini25Flash` | `gemini-2.5-flash` | Balanced production Flash |
+| `gemini25Pro` | `gemini-2.5-pro` | Stronger reasoning; elevated rates above 200k input |
+| `gemini3FlashPreview` | `gemini-3-flash-preview` | Frontier Flash preview |
+| `gemini35Flash` | `gemini-3.5-flash` | Highest Flash-class intelligence |
+
+#### Request / response (OpenAI-shaped)
+
+Request encodes `maxTokens` as wire `max_tokens`. Nil optionals are
+**omitted** from the JSON body (not encoded as `null`). Response fields use
+snake_case on the wire (`prompt_tokens`, `finish_reason`, …) and camelCase
+in Swift (`promptTokens`, `finishReason`). Prefer
+`ChatCompletionResponse.firstContent` for the assistant string.
+
+v1 does **not** include streaming, tools/function calling, multimodal
+content arrays, or a list-models endpoint — text chat completions only.
+
+Dashboard docs: Developer → API reference → LLM Hub (and NodeDa Kit).
 
 ## Error handling
 
