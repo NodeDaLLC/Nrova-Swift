@@ -11,5 +11,5 @@ import Foundation
 public enum NodeDa {
     /// Semantic version of the published SDK. Bumped in lockstep with
     /// the `Package.swift` tag.
-    public static let version = "1.2.1"
+    public static let version = "1.3.0"
 }

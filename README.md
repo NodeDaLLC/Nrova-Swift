@@ -1,6 +1,6 @@
 # NodeDa Vertex
 
-**Current version: `1.2.0`** &nbsp;·&nbsp; available at runtime as `NodeDa.version`.
+**Current version: `1.3.0`** &nbsp;·&nbsp; available at runtime as `NodeDa.version`.
 
 The official Swift package for the **NodeDa Vertex** HTTP APIs. One typed
 client, one auth scheme, every public service NodeDa Vertex exposes — built
@@ -19,7 +19,7 @@ let latest = try await client.distribution.latest(
     channel: .stable
 )
 print("Latest version:", latest.artifact.version ?? latest.release.version)
-print("SDK version:", NodeDa.version) // "1.2.0"
+print("SDK version:", NodeDa.version) // "1.3.0"
 ```
 
 ## Table of contents
@@ -40,6 +40,7 @@ print("SDK version:", NodeDa.version) // "1.2.0"
   - [System Status API](#system-status-api)
   - [Legal Policies API](#legal-policies-api)
   - [LLM Hub API](#llm-hub-api)
+  - [App Analytics API](#app-analytics-api)
 - [Error handling](#error-handling)
 - [Custom transports & testing](#custom-transports--testing)
 - [Configuration reference](#configuration-reference)
@@ -51,7 +52,7 @@ print("SDK version:", NodeDa.version) // "1.2.0"
 
 | | |
 | --- | --- |
-| **SDK version** | `1.2.0` |
+| **SDK version** | `1.3.0` |
 | **Runtime constant** | `NodeDa.version` |
 | **API base** | `https://api.nodeda.com` |
 | **Default org id** | `C1IRXJbknvZSTKMBxLDQ` |
@@ -83,7 +84,7 @@ Tested on Swift 6.x. No third-party dependencies — only Foundation.
 
 1. **File → Add Package Dependencies…**
 2. Paste the repo URL: `https://github.com/NodeDaLLC/Nrova-Swift.git`
-3. **Dependency Rule:** *Up to Next Major Version* → **`1.2.0`**
+3. **Dependency Rule:** *Up to Next Major Version* → **`1.3.0`**
 4. Add the `NodeDa` product to your app target.
 
 ### Swift Package Manager (`Package.swift`)
@@ -94,7 +95,7 @@ Pin to the **1.x** line:
 dependencies: [
     .package(
         url: "https://github.com/NodeDaLLC/Nrova-Swift.git",
-        from: "1.2.0"          // 1.2.0 ≤ NodeDa < 2.0.0
+        from: "1.3.0"          // 1.3.0 ≤ NodeDa < 2.0.0
     )
 ]
 ```
@@ -254,6 +255,7 @@ Scopes you'll see across the SDK:
 | `status:read` / `status:write` | `client.systemStatus` |
 | `legal:read` / `legal:write` | `client.legal` |
 | `llm:invoke` | `client.llmHub` |
+| `app-analytics:write` | `client.appAnalytics` (ingest; `app-analytics:read` cannot ingest) |
 
 ## Top-level client
 
@@ -270,6 +272,7 @@ client.featureFlags    // FeatureFlagsService
 client.systemStatus    // SystemStatusService
 client.legal           // LegalService
 client.llmHub          // LLMHubService
+client.appAnalytics    // AppAnalyticsService
 ```
 
 Quick health check across every service in parallel:
@@ -671,6 +674,76 @@ v1 does **not** include streaming, tools/function calling, multimodal
 content arrays, or a list-models endpoint — text chat completions only.
 
 Dashboard docs: Developer → API reference → LLM Hub (and NodeDa Kit).
+
+### App Analytics API
+
+Session-batch ingest via the Vertex App Analytics gateway
+(`https://api.nodeda.com`, schema `nrova.app-analytics.v1`). Requires a
+developer API key with the `app-analytics:write` scope
+(`AppAnalyticsScope.write`). `app-analytics:read` cannot ingest.
+`GET /health` needs no key.
+
+Apps auto-register from `bundleId`. Country and region are resolved
+server-side from the request IP — never send a raw IP or user identity.
+JSON body limit ~64 KB. Rate limit ~120 requests / minute / org+app+install.
+
+Persist `installId` on device (8–64 letters, digits, `_` or `-`). Mint a
+new `sessionId` (same charset) each time the app foregrounds. Screen
+events require `events[].screen`. Heartbeat / `session_end` may include
+`foregroundDurationMs` (cumulative foreground time for the session).
+`activeUserThresholdSeconds` is optional (clamped 30–3600, default 120).
+
+| Method | Endpoint | Scope |
+| --- | --- | --- |
+| `appAnalytics.health()` | `GET /health` | none |
+| `appAnalytics.ingest(_:)` | `POST …/app-analytics/events` | `app-analytics:write` |
+| `appAnalytics.ingest(bundleId:platform:installId:sessionId:events:…)` | `POST …/app-analytics/events` | `app-analytics:write` |
+
+```swift
+let installId = AppAnalyticsOpaqueId.generate() // persist this
+let sessionId = AppAnalyticsOpaqueId.generate() // new each foreground
+
+let result = try await client.appAnalytics.ingest(
+    bundleId: Bundle.main.bundleIdentifier ?? "com.example.notes",
+    platform: .current, // ios | macos on Apple
+    installId: installId,
+    sessionId: sessionId,
+    events: [
+        .sessionStart(),
+        .screen("Home"),
+        .heartbeat(foregroundDurationMs: 120_000)
+    ],
+    sdk: .current,
+    appVersion: Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String,
+    activeUserThresholdSeconds: AppAnalyticsActiveUserThreshold.default
+)
+print(result.appId ?? "", result.qualifiedActive ?? false)
+```
+
+Typed request form:
+
+```swift
+let result = try await client.appAnalytics.ingest(
+    AppAnalyticsIngestRequest(
+        bundleId: "com.example.notes",
+        platform: .ios,
+        installId: installId,
+        sessionId: sessionId,
+        events: [
+            .sessionStart(ts: 1_710_000_000_000),
+            .screen("Home"),
+            .heartbeat(foregroundDurationMs: 120_000),
+            .sessionEnd(foregroundDurationMs: 180_000)
+        ],
+        sdk: .ios
+    )
+)
+```
+
+Gateway error slugs (via `NodeDaError.api`): `invalid_api_key`,
+`missing_credential`, `org_mismatch`, `insufficient_scope`, `wrong_scope`,
+`rate_limited`. `400` covers invalid `bundleId` / `platform` / `installId`
+/ `sessionId` / `events`.
 
 ## Error handling
 

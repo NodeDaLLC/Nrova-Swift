@@ -19,6 +19,7 @@ final class NodeDaClientTests: XCTestCase {
         XCTAssertEqual(configuration.endpoints.systemStatus.absoluteString, unified)
         XCTAssertEqual(configuration.endpoints.legalPolicies.absoluteString, unified)
         XCTAssertEqual(configuration.endpoints.llmHub.absoluteString, unified)
+        XCTAssertEqual(configuration.endpoints.appAnalytics.absoluteString, unified)
     }
 
     func testClientExposesEveryService() {
@@ -32,6 +33,7 @@ final class NodeDaClientTests: XCTestCase {
         _ = client.systemStatus
         _ = client.legal
         _ = client.llmHub
+        _ = client.appAnalytics
     }
 
     // MARK: - Distribution wiring
@@ -385,7 +387,7 @@ final class NodeDaClientTests: XCTestCase {
 
     func testSDKVersionIsExposed() {
         XCTAssertFalse(NodeDa.version.isEmpty)
-        XCTAssertEqual(NodeDa.version, "1.2.0")
+        XCTAssertEqual(NodeDa.version, "1.3.0")
     }
 
     // MARK: - LLM Hub
@@ -489,6 +491,111 @@ final class NodeDaClientTests: XCTestCase {
                 messages: [ChatMessage(role: .user, content: "Hi")]
             )
         )
+    }
+
+    // MARK: - App Analytics
+
+    func testAppAnalyticsIngestPostsSessionBatch() async throws {
+        let orgId = NodeDaConfiguration.defaultOrganizationId
+        let mock = MockTransport(responder: { request in
+            XCTAssertEqual(request.httpMethod, "POST")
+            XCTAssertEqual(
+                request.url?.path,
+                "/v1/organizations/\(orgId)/app-analytics/events"
+            )
+            XCTAssertEqual(request.value(forHTTPHeaderField: "Authorization"), "Bearer test-key")
+            XCTAssertEqual(request.value(forHTTPHeaderField: "X-API-Key"), "test-key")
+            XCTAssertEqual(request.value(forHTTPHeaderField: "Content-Type"), "application/json")
+
+            let body = try XCTUnwrap(request.httpBody)
+            let json = try JSONSerialization.jsonObject(with: body) as? [String: Any]
+            XCTAssertEqual(json?["bundleId"] as? String, "com.example.notes")
+            XCTAssertEqual(json?["platform"] as? String, "ios")
+            XCTAssertEqual(json?["sdk"] as? String, "ios")
+            XCTAssertEqual(json?["installId"] as? String, "install-uuid-from-device")
+            XCTAssertEqual(json?["sessionId"] as? String, "session-uuid-abcdef")
+            XCTAssertEqual((json?["activeUserThresholdSeconds"] as? NSNumber)?.intValue, 120)
+            let events = try XCTUnwrap(json?["events"] as? [[String: Any]])
+            XCTAssertEqual(events.count, 3)
+            XCTAssertEqual(events[0]["type"] as? String, "session_start")
+            XCTAssertEqual((events[0]["ts"] as? NSNumber)?.intValue, 1_710_000_000_000)
+            XCTAssertEqual(events[1]["type"] as? String, "screen")
+            XCTAssertEqual(events[1]["screen"] as? String, "Home")
+            XCTAssertEqual(events[2]["type"] as? String, "heartbeat")
+            XCTAssertEqual((events[2]["foregroundDurationMs"] as? NSNumber)?.intValue, 120_000)
+            XCTAssertNil(json?["appVersion"])
+            XCTAssertNil(json?["osVersion"])
+
+            let responseJSON = """
+            {
+              "ok": true,
+              "schema": "nrova.app-analytics.v1",
+              "appId": "example-notes",
+              "bundleId": "com.example.notes",
+              "qualifiedActive": false,
+              "activeUserThresholdSeconds": 120
+            }
+            """
+            return (Data(responseJSON.utf8), MockTransport.response(for: request, status: 200))
+        })
+
+        let client = NodeDaClient(apiKey: "test-key", transport: mock)
+        let result = try await client.appAnalytics.ingest(
+            bundleId: "com.example.notes",
+            platform: .ios,
+            installId: "install-uuid-from-device",
+            sessionId: "session-uuid-abcdef",
+            events: [
+                .sessionStart(ts: 1_710_000_000_000),
+                .screen("Home", ts: 1_710_000_000_500),
+                .heartbeat(ts: 1_710_000_120_000, foregroundDurationMs: 120_000)
+            ],
+            sdk: .ios,
+            activeUserThresholdSeconds: AppAnalyticsActiveUserThreshold.default
+        )
+        XCTAssertTrue(result.ok)
+        XCTAssertEqual(result.schema, AppAnalyticsSchema.v1)
+        XCTAssertEqual(result.appId, "example-notes")
+        XCTAssertEqual(result.bundleId, "com.example.notes")
+        XCTAssertEqual(result.qualifiedActive, false)
+        XCTAssertEqual(result.activeUserThresholdSeconds, 120)
+        XCTAssertEqual(AppAnalyticsScope.write, "app-analytics:write")
+    }
+
+    func testAppAnalyticsIngestOmitsNilOptionals() async throws {
+        let mock = MockTransport(responder: { request in
+            let body = try XCTUnwrap(request.httpBody)
+            let json = try JSONSerialization.jsonObject(with: body) as? [String: Any]
+            XCTAssertNil(json?["sdk"])
+            XCTAssertNil(json?["appVersion"])
+            XCTAssertNil(json?["osVersion"])
+            XCTAssertNil(json?["activeUserThresholdSeconds"])
+            let events = try XCTUnwrap(json?["events"] as? [[String: Any]])
+            XCTAssertNil(events[0]["ts"])
+            XCTAssertNil(events[0]["screen"])
+            XCTAssertNil(events[0]["foregroundDurationMs"])
+            let responseJSON = #"{"ok":true,"schema":"nrova.app-analytics.v1","appId":"a","bundleId":"com.example.notes"}"#
+            return (Data(responseJSON.utf8), MockTransport.response(for: request, status: 200))
+        })
+
+        let client = NodeDaClient(apiKey: "test-key", transport: mock)
+        _ = try await client.appAnalytics.ingest(
+            AppAnalyticsIngestRequest(
+                bundleId: "com.example.notes",
+                platform: .macos,
+                installId: "install-uuid-from-device",
+                sessionId: "session-uuid-abcdef",
+                events: [.sessionStart()]
+            )
+        )
+    }
+
+    func testAppAnalyticsOpaqueIdCharset() {
+        let id = AppAnalyticsOpaqueId.generate()
+        XCTAssertTrue(AppAnalyticsOpaqueId.isValid(id))
+        XCTAssertEqual(id.count, 22)
+        XCTAssertFalse(AppAnalyticsOpaqueId.isValid("short"))
+        XCTAssertTrue(AppAnalyticsOpaqueId.isValid("install-uuid-from-device"))
     }
 
     // MARK: - Health
