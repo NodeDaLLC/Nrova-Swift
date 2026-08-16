@@ -20,6 +20,7 @@ final class NodeDaClientTests: XCTestCase {
         XCTAssertEqual(configuration.endpoints.legalPolicies.absoluteString, unified)
         XCTAssertEqual(configuration.endpoints.llmHub.absoluteString, unified)
         XCTAssertEqual(configuration.endpoints.appAnalytics.absoluteString, unified)
+        XCTAssertEqual(configuration.endpoints.drive.absoluteString, unified)
     }
 
     func testClientExposesEveryService() {
@@ -34,6 +35,7 @@ final class NodeDaClientTests: XCTestCase {
         _ = client.legal
         _ = client.llmHub
         _ = client.appAnalytics
+        _ = client.drive
     }
 
     // MARK: - Distribution wiring
@@ -596,6 +598,75 @@ final class NodeDaClientTests: XCTestCase {
         XCTAssertEqual(id.count, 22)
         XCTAssertFalse(AppAnalyticsOpaqueId.isValid("short"))
         XCTAssertTrue(AppAnalyticsOpaqueId.isValid("install-uuid-from-device"))
+    }
+
+    // MARK: - Drive
+
+    func testDriveSessionUsesIdTokenAndUserPath() async throws {
+        let mock = MockTransport(responder: { request in
+            XCTAssertEqual(request.httpMethod, "GET")
+            XCTAssertEqual(request.url?.path, "/v1/drive/session")
+            XCTAssertFalse(request.url?.absoluteString.contains("/organizations/") ?? true)
+            XCTAssertEqual(request.value(forHTTPHeaderField: "Authorization"), "Bearer firebase-id-token")
+            XCTAssertEqual(request.value(forHTTPHeaderField: "X-Firebase-Id-Token"), "firebase-id-token")
+            XCTAssertNil(request.value(forHTTPHeaderField: "X-API-Key"))
+            let json = """
+            {
+              "schema": "nrova.drive.v1",
+              "user": { "uid": "user_1", "email": "ada@example.com" },
+              "accounts": [
+                {
+                  "id": "acct_1",
+                  "name": "Acme",
+                  "driveAccessible": true,
+                  "drives": [
+                    { "kind": "my", "space": "personal", "name": "My Drive" },
+                    { "kind": "organization", "space": "shared", "name": "Organization Drive" }
+                  ]
+                }
+              ]
+            }
+            """
+            return (Data(json.utf8), MockTransport.response(for: request, status: 200))
+        })
+        let client = NodeDaClient(apiKey: "test-key", transport: mock)
+        let session = try await client.drive.session(idToken: "firebase-id-token")
+        XCTAssertEqual(session.user.uid, "user_1")
+        XCTAssertEqual(session.accounts.count, 1)
+        XCTAssertEqual(session.accounts.first?.drives.count, 2)
+        XCTAssertEqual(session.accounts.first?.drives.first?.kind, .my)
+    }
+
+    func testDriveCreateAppFolderDoesNotUseOrganizationPath() async throws {
+        let mock = MockTransport(responder: { request in
+            XCTAssertEqual(request.httpMethod, "POST")
+            XCTAssertEqual(request.url?.path, "/v1/drive/app-folders")
+            XCTAssertFalse(request.url?.absoluteString.contains("/organizations/") ?? true)
+            XCTAssertEqual(request.value(forHTTPHeaderField: "Authorization"), "Bearer firebase-id-token")
+            let json = """
+            {
+              "schema": "nrova.drive.v1",
+              "created": true,
+              "folder": {
+                "id": "fld_1",
+                "kind": "folder",
+                "name": "Example Notes",
+                "parentId": null,
+                "space": "personal",
+                "appKey": "com.example.notes"
+              }
+            }
+            """
+            return (Data(json.utf8), MockTransport.response(for: request, status: 201))
+        })
+        let client = NodeDaClient(apiKey: "test-key", transport: mock)
+        let folder = try await client.drive.createAppFolder(
+            idToken: "firebase-id-token",
+            appKey: "com.example.notes",
+            name: "Example Notes"
+        )
+        XCTAssertEqual(folder.folder.appKey, "com.example.notes")
+        XCTAssertEqual(folder.folder.space, .personal)
     }
 
     // MARK: - Health
