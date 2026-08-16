@@ -1,0 +1,11 @@
+Target dependency graph (4 targets)
+Target 'AllIncludingTests' in project 'Aggregate'
+➜ Explicit dependency on target 'NodeDaTests-product' in project 'NodeDa'
+➜ Dependency on target 'NodeDaTests-product' in project 'NodeDa' via transitive dependency through 'NodeDaTests-test-runner'
+➜ Explicit dependency on target 'NodeDa-product' in project 'NodeDa'
+➜ Explicit dependency on target 'NodeDa' in project 'NodeDa'
+Target 'NodeDa-product' in project 'NodeDa'
+➜ Explicit dependency on target 'NodeDa' in project 'NodeDa'
+Target 'NodeDaTests-product' in project 'NodeDa'
+➜ Explicit dependency on target 'NodeDa' in project 'NodeDa'
+Target 'NodeDa' in project 'NodeDa' (no dependencies)

@@ -1,6 +1,6 @@
 # NodeDa Vertex
 
-**Current version: `1.3.0`** &nbsp;·&nbsp; available at runtime as `NodeDa.version`.
+**Current version: `1.4.0`** &nbsp;·&nbsp; available at runtime as `NodeDa.version`.
 
 The official Swift package for the **NodeDa Vertex** HTTP APIs. One typed
 client, one auth scheme, every public service NodeDa Vertex exposes — built
@@ -19,7 +19,7 @@ let latest = try await client.distribution.latest(
     channel: .stable
 )
 print("Latest version:", latest.artifact.version ?? latest.release.version)
-print("SDK version:", NodeDa.version) // "1.3.0"
+print("SDK version:", NodeDa.version) // "1.4.0"
 ```
 
 ## Table of contents
@@ -41,6 +41,7 @@ print("SDK version:", NodeDa.version) // "1.3.0"
   - [Legal Policies API](#legal-policies-api)
   - [LLM Hub API](#llm-hub-api)
   - [App Analytics API](#app-analytics-api)
+  - [Drive API](#drive-api)
 - [Error handling](#error-handling)
 - [Custom transports & testing](#custom-transports--testing)
 - [Configuration reference](#configuration-reference)
@@ -52,7 +53,7 @@ print("SDK version:", NodeDa.version) // "1.3.0"
 
 | | |
 | --- | --- |
-| **SDK version** | `1.3.0` |
+| **SDK version** | `1.4.0` |
 | **Runtime constant** | `NodeDa.version` |
 | **API base** | `https://api.nodeda.com` |
 | **Default org id** | `C1IRXJbknvZSTKMBxLDQ` |
@@ -84,7 +85,7 @@ Tested on Swift 6.x. No third-party dependencies — only Foundation.
 
 1. **File → Add Package Dependencies…**
 2. Paste the repo URL: `https://github.com/NodeDaLLC/Nrova-Swift.git`
-3. **Dependency Rule:** *Up to Next Major Version* → **`1.3.0`**
+3. **Dependency Rule:** *Up to Next Major Version* → **`1.4.0`**
 4. Add the `NodeDa` product to your app target.
 
 ### Swift Package Manager (`Package.swift`)
@@ -95,7 +96,7 @@ Pin to the **1.x** line:
 dependencies: [
     .package(
         url: "https://github.com/NodeDaLLC/Nrova-Swift.git",
-        from: "1.3.0"          // 1.3.0 ≤ NodeDa < 2.0.0
+        from: "1.4.0"          // 1.4.0 ≤ NodeDa < 2.0.0
     )
 ]
 ```
@@ -217,7 +218,10 @@ Every authenticated request sends **both** the `Authorization: Bearer
 <key>` and `X-API-Key: <key>` headers — the API accepts either.
 `GET /health` is the only endpoint that does not require a key, and
 the Distribution API exposes a `GET /applications/public` feed that
-is also unauthenticated.
+is also unauthenticated. **Drive** is different: `client.drive` uses a
+Firebase ID token (`Authorization: Bearer <idToken>`) against
+`/v1/drive/…`. It does **not** use `NodeDaOrganizationId` or a
+developer API key.
 
 The recommended path is the [Info.plist loader](#configuration-via-infoplist):
 
@@ -256,6 +260,7 @@ Scopes you'll see across the SDK:
 | `legal:read` / `legal:write` | `client.legal` |
 | `llm:invoke` | `client.llmHub` |
 | `app-analytics:write` | `client.appAnalytics` (ingest; `app-analytics:read` cannot ingest) |
+| Firebase ID token (not an API-key scope) | `client.drive` |
 
 ## Top-level client
 
@@ -273,6 +278,7 @@ client.systemStatus    // SystemStatusService
 client.legal           // LegalService
 client.llmHub          // LLMHubService
 client.appAnalytics    // AppAnalyticsService
+client.drive           // DriveService
 ```
 
 Quick health check across every service in parallel:
@@ -744,6 +750,38 @@ Gateway error slugs (via `NodeDaError.api`): `invalid_api_key`,
 `missing_credential`, `org_mismatch`, `insufficient_scope`, `wrong_scope`,
 `rate_limited`. `400` covers invalid `bundleId` / `platform` / `installId`
 / `sessionId` / `events`.
+
+### Drive API
+
+User-scoped Drive (`nrova.drive.v1`) on `https://api.nodeda.com`. Paths are
+`/v1/drive/…` — **not** `/v1/organizations/{orgId}/…`. Pass the signed-in
+user's Firebase ID token. Do not send `X-API-Key` or `NodeDaOrganizationId`.
+One login connects **My Drive** (`space=personal`) and **Organization Drive**
+(`space=shared`). If `session` returns more than one account, pass that
+account's opaque `id` as `accountId`.
+
+| Method | Endpoint | Auth |
+| --- | --- | --- |
+| `drive.health()` | `GET /health` | none |
+| `drive.session(idToken:)` | `GET /v1/drive/session` | ID token |
+| `drive.user(idToken:accountId:)` | `GET /v1/drive/user` | ID token |
+| `drive.createAppFolder(idToken:appKey:name:accountId:)` | `POST /v1/drive/app-folders` | ID token |
+| `drive.createFolder(idToken:name:parentId:space:accountId:)` | `POST /v1/drive/folders` | ID token |
+| `drive.listItems(idToken:parentId:space:limit:accountId:)` | `GET /v1/drive/items` | ID token |
+| `drive.getItem(idToken:itemId:accountId:)` | `GET /v1/drive/items/{itemId}` | ID token |
+| `drive.trashItem(idToken:itemId:accountId:)` | `DELETE /v1/drive/items/{itemId}` | ID token |
+| `drive.initiateUpload(idToken:name:mimeType:sizeBytes:parentId:accountId:)` | `POST /v1/drive/files` | ID token |
+| `drive.finalizeUpload(idToken:fileId:…)` | `POST /v1/drive/files/{fileId}/finalize` | ID token |
+| `drive.content(idToken:fileId:accountId:)` | `GET /v1/drive/files/{fileId}/content` | ID token |
+
+```swift
+let session = try await client.drive.session(idToken: idToken)
+let folder = try await client.drive.createAppFolder(
+    idToken: idToken,
+    appKey: Bundle.main.bundleIdentifier ?? "com.example.notes",
+    name: "Example Notes"
+)
+```
 
 ## Error handling
 

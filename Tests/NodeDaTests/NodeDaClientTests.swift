@@ -389,7 +389,7 @@ final class NodeDaClientTests: XCTestCase {
 
     func testSDKVersionIsExposed() {
         XCTAssertFalse(NodeDa.version.isEmpty)
-        XCTAssertEqual(NodeDa.version, "1.3.0")
+        XCTAssertEqual(NodeDa.version, "1.4.0")
     }
 
     // MARK: - LLM Hub

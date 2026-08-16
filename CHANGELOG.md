@@ -1,3 +1,11 @@
+## 1.4.0
+
+- Added Drive HTTP API client (`client.drive`) for `nrova.drive.v1`.
+- Paths are `/v1/drive/…` (not `/v1/organizations/{orgId}/…`). Auth is a
+  Firebase ID token; Drive does not use `NodeDaOrganizationId` or a
+  developer API key.
+- Included `drive` in `ServiceEndpoints` and `healthAll()`.
+
 ## 1.3.0
 
 - Added Vertex App Analytics ingest client (`client.appAnalytics`) for

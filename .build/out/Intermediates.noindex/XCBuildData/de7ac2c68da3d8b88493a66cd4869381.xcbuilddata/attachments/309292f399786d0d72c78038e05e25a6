@@ -1,0 +1,39 @@
+{
+  "" : {
+    "diagnostics" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDaTests-p.build/Objects-normal/arm64/NodeDaTests-primary.dia",
+    "emit-module-dependencies" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDaTests-p.build/Objects-normal/arm64/NodeDaTests-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDaTests-p.build/Objects-normal/arm64/NodeDaTests-primary-emit-module.dia",
+    "pch" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDaTests-p.build/Objects-normal/arm64/NodeDaTests-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDaTests-p.build/Objects-normal/arm64/NodeDaTests-primary.swiftdeps"
+  },
+  "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDaTests-p.build/DerivedSources/test_entry_point.swift" : {
+    "const-values" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDaTests-p.build/Objects-normal/arm64/test_entry_point.swiftconstvalues",
+    "dependencies" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDaTests-p.build/Objects-normal/arm64/test_entry_point.d",
+    "diagnostics" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDaTests-p.build/Objects-normal/arm64/test_entry_point.dia",
+    "index-unit-output-path" : "/NodeDa.build/Debug/NodeDaTests-p.build/Objects-normal/arm64/test_entry_point.o",
+    "llvm-bc" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDaTests-p.build/Objects-normal/arm64/test_entry_point.bc",
+    "object" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDaTests-p.build/Objects-normal/arm64/test_entry_point.o",
+    "swift-dependencies" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDaTests-p.build/Objects-normal/arm64/test_entry_point.swiftdeps",
+    "swiftmodule" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDaTests-p.build/Objects-normal/arm64/test_entry_point~partial.swiftmodule"
+  },
+  "/Users/anthony/Documents/GitHub/NodeDa-Kit/Tests/NodeDaTests/MockTransport.swift" : {
+    "const-values" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDaTests-p.build/Objects-normal/arm64/MockTransport.swiftconstvalues",
+    "dependencies" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDaTests-p.build/Objects-normal/arm64/MockTransport.d",
+    "diagnostics" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDaTests-p.build/Objects-normal/arm64/MockTransport.dia",
+    "index-unit-output-path" : "/NodeDa.build/Debug/NodeDaTests-p.build/Objects-normal/arm64/MockTransport.o",
+    "llvm-bc" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDaTests-p.build/Objects-normal/arm64/MockTransport.bc",
+    "object" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDaTests-p.build/Objects-normal/arm64/MockTransport.o",
+    "swift-dependencies" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDaTests-p.build/Objects-normal/arm64/MockTransport.swiftdeps",
+    "swiftmodule" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDaTests-p.build/Objects-normal/arm64/MockTransport~partial.swiftmodule"
+  },
+  "/Users/anthony/Documents/GitHub/NodeDa-Kit/Tests/NodeDaTests/NodeDaClientTests.swift" : {
+    "const-values" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDaTests-p.build/Objects-normal/arm64/NodeDaClientTests.swiftconstvalues",
+    "dependencies" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDaTests-p.build/Objects-normal/arm64/NodeDaClientTests.d",
+    "diagnostics" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDaTests-p.build/Objects-normal/arm64/NodeDaClientTests.dia",
+    "index-unit-output-path" : "/NodeDa.build/Debug/NodeDaTests-p.build/Objects-normal/arm64/NodeDaClientTests.o",
+    "llvm-bc" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDaTests-p.build/Objects-normal/arm64/NodeDaClientTests.bc",
+    "object" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDaTests-p.build/Objects-normal/arm64/NodeDaClientTests.o",
+    "swift-dependencies" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDaTests-p.build/Objects-normal/arm64/NodeDaClientTests.swiftdeps",
+    "swiftmodule" : "/Users/anthony/Documents/GitHub/NodeDa-Kit/.build/out/Intermediates.noindex/NodeDa.build/Debug/NodeDaTests-p.build/Objects-normal/arm64/NodeDaClientTests~partial.swiftmodule"
+  }
+}
