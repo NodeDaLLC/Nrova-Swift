@@ -5,11 +5,11 @@
       "name" : "NodeDa",
       "path" : "/Users/anthony/Documents/GitHub/NodeDa-Kit",
       "projects" : [
-        "ee2dd487cfc7a924571c9b1086642c669319359f5456702b4a93d74899b55f70",
+        "4dac3a9f099c7720bfbf47e0383d8d81d6de9a71a60a830af169415f9519ddad",
         "3c72f3039762abfd5ae2a522428f5458d30141590e5e9ad25cb1b7ebaa70c3fb"
       ]
     },
-    "signature" : "77798f2c05367f150264d94d742793e8611d56e18ac99dafff0afda7c17d3c70",
+    "signature" : "79219008a52377257cf87b944308f49af9c06910b4a347341f4f95f2ca813978",
     "type" : "workspace"
   },
   {
@@ -362,6 +362,14 @@
               {
                 "fileType" : "sourcecode.swift",
                 "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_14",
+                "name" : "Drive/DriveAuth.swift",
+                "path" : "Drive/DriveAuth.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_15",
                 "name" : "Drive/DriveModels.swift",
                 "path" : "Drive/DriveModels.swift",
                 "sourceTree" : "<group>",
@@ -369,7 +377,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_15",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_16",
                 "name" : "Drive/DriveService.swift",
                 "path" : "Drive/DriveService.swift",
                 "sourceTree" : "<group>",
@@ -377,7 +385,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_16",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_17",
                 "name" : "FeatureFlags/FeatureFlagsModels.swift",
                 "path" : "FeatureFlags/FeatureFlagsModels.swift",
                 "sourceTree" : "<group>",
@@ -385,7 +393,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_17",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_18",
                 "name" : "FeatureFlags/FeatureFlagsService.swift",
                 "path" : "FeatureFlags/FeatureFlagsService.swift",
                 "sourceTree" : "<group>",
@@ -393,7 +401,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_18",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_19",
                 "name" : "LLMHub/LLMHubModels.swift",
                 "path" : "LLMHub/LLMHubModels.swift",
                 "sourceTree" : "<group>",
@@ -401,7 +409,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_19",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_20",
                 "name" : "LLMHub/LLMHubService.swift",
                 "path" : "LLMHub/LLMHubService.swift",
                 "sourceTree" : "<group>",
@@ -409,7 +417,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_20",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_21",
                 "name" : "Legal/LegalModels.swift",
                 "path" : "Legal/LegalModels.swift",
                 "sourceTree" : "<group>",
@@ -417,7 +425,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_21",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_22",
                 "name" : "Legal/LegalService.swift",
                 "path" : "Legal/LegalService.swift",
                 "sourceTree" : "<group>",
@@ -425,7 +433,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_22",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_23",
                 "name" : "Newsroom/NewsroomModels.swift",
                 "path" : "Newsroom/NewsroomModels.swift",
                 "sourceTree" : "<group>",
@@ -433,7 +441,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_23",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_24",
                 "name" : "Newsroom/NewsroomService.swift",
                 "path" : "Newsroom/NewsroomService.swift",
                 "sourceTree" : "<group>",
@@ -441,7 +449,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_24",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_25",
                 "name" : "NodeDaClient.swift",
                 "path" : "NodeDaClient.swift",
                 "sourceTree" : "<group>",
@@ -449,7 +457,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_25",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_26",
                 "name" : "Sales/SalesModels.swift",
                 "path" : "Sales/SalesModels.swift",
                 "sourceTree" : "<group>",
@@ -457,7 +465,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_26",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_27",
                 "name" : "Sales/SalesService.swift",
                 "path" : "Sales/SalesService.swift",
                 "sourceTree" : "<group>",
@@ -465,7 +473,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_27",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_28",
                 "name" : "Support/SupportModels.swift",
                 "path" : "Support/SupportModels.swift",
                 "sourceTree" : "<group>",
@@ -473,7 +481,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_28",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_29",
                 "name" : "Support/SupportService.swift",
                 "path" : "Support/SupportService.swift",
                 "sourceTree" : "<group>",
@@ -481,7 +489,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_29",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_30",
                 "name" : "SystemStatus/SystemStatusModels.swift",
                 "path" : "SystemStatus/SystemStatusModels.swift",
                 "sourceTree" : "<group>",
@@ -489,7 +497,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_30",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_31",
                 "name" : "SystemStatus/SystemStatusService.swift",
                 "path" : "SystemStatus/SystemStatusService.swift",
                 "sourceTree" : "<group>",
@@ -619,6 +627,14 @@
               {
                 "fileType" : "sourcecode.swift",
                 "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_14",
+                "name" : "Drive/DriveAuth.swift",
+                "path" : "Drive/DriveAuth.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_15",
                 "name" : "Drive/DriveModels.swift",
                 "path" : "Drive/DriveModels.swift",
                 "sourceTree" : "<group>",
@@ -626,7 +642,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_15",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_16",
                 "name" : "Drive/DriveService.swift",
                 "path" : "Drive/DriveService.swift",
                 "sourceTree" : "<group>",
@@ -634,7 +650,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_16",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_17",
                 "name" : "FeatureFlags/FeatureFlagsModels.swift",
                 "path" : "FeatureFlags/FeatureFlagsModels.swift",
                 "sourceTree" : "<group>",
@@ -642,7 +658,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_17",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_18",
                 "name" : "FeatureFlags/FeatureFlagsService.swift",
                 "path" : "FeatureFlags/FeatureFlagsService.swift",
                 "sourceTree" : "<group>",
@@ -650,7 +666,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_18",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_19",
                 "name" : "LLMHub/LLMHubModels.swift",
                 "path" : "LLMHub/LLMHubModels.swift",
                 "sourceTree" : "<group>",
@@ -658,7 +674,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_19",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_20",
                 "name" : "LLMHub/LLMHubService.swift",
                 "path" : "LLMHub/LLMHubService.swift",
                 "sourceTree" : "<group>",
@@ -666,7 +682,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_20",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_21",
                 "name" : "Legal/LegalModels.swift",
                 "path" : "Legal/LegalModels.swift",
                 "sourceTree" : "<group>",
@@ -674,7 +690,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_21",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_22",
                 "name" : "Legal/LegalService.swift",
                 "path" : "Legal/LegalService.swift",
                 "sourceTree" : "<group>",
@@ -682,7 +698,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_22",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_23",
                 "name" : "Newsroom/NewsroomModels.swift",
                 "path" : "Newsroom/NewsroomModels.swift",
                 "sourceTree" : "<group>",
@@ -690,7 +706,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_23",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_24",
                 "name" : "Newsroom/NewsroomService.swift",
                 "path" : "Newsroom/NewsroomService.swift",
                 "sourceTree" : "<group>",
@@ -698,7 +714,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_24",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_25",
                 "name" : "NodeDaClient.swift",
                 "path" : "NodeDaClient.swift",
                 "sourceTree" : "<group>",
@@ -706,7 +722,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_25",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_26",
                 "name" : "Sales/SalesModels.swift",
                 "path" : "Sales/SalesModels.swift",
                 "sourceTree" : "<group>",
@@ -714,7 +730,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_26",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_27",
                 "name" : "Sales/SalesService.swift",
                 "path" : "Sales/SalesService.swift",
                 "sourceTree" : "<group>",
@@ -722,7 +738,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_27",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_28",
                 "name" : "Support/SupportModels.swift",
                 "path" : "Support/SupportModels.swift",
                 "sourceTree" : "<group>",
@@ -730,7 +746,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_28",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_29",
                 "name" : "Support/SupportService.swift",
                 "path" : "Support/SupportService.swift",
                 "sourceTree" : "<group>",
@@ -738,7 +754,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_29",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_30",
                 "name" : "SystemStatus/SystemStatusModels.swift",
                 "path" : "SystemStatus/SystemStatusModels.swift",
                 "sourceTree" : "<group>",
@@ -746,7 +762,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_30",
+                "guid" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_31",
                 "name" : "SystemStatus/SystemStatusService.swift",
                 "path" : "SystemStatus/SystemStatusService.swift",
                 "sourceTree" : "<group>",
@@ -775,12 +791,12 @@
         "6fc995753e121fba2d2614d873faaab2503345f2e1ba5de03de42f762336cc9e",
         "a37ca13b5d769aa08dd32c6a4647606370c98a9ae0042b61d47ff58b04425e85",
         "060136de42159bf4ef5ff3dde97606062c5f9c7350a6e4deb6016742233cbff1",
-        "415fd8aa3c7e9326d035c4963ff7993e1c6e2d787f5b6e4d7d0c6c74e2767de4",
-        "8c27300121c328838987184d822fa5c3038e4b8ef72622ca3250e64599b01e63",
+        "6d6ac46c693543495d81ca54678367a5b6af9aeeba5957e40c745ae3d9b1a1ef",
+        "905b832c8cfa140578d8cb6929a02617ab835e996c98bdc2c6432d1844d226d2",
         "39b6b472dfdd6f502e36b4decdcdcd94a9292f875e81bb1f6a5f0e1232e66e30"
       ]
     },
-    "signature" : "ee2dd487cfc7a924571c9b1086642c669319359f5456702b4a93d74899b55f70",
+    "signature" : "4dac3a9f099c7720bfbf47e0383d8d81d6de9a71a60a830af169415f9519ddad",
     "type" : "project"
   },
   {
@@ -1557,6 +1573,15 @@
 
               ],
               "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:nodeda-kit::MAINGROUP::REF_3::REF_31",
+              "guid" : "PACKAGE-TARGET:NodeDa::BUILDPHASE_0::31",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
             }
           ],
           "guid" : "PACKAGE-TARGET:NodeDa::BUILDPHASE_0",
@@ -1583,7 +1608,7 @@
       "productTypeIdentifier" : "org.swift.product-type.library.static",
       "type" : "standard"
     },
-    "signature" : "415fd8aa3c7e9326d035c4963ff7993e1c6e2d787f5b6e4d7d0c6c74e2767de4",
+    "signature" : "6d6ac46c693543495d81ca54678367a5b6af9aeeba5957e40c745ae3d9b1a1ef",
     "type" : "target"
   },
   {
@@ -2033,6 +2058,15 @@
 
               ],
               "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:nodeda-kit::MAINGROUP::REF_4::REF_31",
+              "guid" : "PACKAGE-TARGET:NodeDa-1A7BF9913F2E71-dynamic::BUILDPHASE_0::31",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
             }
           ],
           "guid" : "PACKAGE-TARGET:NodeDa-1A7BF9913F2E71-dynamic::BUILDPHASE_0",
@@ -2058,7 +2092,7 @@
       "productTypeIdentifier" : "com.apple.product-type.library.dynamic",
       "type" : "standard"
     },
-    "signature" : "8c27300121c328838987184d822fa5c3038e4b8ef72622ca3250e64599b01e63",
+    "signature" : "905b832c8cfa140578d8cb6929a02617ab835e996c98bdc2c6432d1844d226d2",
     "type" : "target"
   },
   {

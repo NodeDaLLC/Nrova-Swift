@@ -1,7 +1,0 @@
-Target dependency graph (3 targets)
-Target 'AllExcludingTests' in project 'Aggregate'
-➜ Explicit dependency on target 'NodeDa-product' in project 'NodeDa'
-➜ Explicit dependency on target 'NodeDa' in project 'NodeDa'
-Target 'NodeDa-product' in project 'NodeDa'
-➜ Explicit dependency on target 'NodeDa' in project 'NodeDa'
-Target 'NodeDa' in project 'NodeDa' (no dependencies)

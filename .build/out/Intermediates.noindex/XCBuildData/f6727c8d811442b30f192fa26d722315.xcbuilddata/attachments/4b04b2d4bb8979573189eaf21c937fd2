@@ -1,3 +1,5 @@
+/Users/anthony/Documents/GitHub/NodeDa-Kit/Sources/NodeDa/AppAnalytics/AppAnalyticsModels.swift
+/Users/anthony/Documents/GitHub/NodeDa-Kit/Sources/NodeDa/AppAnalytics/AppAnalyticsService.swift
 /Users/anthony/Documents/GitHub/NodeDa-Kit/Sources/NodeDa/Careers/CareersModels.swift
 /Users/anthony/Documents/GitHub/NodeDa-Kit/Sources/NodeDa/Careers/CareersService.swift
 /Users/anthony/Documents/GitHub/NodeDa-Kit/Sources/NodeDa/Core/HTTPClient.swift
@@ -10,6 +12,9 @@
 /Users/anthony/Documents/GitHub/NodeDa-Kit/Sources/NodeDa/Core/SharedModels.swift
 /Users/anthony/Documents/GitHub/NodeDa-Kit/Sources/NodeDa/Distribution/DistributionModels.swift
 /Users/anthony/Documents/GitHub/NodeDa-Kit/Sources/NodeDa/Distribution/DistributionService.swift
+/Users/anthony/Documents/GitHub/NodeDa-Kit/Sources/NodeDa/Drive/DriveAuth.swift
+/Users/anthony/Documents/GitHub/NodeDa-Kit/Sources/NodeDa/Drive/DriveModels.swift
+/Users/anthony/Documents/GitHub/NodeDa-Kit/Sources/NodeDa/Drive/DriveService.swift
 /Users/anthony/Documents/GitHub/NodeDa-Kit/Sources/NodeDa/FeatureFlags/FeatureFlagsModels.swift
 /Users/anthony/Documents/GitHub/NodeDa-Kit/Sources/NodeDa/FeatureFlags/FeatureFlagsService.swift
 /Users/anthony/Documents/GitHub/NodeDa-Kit/Sources/NodeDa/LLMHub/LLMHubModels.swift

@@ -669,6 +669,63 @@ final class NodeDaClientTests: XCTestCase {
         XCTAssertEqual(folder.folder.space, .personal)
     }
 
+    func testDriveAuthAuthorizeURLUsesWebsiteNotApiHost() {
+        let pkce = DrivePKCE(
+            verifier: String(repeating: "a", count: 43),
+            challenge: String(repeating: "b", count: 43)
+        )
+        let url = DriveAuth.authorizeURL(
+            clientId: "com.example.notes",
+            redirectURI: URL(string: "http://127.0.0.1:43781/oauth")!,
+            state: "state-token-1",
+            pkce: pkce,
+            appName: "Example Notes"
+        )
+        XCTAssertEqual(url.host, "vertex.nodeda.com")
+        XCTAssertEqual(url.path, "/connect")
+        XCTAssertFalse(url.absoluteString.contains("/v1/organizations/"))
+        XCTAssertFalse(url.absoluteString.contains("api.nodeda.com"))
+        let items = URLComponents(url: url, resolvingAgainstBaseURL: false)?.queryItems ?? []
+        XCTAssertEqual(items.first { $0.name == "client_id" }?.value, "com.example.notes")
+        XCTAssertEqual(items.first { $0.name == "code_challenge_method" }?.value, "S256")
+        XCTAssertEqual(items.first { $0.name == "code_challenge" }?.value, pkce.challenge)
+    }
+
+    func testDriveAuthExchangePostsToWebsiteTokenPath() async throws {
+        let mock = MockTransport(responder: { request in
+            XCTAssertEqual(request.httpMethod, "POST")
+            XCTAssertEqual(request.url?.host, "vertex.nodeda.com")
+            XCTAssertEqual(request.url?.path, "/api/connect/token")
+            XCTAssertFalse(request.url?.absoluteString.contains("/v1/organizations/") ?? true)
+            XCTAssertNil(request.value(forHTTPHeaderField: "X-API-Key"))
+            let json = """
+            {"token_type":"Bearer","id_token":"idtok","refresh_token":"nrv_rt_x","expires_in":3600}
+            """
+            return (Data(json.utf8), MockTransport.response(for: request, status: 200))
+        })
+        let pkce = DrivePKCE(
+            verifier: String(repeating: "a", count: 43),
+            challenge: String(repeating: "b", count: 43)
+        )
+        let tokens = try await DriveAuth.exchange(
+            code: "nrv_ac_abc",
+            pkce: pkce,
+            clientId: "com.example.notes",
+            redirectURI: URL(string: "http://127.0.0.1:43781/oauth")!,
+            transport: mock
+        )
+        XCTAssertEqual(tokens.idToken, "idtok")
+        XCTAssertEqual(tokens.refreshToken, "nrv_rt_x")
+        XCTAssertEqual(tokens.expiresIn, 3600)
+    }
+
+    func testDriveAuthMakePKCEVerifierLength() {
+        let pkce = DriveAuth.makePKCE()
+        XCTAssertGreaterThanOrEqual(pkce.verifier.count, 43)
+        XCTAssertLessThanOrEqual(pkce.verifier.count, 128)
+        XCTAssertGreaterThanOrEqual(pkce.challenge.count, 43)
+    }
+
     // MARK: - Health
 
     func testHealthEndpointSkipsAuth() async throws {

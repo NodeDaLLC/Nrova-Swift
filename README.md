@@ -760,7 +760,13 @@ One login connects **My Drive** (`space=personal`) and **Organization Drive**
 (`space=shared`). If `session` returns more than one account, pass that
 account's opaque `id` as `accountId`.
 
+Sign the user in on the NodeDa website (PKCE) — do not embed a password
+form. `DriveAuth.authorizeURL` opens `https://vertex.nodeda.com/connect`;
+`DriveAuth.exchange` posts to `/api/connect/token` on that same host
+(not `api.nodeda.com`).
+
 | Method | Endpoint | Auth |
+| --- | --- | --- |
 | --- | --- | --- |
 | `drive.health()` | `GET /health` | none |
 | `drive.session(idToken:)` | `GET /v1/drive/session` | ID token |
@@ -775,9 +781,24 @@ account's opaque `id` as `accountId`.
 | `drive.content(idToken:fileId:accountId:)` | `GET /v1/drive/files/{fileId}/content` | ID token |
 
 ```swift
-let session = try await client.drive.session(idToken: idToken)
+let pkce = DriveAuth.makePKCE()
+let signIn = DriveAuth.authorizeURL(
+    clientId: Bundle.main.bundleIdentifier ?? "com.example.notes",
+    redirectURI: URL(string: "http://127.0.0.1:43781/oauth")!,
+    state: UUID().uuidString,
+    pkce: pkce,
+    appName: "Example Notes"
+)
+// Open `signIn` in ASWebAuthenticationSession, then:
+let tokens = try await DriveAuth.exchange(
+    code: codeFromRedirect,
+    pkce: pkce,
+    clientId: Bundle.main.bundleIdentifier ?? "com.example.notes",
+    redirectURI: URL(string: "http://127.0.0.1:43781/oauth")!
+)
+let session = try await client.drive.session(idToken: tokens.idToken)
 let folder = try await client.drive.createAppFolder(
-    idToken: idToken,
+    idToken: tokens.idToken,
     appKey: Bundle.main.bundleIdentifier ?? "com.example.notes",
     name: "Example Notes"
 )
