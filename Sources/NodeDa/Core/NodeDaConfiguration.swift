@@ -68,6 +68,7 @@ public struct ServiceEndpoints: Sendable {
     public var legalPolicies: URL
     public var llmHub: URL
     public var appAnalytics: URL
+    public var drive: URL
 
     public init(
         distribution: URL,
@@ -79,7 +80,8 @@ public struct ServiceEndpoints: Sendable {
         systemStatus: URL,
         legalPolicies: URL,
         llmHub: URL,
-        appAnalytics: URL
+        appAnalytics: URL,
+        drive: URL
     ) {
         self.distribution = distribution
         self.support = support
@@ -91,6 +93,7 @@ public struct ServiceEndpoints: Sendable {
         self.legalPolicies = legalPolicies
         self.llmHub = llmHub
         self.appAnalytics = appAnalytics
+        self.drive = drive
     }
 
     /// Builds endpoints where every service shares the same base URL.
@@ -105,7 +108,8 @@ public struct ServiceEndpoints: Sendable {
             systemStatus: baseURL,
             legalPolicies: baseURL,
             llmHub: baseURL,
-            appAnalytics: baseURL
+            appAnalytics: baseURL,
+            drive: baseURL
         )
     }
 

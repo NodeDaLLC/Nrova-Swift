@@ -32,6 +32,7 @@ public struct NodeDaClient: Sendable {
     public let legal: LegalService
     public let llmHub: LLMHubService
     public let appAnalytics: AppAnalyticsService
+    public let drive: DriveService
 
     /// Builds a fully wired client. Pass an explicit `transport` to swap in
     /// a stub or proxy implementation (handy for tests and offline mode).
@@ -103,6 +104,9 @@ public struct NodeDaClient: Sendable {
             http: HTTPClient(baseURL: configuration.endpoints.appAnalytics, configuration: configuration, transport: transport),
             orgId: orgId
         )
+        self.drive = DriveService(
+            http: HTTPClient(baseURL: configuration.endpoints.drive, configuration: configuration, transport: transport)
+        )
     }
 
     /// Issues `GET /health` against every service base URL in parallel.
@@ -119,6 +123,7 @@ public struct NodeDaClient: Sendable {
             group.addTask { ("legal", try await legal.health()) }
             group.addTask { ("llmHub", try await llmHub.health()) }
             group.addTask { ("appAnalytics", try await appAnalytics.health()) }
+            group.addTask { ("drive", try await drive.health()) }
 
             var result: [String: HealthResponse] = [:]
             for try await (name, health) in group {

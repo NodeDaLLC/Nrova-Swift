@@ -43,9 +43,10 @@ struct HTTPClient: Sendable {
         _ path: String,
         query: [String: String?] = [:],
         as type: Response.Type = Response.self,
-        authenticated: Bool = true
+        authenticated: Bool = true,
+        extraHeaders: [String: String] = [:]
     ) async throws -> Response {
-        let request = try buildRequest(method: "GET", path: path, query: query, body: nil, authenticated: authenticated)
+        let request = try buildRequest(method: "GET", path: path, query: query, body: nil, authenticated: authenticated, extraHeaders: extraHeaders)
         return try await perform(request)
     }
 
@@ -55,10 +56,11 @@ struct HTTPClient: Sendable {
         query: [String: String?] = [:],
         body: Body,
         as type: Response.Type = Response.self,
-        authenticated: Bool = true
+        authenticated: Bool = true,
+        extraHeaders: [String: String] = [:]
     ) async throws -> Response {
         let data = try Self.jsonEncoder.encode(body)
-        let request = try buildRequest(method: "POST", path: path, query: query, body: data, authenticated: authenticated)
+        let request = try buildRequest(method: "POST", path: path, query: query, body: data, authenticated: authenticated, extraHeaders: extraHeaders)
         return try await perform(request)
     }
 
@@ -68,10 +70,11 @@ struct HTTPClient: Sendable {
         query: [String: String?] = [:],
         body: Body,
         as type: Response.Type = Response.self,
-        authenticated: Bool = true
+        authenticated: Bool = true,
+        extraHeaders: [String: String] = [:]
     ) async throws -> Response {
         let data = try Self.jsonEncoder.encode(body)
-        let request = try buildRequest(method: "PATCH", path: path, query: query, body: data, authenticated: authenticated)
+        let request = try buildRequest(method: "PATCH", path: path, query: query, body: data, authenticated: authenticated, extraHeaders: extraHeaders)
         return try await perform(request)
     }
 
@@ -81,19 +84,21 @@ struct HTTPClient: Sendable {
         query: [String: String?] = [:],
         body: Body,
         as type: Response.Type = Response.self,
-        authenticated: Bool = true
+        authenticated: Bool = true,
+        extraHeaders: [String: String] = [:]
     ) async throws -> Response {
         let data = try Self.jsonEncoder.encode(body)
-        let request = try buildRequest(method: "PUT", path: path, query: query, body: data, authenticated: authenticated)
+        let request = try buildRequest(method: "PUT", path: path, query: query, body: data, authenticated: authenticated, extraHeaders: extraHeaders)
         return try await perform(request)
     }
 
     func delete(
         _ path: String,
         query: [String: String?] = [:],
-        authenticated: Bool = true
+        authenticated: Bool = true,
+        extraHeaders: [String: String] = [:]
     ) async throws {
-        let request = try buildRequest(method: "DELETE", path: path, query: query, body: nil, authenticated: authenticated)
+        let request = try buildRequest(method: "DELETE", path: path, query: query, body: nil, authenticated: authenticated, extraHeaders: extraHeaders)
         let (data, response) = try await transport.send(request)
         try Self.validate(response: response, data: data)
     }
@@ -105,9 +110,10 @@ struct HTTPClient: Sendable {
     func head(
         _ path: String,
         query: [String: String?] = [:],
-        authenticated: Bool = true
+        authenticated: Bool = true,
+        extraHeaders: [String: String] = [:]
     ) async throws -> (Data, HTTPURLResponse) {
-        let request = try buildRequest(method: "GET", path: path, query: query, body: nil, authenticated: authenticated)
+        let request = try buildRequest(method: "GET", path: path, query: query, body: nil, authenticated: authenticated, extraHeaders: extraHeaders)
         let (data, response) = try await transport.send(request)
         guard let http = response as? HTTPURLResponse else {
             throw NodeDaError.unexpectedStatus(-1, data: data)
@@ -122,7 +128,8 @@ struct HTTPClient: Sendable {
         path: String,
         query: [String: String?],
         body: Data?,
-        authenticated: Bool
+        authenticated: Bool,
+        extraHeaders: [String: String]
     ) throws -> URLRequest {
         let normalizedPath = path.hasPrefix("/") ? path : "/\(path)"
         let fullURL = baseURL.appendingPathComponent(normalizedPath, isDirectory: false)
@@ -157,6 +164,10 @@ struct HTTPClient: Sendable {
         if authenticated && requiresAuth && !configuration.apiKey.isEmpty {
             request.setValue("Bearer \(configuration.apiKey)", forHTTPHeaderField: "Authorization")
             request.setValue(configuration.apiKey, forHTTPHeaderField: "X-API-Key")
+        }
+
+        for (key, value) in extraHeaders {
+            request.setValue(value, forHTTPHeaderField: key)
         }
 
         for (key, value) in configuration.defaultHeaders {
